@@ -35,7 +35,7 @@ In the deploy phase, leveraging a [reusable GitHub workflow](https://docs.github
 
 Check out the repository for this series to see how these concepts come to life and integrate them into your workflows.
 
-[Click here to view the deploy example GitHub workflow](https://github.com/tw3lveparsecs/azure-iac-and-devops/blob/main/.github/deploy_template.yml)
+[Click here to view the deploy example GitHub workflow](https://github.com/tw3lveparsecs/azure-iac-and-devops/blob/main/.github/workflows/deploy_template.yml)
 
 ## Conclusion
 
