@@ -2,7 +2,7 @@
 layout: post
 title: "DevOps and Azure IaC Series: Deploy"
 date: 2025-01-06 09:30:00 +1100
-categories: [Azure IaC, DevOps]
+categories: [DevOps, Azure IaC]
 tags: [azure, deploy, devops, iac, ci/cd]
 image: /assets/img/posts/2025-01-06-azure-iac-devops-series-deploy/feature_image.png
 ---
