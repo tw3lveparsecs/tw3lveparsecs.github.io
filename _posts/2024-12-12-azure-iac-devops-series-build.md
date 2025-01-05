@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Azure IaC & DevOps Series: Build"
+title: "DevOps and Azure IaC Series: Build"
 date: 2024-12-12 11:41:00 +1100
-categories: [Azure IaC, DevOps]
+categories: [DevOps, Azure IaC]
 tags: [azure, build, devops, iac, ci/cd]
 image: /assets/img/posts/2024-12-12-azure-iac-devops-series-build/feature_image.jpg
 ---
