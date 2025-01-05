@@ -49,7 +49,7 @@ Compiling these steps into a reusable pipeline template offers several benefits:
 
 Moving forward, this repository will serve as the central hub for all the code featured in this series, providing a cohesive and practical resource for your DevOps journey. Check out the repository to see how these concepts come to life and integrate them into your workflows.
 
-[Click here to view build example GitHub workflow](https://github.com/tw3lveparsecs/azure-iac-and-devops/blob/main/.github/build_template.yml)
+[Click here to view build example GitHub workflow](https://github.com/tw3lveparsecs/azure-iac-and-devops/blob/main/.github/workflows/build_template.yml)
 
 ## Conclusion
 
