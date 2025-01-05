@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Azure IaC & DevOps Series: Deploy"
+title: "DevOps and Azure IaC Series: Deploy"
 date: 2025-01-06 09:30:00 +1100
 categories: [Azure IaC, DevOps]
 tags: [azure, deploy, devops, iac, ci/cd]
