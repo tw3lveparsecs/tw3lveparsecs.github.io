@@ -39,6 +39,10 @@ We can automate AI model deployments using native tools like Azure Bicep and Azu
 
 In the following example, we assume that the Landing Zone has been established and Azure OpenAI has been deployed using a shared service model. The platform team is responsible for setting up the codebase for AI model deployments, while the application team can add and manage models as needed. This hybrid approach leverages a GitOps methodology, allowing the application team to make changes to the codebase and deploy AI models through pull requests, subject to the platform team’s approval.
 
+This has been illustrated in the diagram below:
+
+![ai model workflow](../assets/img/posts/2025-02-10-devops-ai-series-ai-models/ai_model_workflow.png)
+
 Breaking down the process:
 
 - Set up a GitHub repository to store the Bicep templates for deploying AI models.
