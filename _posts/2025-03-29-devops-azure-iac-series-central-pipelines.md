@@ -3,7 +3,7 @@ layout: post
 title: "DevOps and Azure IaC Series: Centralised Pipelines"
 date: 2025-03-29 21:30:00 +1100
 categories: [DevOps, Azure IaC]
-tags: [azure, deploy, devops, iac, ci/cd]
+tags: [azure, pipelines, devops, iac, ci/cd]
 image: /assets/img/posts/2025-03-29-devops-iac-series-central-pipelines/feature_image.png
 mermaid: true
 ---
@@ -652,8 +652,6 @@ graph TD
   class DM,RT doc
   class T1,T2,T3 teams
 ```
-
-Check out the repository for this series to see how these concepts come to life and integrate them into our workflows.
 
 ## Conclusion
 
