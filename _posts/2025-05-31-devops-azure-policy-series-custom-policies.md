@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "DevOps and Azure Policy Series: Custom Policies
+title: "DevOps and Azure Policy Series: Custom Policies"
 date: 2025-05-15 21:30:00 +1100
 categories: [Azure Policy, Bicep]
 tags: [azure, bicep, iac, policy, cicd, devops]
