@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Azure Policy with Bicep Series: Deployments"
+title: "DevOps and Azure Policy Series: Deployments"
 date: 2024-12-15 13:43:00 +1100
 categories: [Azure Policy, Bicep]
-tags: [azure, bicep, iac, policy]
+tags: [azure, bicep, iac, policy, devops]
 image: /assets/img/posts/2024-12-15-azure-policy-bicep-series-deploy/feature_image.jpg
 ---
 
