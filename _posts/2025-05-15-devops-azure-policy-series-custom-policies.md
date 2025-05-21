@@ -286,6 +286,7 @@ flowchart TD
 Here's how to implement a CI/CD pipeline for Azure Policy using GitHub Actions and our centralised pipeline approach:
 
 ```yaml
+{% raw %}
 # deploy-custom-policy-definitions.yml
 
 name: Custom Policy Definition Deployment
@@ -371,9 +372,11 @@ jobs:
       management_group_id: ${{ needs.initialise_vars.outputs.management_group_id }}
       deployment_name: ${{ needs.initialise_vars.outputs.deployment_name_policies }}
       az_deployment_type: ${{ needs.initialise_vars.outputs.az_deployment_type }}
+{% endraw %}
 ```
 
 ```yaml
+{% raw %}
 # deploy-custom-policy-initiative.yml
 
 name: Custom Policy Initiative Deployment
@@ -460,6 +463,7 @@ jobs:
       oidc_app_reg_client_id: ${{ needs.initialise_vars.outputs.oidc_app_reg_client_id }}
       azure_tenant_id: ${{ needs.initialise_vars.outputs.azure_tenant_id }}
       az_deployment_type: ${{ needs.initialise_vars.outputs.az_deployment_type }}
+{% endraw %}
 ```
 
 To demonstrate this, I’ve added a complete example to the repository linked below.
