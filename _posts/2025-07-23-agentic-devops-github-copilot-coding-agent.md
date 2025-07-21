@@ -4,7 +4,7 @@ title: "Agentic DevOps: Getting the Most Out of GitHub Copilot's Coding Agent"
 date: 2025-07-23 09:00:00 +1100
 categories: [DevOps, AI]
 tags: [github, copilot, agent, devops, agentic, ai]
-image: /assets/img/posts/2025-07-23-agentic-devops-gh-copilot-coding-agent/feature_image.png
+image: /assets/img/posts/2025-07-23-agentic-devops-github-copilot-coding-agent/feature_image.png
 mermaid: true
 ---
 
