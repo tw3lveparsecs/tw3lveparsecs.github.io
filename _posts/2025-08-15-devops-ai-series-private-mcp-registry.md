@@ -2,7 +2,7 @@
 layout: post
 title: "DevOps and AI Series: Azure Private MCP Registry"
 date: 2025-08-15 05:00:00 +1100
-categories: [Azure, AI]
+categories: [DevOps, AI]
 tags: [mcp, ai, devops, azure]
 image: /assets/img/posts/2025-08-15-devops-ai-series-private-mcp-registry/feature_image.png
 mermaid: true
