@@ -1,19 +1,20 @@
 ---
 layout: post
 title: "DevOps and Azure Policy Series: Remediation Tasks"
-date: 2025-09-30 10:00:00 +1100
+date: 2025-09-21 06:00:00 +1100
 categories: [Azure Policy, DevOps]
-tags: [azure, policy, remediation, devops, PowerShell, ci-cd, governance]
-image: /assets/image/posts/2025-09-30-devops-azure-policy-series-remediation/feature_image.png
+tags: [azure, remediation, iac, policy, cicd, devops]
+image: /assets/img/posts/2025-09-24-devops-azure-policy-series-remediation/feature_image.png
+mermaid: true
 ---
 
 Welcome to the fourth instalment of our DevOps and Azure Policy series! In our [previous post](https://azurewithaj.com/posts/devops-azure-policy-series-exemptions/), we explored how to manage policy exemptions using Infrastructure as Code (IaC) and CI/CD pipelines. Today, we're diving into another critical aspect of Azure Policy governance: **policy remediation tasks**.
 
-While exemptions help us handle exceptions to policies, remediation tasks take the opposite approach they actively fix non-compliant resources to bring them into alignment with your organisational standards. We'll explore what remediation tasks are, when to use them, and how to implement them through automated PowerShell scripts and CI/CD pipelines.
+While exemptions help us handle exceptions to policies, remediation tasks take the opposite approach they actively fix non-compliant resources to bring them into alignment with our organisational standards. We'll explore what remediation tasks are, when to use them, and how to implement them through automated PowerShell scripts and CI/CD pipelines.
 
 ## Understanding Azure Policy Remediation
 
-Policy remediation is the process of automatically correcting non-compliant resources to ensure they adhere to your defined policies. Think of it as the "auto-fix" capability for your governance rules. When Azure Policy identifies resources that don't meet your standards, remediation tasks can automatically apply the necessary changes to bring them into compliance.
+Policy remediation is the process of automatically correcting non-compliant resources to ensure they adhere to our defined policies. Think of it as the "auto-fix" capability for our governance rules. When Azure Policy identifies resources that don't meet our standards, remediation tasks can automatically apply the necessary changes to bring them into compliance.
 
 ### How Policy Remediation Works
 
@@ -57,7 +58,7 @@ At the time of writing, **policy remediation tasks are not currently supported f
 - Azure PowerShell
 - REST API
 
-Due to this limitation, we'll focus on a PowerShell-based approach for this article.
+Due to this limitation, we'll focus on a PowerShell-based approach.
 
 ### Remediation Scope
 
@@ -81,25 +82,6 @@ Let's examine a PowerShell script that automates the creation and execution of p
 ### The Core Remediation Script
 
 ```powershell
-<#
-.SYNOPSIS
-  A script that is used to create and run policy remediation tasks for Azure Policy assignments.
-
-.DESCRIPTION
-  A script that is used to create and run policy remediation tasks for Azure Policy assignments.
-  The script reads a JSON file that contains the policy assignments to remediate and the associated parameters.
-  The script will then create and run the remediation tasks for each policy assignment.
-  The script will output the results of the remediation tasks to the console.
-
-.PARAMETER remediationFile
-  Path to the JSON file that contains the policy assignments to remediate and the associated parameters.
-
-.NOTES
-  Dependencies:
-    The account running this script is assumed to be logged in with an Azure PowerShell context and must have at least:
-      - Resource Policy Contributor
-#>
-
 [CmdletBinding()]
 param (
   [Parameter(Mandatory)]
@@ -175,8 +157,8 @@ The script uses a JSON configuration file to define which policies to remediate.
 [
   {
     "name": "Application Name Tag Remediation",
-    "managementGroup": "company-mg",
-    "policyAssignmentId": "/providers/microsoft.management/managementgroups/company-mg/providers/microsoft.authorization/policyassignments/tag-governance",
+    "managementGroup": "production-mg",
+    "policyAssignmentId": "/providers/microsoft.management/managementgroups/production-mg/providers/microsoft.authorization/policyassignments/tag-governance",
     "policyDefinitionReferenceId": "require-application-name-tag"
   },
   {
@@ -345,9 +327,11 @@ graph TD
 - Document any issues encountered
 - Update procedures based on lessons learned
 
-To demonstrate this, I’ve added a complete example to the repository linked below.
+## Complete Example
 
-[Click here to view an example of a policy remediation using PowerShell](https://github.com/tw3lveparsecs/azure-policy-with-bicep/tree/main/policy-exemptions)
+The PowerShell script, JSON configuration, and CI/CD pipeline integration we've explored provide a comprehensive solution for automated policy remediation. To help you implement this approach in your own environment, I've created a complete working example:
+
+[Click here to view the policy remediation example](https://github.com/tw3lveparsecs/azure-policy-with-bicep/tree/main/policy-remediation)
 
 ## Conclusion
 
