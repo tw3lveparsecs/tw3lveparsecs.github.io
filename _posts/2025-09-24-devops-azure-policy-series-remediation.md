@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "DevOps and Azure Policy Series: Remediation Tasks"
-date: 2025-09-21 06:00:00 +1100
+date: 2025-09-24 06:00:00 +1100
 categories: [Azure Policy, DevOps]
 tags: [azure, remediation, iac, policy, cicd, devops]
 image: /assets/img/posts/2025-09-24-devops-azure-policy-series-remediation/feature_image.png
