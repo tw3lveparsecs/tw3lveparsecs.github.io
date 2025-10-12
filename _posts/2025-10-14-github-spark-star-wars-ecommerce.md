@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Building a Star Wars E-Commerce Empire with GitHub Spark: A Weekend DevOps Story"
-date: 2025-10-15 06:00:00 +1100
+date: 2025-10-10 06:00:00 +1100
 categories: [DevOps, AI]
-tags: [github, spark, ai, web-development, agentic, copilot, frontend]
-image: /assets/img/posts/2025-10-15-agentic-devops-spark/feature_image.png
+tags: [github, spark, ai, agentic, copilot, frontend]
+image: /assets/img/posts/2025-10-14-github-spark-star-wars-ecommerce/feature_image.png
 mermaid: true
 ---
 
@@ -63,11 +63,11 @@ graph TD
     I --> J[Sunday Afternoon: Polish & Testing]
     J --> K[Functional E-Commerce Platform]
 
-    style A fill:#f9f,stroke:#333,stroke-width:2px
-    style K fill:#9f9,stroke:#333,stroke-width:2px
-    style C fill:#bbf,stroke:#333,stroke-width:1px
-    style F fill:#bbf,stroke:#333,stroke-width:1px
-    style I fill:#bbf,stroke:#333,stroke-width:1px
+    style A fill:#2188ff,stroke:#1b6cc7,stroke-width:3px,color:#ffffff
+    style K fill:#28a745,stroke:#1e7e34,stroke-width:3px,color:#ffffff
+    style C fill:#f9c513,stroke:#d4a00a,stroke-width:2px,color:#000000
+    style F fill:#f9c513,stroke:#d4a00a,stroke-width:2px,color:#000000
+    style I fill:#f9c513,stroke:#d4a00a,stroke-width:2px,color:#000000
 ```
 
 ### What GitHub Spark Delivered
@@ -254,7 +254,7 @@ GitHub Spark operates on a premium request model:
 
 **Free Plan Reality**:
 
-- Limited premium requests per month
+- 50 premium requests per month
 - Each Spark message uses 4 premium requests
 - Getting stuck in loops exhausts quota rapidly
 - No ability to purchase additional requests
@@ -266,7 +266,7 @@ GitHub Spark operates on a premium request model:
 - 10 active app building sessions simultaneously
 - Unlimited app building overall
 
-My recommendation? **If you're serious about using Spark for multiple projects or complex applications, invest in Copilot Pro+ from the start.** The free tier is excellent for experimentation and small projects, but any substantial development work will quickly hit the limits, especially while you're learning optimal prompting techniques.
+My recommendation? **If you're serious about using Spark for multiple projects or complex applications, review Copilot plans carefully from the start.** The free tier is excellent for experimentation and small projects, but any substantial development work will quickly hit the limits, especially while you're learning optimal prompting techniques.
 
 ### Lesson 4: Let Spark Handle the Visuals (If You Want)
 
@@ -378,9 +378,17 @@ GitHub Spark demonstrates that we're entering an era where deep technical specia
 5. **AI Generated Visuals**: Surprisingly effective for demos and prototypes
 6. **Specialisation + AI**: Powerful combination that expands capabilities without diluting expertise
 
-For fellow DevOps professionals, infrastructure engineers, and backend specialists who need to create compelling frontends for demos, presentations, or internal tools—GitHub Spark offers a genuine solution. It won't replace dedicated frontend developers for production applications, but it absolutely fills the gap for creating functional, presentable interfaces without months of learning modern frontend frameworks.
+For fellow DevOps professionals, infrastructure engineers, and backend specialists who need to create compelling frontends for demos, presentations, or internal tools, GitHub Spark offers a genuine solution. It won't replace dedicated frontend developers for production applications, but it absolutely fills the gap for creating functional, presentable interfaces without months of learning modern frontend frameworks.
 
 The Empire's procurement system is now operational, and I built it in a weekend while barely paying full attention. That's the power of AI assisted development when approached with the right strategies and realistic expectations.
+
+Here is a few screenshots of the final application in action:
+
+![Home Page](../assets/img/posts/2025-10-14-github-spark-star-wars-ecommerce/github_spark_star_wars_home_page.png)
+
+![Add to Cart](../assets/img/posts/2025-10-14-github-spark-star-wars-ecommerce/github_spark_star_wars_add_cart.png)
+
+![Submission](../assets/img/posts/2025-10-14-github-spark-star-wars-ecommerce/github_spark_star_wars_submission.png)
 
 ---
 
