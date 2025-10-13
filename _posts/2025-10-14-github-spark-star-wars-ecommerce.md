@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Building a Star Wars E-Commerce Empire with GitHub Spark: A Weekend DevOps Story"
-date: 2025-10-10 06:00:00 +1100
+date: 2025-10-14 06:00:00 +1100
 categories: [DevOps, AI]
 tags: [github, spark, ai, agentic, copilot, frontend]
 image: /assets/img/posts/2025-10-14-github-spark-star-wars-ecommerce/feature_image.png
