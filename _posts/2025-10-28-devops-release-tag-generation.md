@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "DevOps: Enhanced Release Automation with GitHub's AI-Powered Release Notes"
-date: 2025-10-28 09:00:00 +1100
+date: 2025-10-22 06:00:00 +1100
 categories: [DevOps]
 tags: [devops, release, tags, automation, api]
-image: /assets/img/posts/2025-10-28-devops-release-tag-copilot-generation/feature_image.png
+image: /assets/img/posts/2025-10-22-devops-release-tag-generation/feature_image.png
 ---
 
 In my previous article, "[DevOps: Automating Release Tags](https://azurewithaj.com/posts/devops-release-tags/)", I shared how we automated version tagging and release creation using GitHub Actions. While that solution worked well, the release notes generation was basic, essentially just copying the PR title and description. Today, I'll show you how we evolved this approach by leveraging GitHub's powerful automatic release notes generation API.
@@ -89,55 +89,55 @@ This step creates the new tag for our release based on whether it's a major or m
 ```yaml
 {% raw %}
 - name: Generate release notes
-        id: release_notes
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const tag = '${{ steps.bump_tag.outputs.new_tag }}';
-            const latestTag = '${{ steps.get_tag.outputs.latest_tag }}';
+  id: release_notes
+  uses: actions/github-script@v7
+  with:
+    script: |
+      const tag = '${{ steps.bump_tag.outputs.new_tag }}';
+      const latestTag = '${{ steps.get_tag.outputs.latest_tag }}';
 
-            // Use GitHub's automatic release notes generation API
-            const response = await github.rest.repos.generateReleaseNotes({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              tag_name: tag,
-              previous_tag_name: latestTag || undefined, // Use previous tag if available
-              target_commitish: 'main'
-            });
+      // Use GitHub's automatic release notes generation API
+      const response = await github.rest.repos.generateReleaseNotes({
+        owner: context.repo.owner,
+        repo: context.repo.repo,
+        tag_name: tag,
+        previous_tag_name: latestTag || undefined, // Use previous tag if available
+        target_commitish: 'main'
+      });
 
-            // Determine release type based on version number analysis
-            const major = tag.split('.')[0].replace('v', '');
-            const minor = tag.split('.')[1];
-            const patch = tag.split('.')[2];
+      // Determine release type based on version number analysis
+      const major = tag.split('.')[0].replace('v', '');
+      const minor = tag.split('.')[1];
+      const patch = tag.split('.')[2];
 
-            let releaseType;
-            if (minor === '0' && patch === '0') {
-              releaseType = "🚀 Major Release";
-            } else if (patch === '0') {
-              releaseType = "✨ Minor Release";
-            } else {
-              releaseType = "🐛 Patch Release";
-            }
+      let releaseType;
+      if (minor === '0' && patch === '0') {
+        releaseType = "🚀 Major Release";
+      } else if (patch === '0') {
+        releaseType = "✨ Minor Release";
+      } else {
+        releaseType = "🐛 Patch Release";
+      }
 
-            // Combine release type with auto-generated notes
-            const releaseNotes = `${releaseType} ${tag}\n\n${response.data.body}`;
+      // Combine release type with auto-generated notes
+      const releaseNotes = `${releaseType} ${tag}\n\n${response.data.body}`;
 
-            // Write to file for use in release creation
-            const fs = require('fs');
-            fs.writeFileSync('release-notes.txt', releaseNotes);
+      // Write to file for use in release creation
+      const fs = require('fs');
+      fs.writeFileSync('release-notes.txt', releaseNotes);
 
-            // Also output for debugging
-            core.setOutput('release_notes', releaseNotes);
-            core.setOutput('release_name', response.data.name);
+      // Also output for debugging
+      core.setOutput('release_notes', releaseNotes);
+      core.setOutput('release_name', response.data.name);
 
-      - name: Create GitHub Release
-        if: steps.is_major.outputs.major == 'true'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          gh release create "${{ steps.bump_tag.outputs.new_tag }}" \
-            --title "Release ${{ steps.bump_tag.outputs.new_tag }}" \
-            --notes-file release-notes.txt
+- name: Create GitHub Release
+  if: steps.is_major.outputs.major == 'true'
+  env:
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  run: |
+    gh release create "${{ steps.bump_tag.outputs.new_tag }}" \
+      --title "Release ${{ steps.bump_tag.outputs.new_tag }}" \
+      --notes-file release-notes.txt
 {% endraw %}
 ```
 
