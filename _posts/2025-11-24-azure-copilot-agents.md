@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Azure Copilot Agents: Transforming Cloud Operations"
-date: 2025-11-25 07:00:00 +1100
+date: 2025-11-24 06:00:00 +1100
 categories: [DevOps, AI]
 tags: [azure, copilot, agents, ai, agentic, devops, ignite, operations]
-image: /assets/img/posts/2025-11-25-azure-copilot-agents/feature_image.png
+image: /assets/img/posts/2025-11-24-azure-copilot-agents/feature_image.png
 mermaid: true
 ---
 
@@ -56,7 +56,7 @@ graph TD
     style K fill:#ef4444,stroke:#dc2626,stroke-width:2px,color:#fff
 ```
 
-## The Vision: Azure Copilot as Your Cloud Operations Command Centre
+## The Transformation: Azure Copilot as Your Cloud Operations Command Centre
 
 Azure Copilot Agents transforms this fragmented experience into a unified, intelligent operations platform. Instead of managing tools, you're orchestrating specialised agents that bring deep expertise to every aspect of cloud operations.
 
