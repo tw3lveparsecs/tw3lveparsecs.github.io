@@ -7,6 +7,22 @@ favicon: "assets/images/favicons/favicon.ico"
 baseurl: ""
 google_analytics: "G-QN1JHQ7WLQ"
 disqus: "azurewithaj"
+
+# Giscus comments (https://giscus.app)
+# Fill these values from the giscus.app setup page.
+giscus:
+  repo: "tw3lveparsecs/tw3lveparsecs.github.io" # e.g. "tw3lveparsecs/tw3lveparsecs.github.io"
+  repo_id: ""
+  category: "Announcements"
+  category_id: ""
+  mapping: "title" # pathname | url | title | og:title | specific
+  strict: 1
+  reactions_enabled: 1
+  emit_metadata: 0
+  input_position: "bottom" # bottom | top
+  theme: "preferred_color_scheme"
+  lang: "en"
+  loading: "lazy"
 include: ["_pages"]
 permalink: /:title/
 
