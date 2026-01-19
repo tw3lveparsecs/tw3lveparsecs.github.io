@@ -4,8 +4,11 @@ title: "Beyond Planning: How GitHub Spec Kit Transforms Ideas into Implementatio
 date: 2025-12-16 06:00:00 +1100
 categories: [DevOps, AI]
 tags: [github, copilot, agent, devops, agentic, ai, spec-kit, planning]
-image: /assets/img/posts/2025-12-16-github-spec-kit/feature_image.png
+image: assets/images/posts/2025-12-16-github-spec-kit/feature_image.png
 mermaid: true
+author: AJ Bajada
+toc: true
+featured: true
 ---
 
 In my journey exploring agentic DevOps tools, I've previously written about [delivering major enhancements using Awesome Copilot](https://azurewithaj.com/posts/agentic-devops-delivered-major-enhancement/) and [GitHub's built-in Plan Agent](https://azurewithaj.com/posts/github-plan-agent/). Each tool has pushed the boundaries of what's possible when AI assists with development workflows. Today, I'm diving into my experience with **GitHub Spec Kit**, a developer-centric toolkit that takes planning and implementation to an entirely new level of detail and sophistication.
@@ -36,7 +39,7 @@ The demo includes:
 - Custom scenario builder using your own specifications
 - Exploration of tokens and constitution principles
 
-![Spec Kit demo application overview](/assets/img/posts/2025-12-16-github-spec-kit/demo_app_overview.png)
+![Spec Kit demo application overview](../assets/images/posts/2025-12-16-github-spec-kit/demo_app_overview.png)
 _My demo application showcasing GitHub Spec Kit's workflow and capabilities_
 
 ## The Evolution: From Simple Planning to Comprehensive Specification
@@ -47,17 +50,17 @@ Let me position Spec Kit within my broader experience with agentic development t
 graph TD
     A[Awesome Copilot] --> B[Proven Prompts<br/>& Agents]
     B --> C[Manual Integration<br/>Required]
-    
+
     D[Plan Agent] --> E[Built-in VS Code<br/>Integration]
     E --> F[Zero Configuration<br/>Planning]
-    
+
     G[GitHub Spec Kit] --> H[Developer-Centric<br/>Toolkit]
     H --> I[Comprehensive<br/>Specification Framework]
-    
+
     C --> J[Good for: Accessing<br/>Library of Customisations]
     F --> K[Good for: Natural<br/>Language Planning]
     I --> L[Good for: Staying<br/>in the IDE]
-    
+
     style A fill:#6366f1,stroke:#4f46e5,stroke-width:2px,color:#fff
     style B fill:#818cf8,stroke:#6366f1,stroke-width:2px,color:#fff
     style C fill:#a5b4fc,stroke:#818cf8,stroke-width:2px,color:#1e1b4b
@@ -98,12 +101,14 @@ This approach feels natural for developers who prefer staying in their IDE rathe
 While Spec Kit's developer-centric approach is a strength, it also creates a higher barrier to entry compared to something like Plan Agent.
 
 **Plan Agent advantages:**
+
 - Works immediately in VS Code with zero setup
 - Natural language interface - just describe what you want
 - No need to understand templates or workflow structures
 - Easy to get started
 
 **Spec Kit considerations:**
+
 - Requires understanding of the toolkit's structure and methodology
 - Initial setup and configuration needed
 - Need familiarity with templates and specification formats

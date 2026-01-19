@@ -4,8 +4,10 @@ title: "Delivering Major Enhancements Without Writing Code: My Agentic DevOps Jo
 date: 2025-09-17 06:00:00 +1100
 categories: [DevOps, AI]
 tags: [github, copilot, agent, devops, agentic, ai]
-image: /assets/img/posts/2025-09-17-agentic-devops-delivered-major-enhancement/feature_image.png
+image: assets/images/posts/2025-09-17-agentic-devops-delivered-major-enhancement/feature_image.png
 mermaid: true
+author: AJ Bajada
+toc: true
 ---
 
 As a busy professional, I found myself in a familiar situation, needing to deliver a major enhancement to an internal solution while managing my regular day-to-day responsibilities. The challenge wasn't a lack of capability or resources, but rather finding the sustained focus time that complex development work typically demands.
@@ -213,7 +215,6 @@ This prompt transformed my comprehensive plan into exactly what I needed:
 - **Discrete GitHub issues**: Each representing a focused development task that could be completed independently
 
   Each issue included:
-
   - **Description**: A detailed overview of the task
   - **Tasks to complete**: Specific steps required to complete the issue
   - **Requirements**: Any specific conditions or prerequisites for the issue

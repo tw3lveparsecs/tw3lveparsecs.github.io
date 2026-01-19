@@ -1,0 +1,64 @@
+---
+title: "Tags"
+layout: default
+permalink: "/tags.html"
+---
+
+{% assign tags = site.tags | sort %}
+
+<div class="accordion" id="tagsAccordion">
+  {% for tag in tags %} {% assign tag_name = tag[0] %} {% assign tag_posts =
+  tag[1] %} {% assign tag_slug = tag_name | slugify %} {% assign heading_id =
+  "heading-tag-" | append: tag_slug %} {% assign collapse_id = "collapse-tag-" |
+  append: tag_slug %}
+
+  <div class="card mb-3">
+    <div class="card-header" id="{{ heading_id }}">
+      <h2 class="mb-0">
+        <button
+          class="btn btn-link p-0"
+          type="button"
+          data-toggle="collapse"
+          data-target="#{{ collapse_id }}"
+          aria-expanded="false"
+          aria-controls="{{ collapse_id }}"
+        >
+          <span class="text-capitalize">{{ tag_name }}</span>
+          <span class="text-muted">({{ tag_posts.size }})</span>
+        </button>
+      </h2>
+    </div>
+
+    <div
+      id="{{ collapse_id }}"
+      class="collapse"
+      aria-labelledby="{{ heading_id }}"
+      data-parent="#tagsAccordion"
+    >
+      <div class="card-body">
+        <div class="row listrecent">
+          {% assign pages_list = tag_posts %} {% for post in pages_list %} {% if
+          post.title != null %} {% if group == null or group == post.group %} {%
+          include postbox.html %} {% endif %} {% endif %} {% endfor %} {% assign
+          pages_list = nil %} {% assign group = nil %}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<script>
+  // If the URL has a hash like #my-tag, auto-expand that tag.
+  (function () {
+    try {
+      var hash = window.location.hash;
+      if (!hash) return;
+      var slug = hash.replace(/^#/, "");
+      if (!slug) return;
+      var el = document.getElementById("collapse-tag-" + slug);
+      if (!el) return;
+      el.classList.add("show");
+    } catch (e) {}
+  })();
+</script>

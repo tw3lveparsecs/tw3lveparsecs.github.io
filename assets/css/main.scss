@@ -1,0 +1,646 @@
+---
+# Add a comment to make this file sass-y.
+# Change this file for any custom CSS.
+---
+
+/* We need to add display:inline in order to align the '>>' of the 'read more' link */
+.post-excerpt p {
+  display: inline;
+}
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import "syntax", "starsnonscss";
+
+html {
+  color-scheme: light dark;
+}
+
+/* Sticky footer: keep the copyright bar at the bottom on short pages */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Footer lives inside .site-content, so make that a column flex container */
+.site-content {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+:root {
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --surface-2: #f6f7f8;
+  --text: #212529;
+  --text-muted: #6c757d;
+  --border: rgba(0, 0, 0, 0.12);
+  --link: #1a73e8;
+  --link-hover: #1558b0;
+  --shadow: rgba(0, 0, 0, 0.08);
+}
+
+html[data-theme="dark"] {
+  --bg: #0f1115;
+  --surface: #151922;
+  --surface-2: #0f1115;
+  --text: #e9ecf1;
+  --text-muted: #a7b0bf;
+  --border: rgba(255, 255, 255, 0.12);
+  --link: #8ab4f8;
+  --link-hover: #b3d1ff;
+  --shadow: rgba(0, 0, 0, 0.35);
+
+  /* Code theme (dark) – subtle GitHub/VS Code vibe */
+  --code-bg: #12161c;
+  --code-border: rgba(255, 255, 255, 0.1);
+  --code-gutter-bg: rgba(255, 255, 255, 0.04);
+  --code-text: #c9d1d9;
+  --code-muted: #8b949e;
+  --code-keyword: #ff7b72;
+  --code-string: #a5d6ff;
+  --code-number: #ffa657;
+  --code-func: #d2a8ff;
+  --code-type: #7ee787;
+  --code-tag: #79c0ff;
+  --code-attr: #ffa198;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+a {
+  color: var(--link);
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+/* Make the homepage/site title clickable without changing its appearance */
+.mainheading .sitetitle .site-title-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.mainheading .sitetitle .site-title-link:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.mainheading .sitetitle .site-title-link:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 6px;
+  border-radius: 6px;
+}
+
+hr {
+  border-color: var(--border);
+}
+
+/* Code blocks + inline code */
+/* Mediumish sets a global light `pre { background:#fff; color:#333; }` in screen.css.
+   Override it in dark mode so fenced code blocks actually switch backgrounds. */
+html[data-theme="dark"] pre {
+  background: var(--code-bg);
+  border: 1px solid var(--code-border);
+  border-radius: 0px;
+  padding: 7px;
+  color: var(--code-text);
+}
+
+html[data-theme="dark"] pre code {
+  background: transparent;
+  color: inherit;
+}
+
+/* Rouge blocks render as: div.highlighter-rouge > div.highlight > pre.highlight > code > table.rouge-table
+   Only the outer wrapper should draw the box; inner wrappers/pre should be transparent to avoid double boxes. */
+html[data-theme="dark"] div.highlighter-rouge {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  margin-bottom: 1.7rem;
+}
+
+html[data-theme="dark"] div.highlighter-rouge > .highlight {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/* Prevent an extra outer frame from the wrapper <pre class="highlight"> */
+html[data-theme="dark"] pre.highlight {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+}
+
+html[data-theme="dark"] .highlight pre,
+html[data-theme="dark"] .highlight code {
+  color: var(--code-text);
+}
+
+html[data-theme="dark"] .highlight table {
+  margin-bottom: 0;
+}
+
+html[data-theme="dark"] .highlight table.rouge-table {
+  border-collapse: separate;
+  /* Match light-mode/default table spacing so the gutter/code boxes have a small gap */
+  border-spacing: 2px;
+}
+
+html[data-theme="dark"] .highlight td.rouge-gutter {
+  background: transparent;
+  border-right: 0;
+}
+
+html[data-theme="dark"] .highlight td.rouge-code {
+  background: transparent;
+}
+
+/* Keep the two bordered boxes aligned */
+html[data-theme="dark"] .highlight td.rouge-gutter,
+html[data-theme="dark"] .highlight td.rouge-code {
+  vertical-align: top;
+  padding: 0;
+}
+
+html[data-theme="dark"] pre.lineno {
+  color: var(--code-muted);
+}
+
+/* In light mode, the global `pre { border + padding }` gives line numbers their own box.
+   We neutralize most inner <pre> styling in dark mode to avoid double frames, but keep
+   the line-number box so it matches light mode exactly. */
+html[data-theme="dark"] td.rouge-gutter pre.lineno {
+  border: 1px solid var(--code-border);
+  border-radius: 0px;
+  padding: 7px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+html[data-theme="dark"] td.rouge-code > pre {
+  background: var(--code-bg);
+  border: 1px solid var(--code-border);
+  border-radius: 0px;
+  padding: 7px;
+  margin: 0;
+  color: var(--code-text);
+  height: 100%;
+  box-sizing: border-box;
+}
+
+html[data-theme="dark"] code.highlighter-rouge {
+  background: rgba(110, 118, 129, 0.35);
+  border: 1px solid rgba(110, 118, 129, 0.35);
+  color: var(--code-text);
+  border-radius: 6px;
+  padding: 0.1em 0.35em;
+}
+
+/* Rouge token colors (override the light theme from _syntax.scss) */
+html[data-theme="dark"] .highlight .c,
+html[data-theme="dark"] .highlight .cm,
+html[data-theme="dark"] .highlight .c1,
+html[data-theme="dark"] .highlight .cp,
+html[data-theme="dark"] .highlight .cs {
+  color: var(--code-muted);
+}
+
+html[data-theme="dark"] .highlight .k,
+html[data-theme="dark"] .highlight .kc,
+html[data-theme="dark"] .highlight .kd,
+html[data-theme="dark"] .highlight .kp,
+html[data-theme="dark"] .highlight .kr,
+html[data-theme="dark"] .highlight .kt {
+  color: var(--code-keyword);
+}
+
+html[data-theme="dark"] .highlight .s,
+html[data-theme="dark"] .highlight .s1,
+html[data-theme="dark"] .highlight .s2,
+html[data-theme="dark"] .highlight .sb,
+html[data-theme="dark"] .highlight .sc,
+html[data-theme="dark"] .highlight .sd,
+html[data-theme="dark"] .highlight .se,
+html[data-theme="dark"] .highlight .sh,
+html[data-theme="dark"] .highlight .si,
+html[data-theme="dark"] .highlight .sx,
+html[data-theme="dark"] .highlight .sr,
+html[data-theme="dark"] .highlight .ss {
+  color: var(--code-string);
+}
+
+html[data-theme="dark"] .highlight .m,
+html[data-theme="dark"] .highlight .mf,
+html[data-theme="dark"] .highlight .mh,
+html[data-theme="dark"] .highlight .mi,
+html[data-theme="dark"] .highlight .mo,
+html[data-theme="dark"] .highlight .il {
+  color: var(--code-number);
+}
+
+html[data-theme="dark"] .highlight .nf {
+  color: var(--code-func);
+}
+
+html[data-theme="dark"] .highlight .nc,
+html[data-theme="dark"] .highlight .no,
+html[data-theme="dark"] .highlight .nn {
+  color: var(--code-type);
+}
+
+html[data-theme="dark"] .highlight .nt {
+  color: var(--code-tag);
+}
+
+html[data-theme="dark"] .highlight .na,
+html[data-theme="dark"] .highlight .nv,
+html[data-theme="dark"] .highlight .vc,
+html[data-theme="dark"] .highlight .vg,
+html[data-theme="dark"] .highlight .vi {
+  color: var(--code-attr);
+}
+
+/* Bootstrap helpers used by the theme */
+.bg-white {
+  background-color: var(--surface) !important;
+}
+
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+/* Navbar */
+.mediumnavigation {
+  box-shadow: 0 8px 24px var(--shadow);
+}
+
+.navbar-light .navbar-nav .nav-link,
+.navbar-light .navbar-brand {
+  color: var(--text) !important;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus {
+  color: var(--link-hover) !important;
+}
+
+/* Cards + containers */
+.card,
+.listfeaturedtag .wrapthumbnail,
+.listfeaturedtag .card,
+.listrecent .card {
+  background: var(--surface);
+  border-color: var(--border);
+}
+
+.jumbotron,
+.alertbar,
+.footer {
+  background: var(--surface);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: calc(1.5em + 0.75rem + 2px); /* bootstrap-ish input height */
+  width: calc(1.5em + 0.75rem + 2px);
+  padding: 0;
+
+  border-radius: 30px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text) !important;
+
+  font-size: 0.8rem;
+  line-height: 1;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+/* Space between theme toggle and search bar */
+.mediumnavigation .theme-toggle {
+  margin-right: 10px;
+}
+
+.mediumnavigation .bd-search {
+  margin-left: 10px;
+}
+
+.theme-toggle:hover {
+  background: var(--surface-2);
+}
+
+.theme-toggle:focus {
+  outline: none;
+}
+
+.theme-toggle:focus-visible {
+  box-shadow: 0 0 0 0.2rem rgba(138, 180, 248, 0.35);
+}
+
+.theme-toggle.btn,
+.theme-toggle.btn:hover,
+.theme-toggle.btn:focus {
+  border-color: var(--border);
+}
+
+.theme-toggle__icon {
+  display: inline-block;
+  width: 1.25rem;
+  text-align: center;
+}
+
+/* Dark-mode fixes for Mediumish theme rules in screen.css
+   (screen.css hard-codes rgba(0,0,0,...) for text/icons). */
+html[data-theme="dark"] .mainheading,
+html[data-theme="dark"] .mainheading .lead {
+  color: var(--text);
+}
+
+/* Post reading time (under post title) */
+.post-readtime {
+  margin-top: -0.25rem;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+/* Mermaid diagrams (```mermaid fenced blocks) */
+.mermaid {
+  margin: 1.7rem 0;
+  overflow-x: auto;
+}
+
+.mermaid svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Post author box: keep description on its own line under the Follow button */
+.post-top-meta .author-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.post-top-meta .author-description {
+  display: block;
+  margin-top: 6px;
+}
+
+/* Theme compatibility: screen.css applies overflow:hidden + negative margins that can clip the Follow pill */
+.post-top-meta {
+  color: var(--text);
+}
+
+.post-top-meta .link-dark {
+  color: var(--text-muted) !important;
+}
+
+.post-top-meta .author-meta {
+  overflow: visible !important;
+  text-overflow: clip !important;
+  white-space: nowrap !important;
+}
+
+.post-top-meta .btn.follow {
+  margin-top: 0 !important;
+  vertical-align: middle;
+}
+
+.post-top-meta .author-description {
+  color: var(--text-muted);
+}
+
+/* Back-to-top button (posts) */
+.back-to-top {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 1000;
+
+  width: 44px;
+  height: 44px;
+  padding: 0;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: 0 8px 24px var(--shadow);
+
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.back-to-top__icon {
+  display: block;
+}
+
+.back-to-top:hover {
+  background: var(--surface-2);
+}
+
+.back-to-top:focus {
+  outline: none;
+}
+
+.back-to-top:focus-visible {
+  box-shadow:
+    0 8px 24px var(--shadow),
+    0 0 0 0.2rem rgba(138, 180, 248, 0.35);
+}
+
+/* Section title underline (e.g. "Featured") uses dark borders in screen.css */
+html[data-theme="dark"] .section-title h2 {
+  border-bottom-color: var(--border);
+}
+
+html[data-theme="dark"] .section-title span {
+  border-bottom-color: rgba(255, 255, 255, 0.35);
+}
+
+html[data-theme="dark"] .link-dark,
+html[data-theme="dark"] .article-post,
+html[data-theme="dark"] .article-post p,
+html[data-theme="dark"] .article-post li,
+html[data-theme="dark"] .article-post h1,
+html[data-theme="dark"] .article-post h2,
+html[data-theme="dark"] .article-post h3,
+html[data-theme="dark"] .article-post h4,
+html[data-theme="dark"] .article-post h5,
+html[data-theme="dark"] .article-post h6 {
+  color: var(--text);
+}
+
+html[data-theme="dark"] blockquote,
+html[data-theme="dark"] .post-top-meta span,
+html[data-theme="dark"] span.post-date,
+html[data-theme="dark"] span.post-read,
+html[data-theme="dark"] span.author-meta,
+html[data-theme="dark"] span.post-read-more a,
+html[data-theme="dark"] .listfeaturedtag h4.card-text,
+html[data-theme="dark"] .listrecent h4.card-text {
+  color: var(--text-muted);
+}
+
+html[data-theme="dark"] span.post-name a,
+html[data-theme="dark"] span.post-read-more a:hover {
+  color: var(--text);
+}
+
+html[data-theme="dark"] .share,
+html[data-theme="dark"] .share a {
+  color: var(--text);
+  fill: var(--text);
+}
+
+html[data-theme="dark"] .share ul li i.fa {
+  border-color: var(--border);
+}
+
+html[data-theme="dark"] ul.tags li a {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-muted);
+}
+
+html[data-theme="dark"] ul.tags li a:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+html[data-theme="dark"] .graybg {
+  background-color: var(--surface-2);
+}
+
+/* Footer in screen.css uses !important + light colors */
+html[data-theme="dark"] .footer {
+  color: var(--text-muted);
+  border-top-color: var(--border) !important;
+}
+
+/* Remove theme's large bottom margin that causes a visible gap */
+.footer {
+  margin-top: auto;
+  margin-bottom: 0 !important;
+}
+
+.footer .social-links {
+  list-style: none;
+  padding-left: 0;
+  margin: 10px 0 0;
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+}
+
+.footer .social-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 1.05rem;
+}
+
+.footer .social-links a:hover,
+.footer .social-links a:focus {
+  color: var(--text);
+}
+
+/* Navbar social links */
+.mediumnavigation .navbar-social {
+  flex: 0 0 auto;
+}
+
+.mediumnavigation .social-links {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: inline-flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.mediumnavigation .social-links li {
+  margin: 0;
+}
+
+.mediumnavigation .social-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.mediumnavigation .social-links a:hover,
+.mediumnavigation .social-links a:focus {
+  color: var(--text);
+}
+
+/* Home page: add breathing room between pagination bar and footer */
+.layout-default .bottompagination {
+  margin-bottom: 24px;
+}
+
+/* Navbar search input in screen.css uses dark border; ensure contrast */
+html[data-theme="dark"] .mediumnavigation .form-control {
+  background: var(--surface);
+  color: var(--text);
+  border-color: var(--border);
+}
+
+html[data-theme="dark"] .mediumnavigation .form-control::placeholder {
+  color: var(--text-muted);
+}
+
+html[data-theme="dark"] .mediumnavigation .search-icon {
+  color: var(--text-muted);
+}
+
+/* Bootstrap's navbar-light uses a dark hamburger icon; invert it for dark mode. */
+html[data-theme="dark"] .navbar-light .navbar-toggler {
+  border-color: var(--border);
+}
+
+html[data-theme="dark"] .navbar-light .navbar-toggler-icon {
+  filter: invert(1) grayscale(100%);
+  opacity: 0.85;
+}
+
+/* Bootstrap utility classes used in templates */
+html[data-theme="dark"] .text-dark {
+  color: var(--text) !important;
+}
+
+/* Card titles + "Read Story" bookmark icon */
+html[data-theme="dark"] .card-title,
+html[data-theme="dark"] .card-title a {
+  color: var(--text);
+}
+
+html[data-theme="dark"] span.post-read-more a svg,
+html[data-theme="dark"] span.post-read-more a svg path {
+  fill: currentColor;
+}

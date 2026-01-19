@@ -4,8 +4,10 @@ title: "Welcome Home, Agents: How GitHub Copilot Agent HQ is Transforming Develo
 date: 2025-11-17 06:00:00 +1100
 categories: [DevOps, AI]
 tags: [github, copilot, agent, devops, agentic, ai, vscode, hq]
-image: /assets/img/posts/2025-11-17-welcome-home-agents/feature_image.png
+image: assets/images/posts/2025-11-17-welcome-home-agents/feature_image.png
 mermaid: true
+author: AJ Bajada
+toc: true
 ---
 
 The development landscape has fundamentally shifted. We're no longer working with simple AI assistants that complete our code,we're orchestrating fleets of specialised agents that can take on entire features, collaborate across tools, and work asynchronously while we sleep. GitHub's announcement of **Agent HQ** at Universe 2025 marks a pivotal moment in how we think about development workflows, and the accompanying VS Code updates make this vision tangible today.
@@ -29,12 +31,12 @@ graph TD
     A --> C[VS Code Chat Sessions]
     A --> D[GitHub Copilot CLI]
     A --> E[Third-Party Agents]
-    
+
     B -.->|No visibility| C
     C -.->|No visibility| D
     D -.->|No visibility| E
     E -.->|No visibility| B
-    
+
     style A fill:#2563eb,stroke:#1e40af,stroke-width:3px,color:#fff
     style B fill:#94a3b8,stroke:#64748b,stroke-width:2px,color:#0f172a
     style C fill:#94a3b8,stroke:#64748b,stroke-width:2px,color:#0f172a
@@ -55,14 +57,14 @@ graph TD
     A --> D[GitHub Copilot CLI]
     A --> E[Third-Party Agents]
     A --> F[Mobile/Web Access]
-    
+
     B <--> C
     C <--> D
     D <--> E
     E <--> B
-    
+
     G[Developer] --> A
-    
+
     style A fill:#059669,stroke:#047857,stroke-width:3px,color:#fff
     style G fill:#2563eb,stroke:#1e40af,stroke-width:3px,color:#fff
     style B fill:#94a3b8,stroke:#64748b,stroke-width:2px,color:#0f172a
@@ -91,18 +93,18 @@ graph LR
     A --> C[Coding Agents]
     A --> D[CLI Sessions]
     A --> E[Third-Party Agents]
-    
+
     B --> B1[Chat Session 1]
     B --> B2[Chat Session 2]
-    
+
     C --> C1[Issue #123: Add DNS Fallback]
     C --> C2[Issue #456: Fix Bug]
-    
+
     D --> D1[Terminal Session 1]
-    
+
     E --> E1[OpenAI Codex Session]
     E --> E2[Anthropic Claude Session]
-    
+
     style A fill:#059669,stroke:#047857,stroke-width:3px,color:#fff
     style B fill:#94a3b8,stroke:#64748b,stroke-width:2px,color:#0f172a
     style C fill:#94a3b8,stroke:#64748b,stroke-width:2px,color:#0f172a
@@ -157,7 +159,7 @@ graph TD
     H --> I[Choose Implementation Method]
     I --> J[Local Implementation in VS Code]
     I --> K[Cloud Agent Implementation]
-    
+
     style A fill:#2563eb,stroke:#1e40af,stroke-width:3px,color:#fff
     style H fill:#059669,stroke:#047857,stroke-width:3px,color:#fff
     style G fill:#f59e0b,stroke:#d97706,stroke-width:3px,color:#fff
@@ -217,27 +219,27 @@ sequenceDiagram
     participant GH as GitHub.com
     participant CA as Coding Agent
     participant VS as VS Code
-    
+
     D->>GH: Assign issues to @copilot
     activate CA
     CA->>CA: Analyses requirements
     CA->>CA: Implements features
     CA->>GH: Creates PRs
     deactivate CA
-    
+
     D->>VS: Opens Agent Sessions view
     VS->>GH: Fetches agent status
     GH->>VS: Shows completed PRs
-    
+
     D->>VS: Reviews PR in editor
     D->>GH: Adds review comments
-    
+
     activate CA
     CA->>GH: Reads feedback
     CA->>CA: Implements changes
     CA->>GH: Updates PR
     deactivate CA
-    
+
     D->>VS: Final review & merge
 ```
 
@@ -338,27 +340,27 @@ A strategic mental model for choosing the right agent for each task:
 ```mermaid
 graph TD
     A[Development Task] --> B{Task Type?}
-    
+
     B -->|Quick Question| C[Local VS Code Chat]
     B -->|Complex Feature| D[Plan Agent]
     B -->|Implementation| E[Coding Agent]
     B -->|Terminal/Deploy| F[CLI Agent]
     B -->|Specialised| G[Third-Party Agent]
-    
+
     D --> H[Create Plan]
     H --> E
-    
+
     C --> I{Needs More?}
     I -->|Yes| E
     I -->|No| J[Done]
-    
+
     E --> K[Creates PR]
     K --> L[Review in VS Code]
-    
+
     F --> M{Complex Changes?}
     M -->|Yes| E
     M -->|No| N[Execute Commands]
-    
+
     style A fill:#2563eb,stroke:#1e40af,stroke-width:3px,color:#fff
     style B fill:#f59e0b,stroke:#d97706,stroke-width:3px,color:#fff
     style I fill:#f59e0b,stroke:#d97706,stroke-width:3px,color:#fff
@@ -382,12 +384,13 @@ Custom agents let you:
 ### Creating a Custom Agent
 
 Custom agent files live in `.github/agents/` and use the `.agent.md` suffix:
+
 ```markdown
 ---
 description: Generate an implementation plan for new features or refactoring existing code.
 name: Planner
 target: vscode
-tools: ['fetch', 'githubRepo', 'search', 'usages']
+tools: ["fetch", "githubRepo", "search", "usages"]
 model: Claude Sonnet 4
 handoffs:
   - label: Implement Plan
@@ -395,16 +398,18 @@ handoffs:
     prompt: Implement the plan outlined above.
     send: false
 ---
+
 # Planning instructions
+
 You are in planning mode. Your task is to generate an implementation plan for a new feature or for refactoring existing code.
 Don't make any code edits, just generate a plan.
 
 The plan consists of a Markdown document that describes the implementation plan, including the following sections:
 
-* Overview: A brief description of the feature or refactoring task.
-* Requirements: A list of requirements for the feature or refactoring task.
-* Implementation Steps: A detailed list of steps to implement the feature or refactoring task.
-* Testing: A list of tests that need to be implemented to verify the feature or refactoring task.
+- Overview: A brief description of the feature or refactoring task.
+- Requirements: A list of requirements for the feature or refactoring task.
+- Implementation Steps: A detailed list of steps to implement the feature or refactoring task.
+- Testing: A list of tests that need to be implemented to verify the feature or refactoring task.
 ```
 
 ### Custom Agent Metadata
@@ -499,6 +504,7 @@ All agent work is properly attributed:
 - **Audit trails**: Full compliance documentation
 
 ## Security Best Practices with Agent HQ
+
 Working with AI agents introduces new security considerations. Here's how to maintain security hygiene while leveraging Agent HQ's capabilities:
 
 ### 1. Start with Recommended Defaults
@@ -653,22 +659,22 @@ Use CLI agent to:
 gantt
     title Agent HQ Workflow Timeline
     dateFormat YYYY-MM-DD
-    
+
     section Planning
     Plan Agent Discussion       :2025-11-20, 1d
-    
+
     section Backlog
     Generate Issues             :2025-11-20, 1d
-    
+
     section Development
     Coding Agent Work           :2025-11-21, 3d
     Parallel Local Development  :2025-11-21, 3d
     CLI Testing                 :2025-11-22, 2d
-    
+
     section Review
     PR Reviews                  :2025-11-24, 2d
     Agent Iterations            :2025-11-24, 2d
-    
+
     section Integration
     Deployment & Testing        :2025-11-26, 1d
 ```

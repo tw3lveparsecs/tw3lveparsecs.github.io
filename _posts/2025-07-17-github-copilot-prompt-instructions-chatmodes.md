@@ -4,8 +4,10 @@ title: "GitHub Copilot DevOps Excellence: Prompt Files vs Instructions vs Chat M
 date: 2025-07-17 09:00:00 +1100
 categories: [DevOps, AI]
 tags: [github, copilot, devops, ai]
-image: /assets/img/posts/2025-07-17-github-copilot-prompt-instructions-chatmodes/feature_image.png
+image: assets/images/posts/2025-07-17-github-copilot-prompt-instructions-chatmodes/feature_image.png
 mermaid: true
+author: AJ Bajada
+toc: true
 ---
 
 As we venture deeper into 2025, GitHub Copilot has evolved far beyond a simple code completion tool. The introduction of **prompt files**, **custom instructions**, and **custom chat modes** has transformed it into a sophisticated AI development partner. Yet, we may find ourselves confused about when and how to leverage these features effectively.

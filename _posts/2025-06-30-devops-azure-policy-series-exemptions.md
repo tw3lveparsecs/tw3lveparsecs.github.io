@@ -3,9 +3,11 @@ layout: post
 title: "DevOps and Azure Policy Series: Exemptions"
 date: 2025-06-30 05:00:00 +1100
 categories: [Azure Policy, Bicep]
-tags: [azure, bicep, iac, policy, cicd, devops]
-image: /assets/img/posts/2025-06-30-devops-azure-policy-series-exemptions/feature_image.png
+tags: [azure, bicep, iac, policy, ci/cd, devops]
+image: assets/images/posts/2025-06-30-devops-azure-policy-series-exemptions/feature_image.png
 mermaid: true
+author: AJ Bajada
+toc: true
 ---
 
 Welcome to the third instalment of our DevOps and Azure Policy series! In our [previous post](https://azurewithaj.com/posts/devops-azure-policy-series-custom-policies/), we explored how to create and deploy custom policy definitions using Bicep and CI/CD pipelines. Today, we're diving into a critical but often overlooked aspect of Azure Policy governance: policy exemptions. We'll explore what they are, when to use them, and how to implement them through Infrastructure as Code (IaC) using Bicep and automated CI/CD pipelines.

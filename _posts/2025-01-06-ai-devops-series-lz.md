@@ -4,7 +4,9 @@ title: "DevOps and AI Series: Landing Zones"
 date: 2025-01-06 09:00:00 +1100
 categories: [DevOps, AI]
 tags: [ai, devops, landing zones, azure]
-image: /assets/img/posts/2025-01-06-ai-devops-series-lz/feature_image.png
+image: assets/images/posts/2025-01-06-ai-devops-series-lz/feature_image.png
+author: AJ Bajada
+toc: true
 ---
 
 In today's fast-paced digital landscape, the integration of artificial intelligence (AI) and DevOps practices is revolutionising how organisations manage their infrastructure and streamline operations. This blog post, the first in a series, will delve into the critical importance of establishing safe and scalable landing zones for AI deployments and how DevOps teams enable this transformation.

@@ -1,0 +1,14 @@
+services:
+    jekyll:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        working_dir: /srv/jekyll
+        ports:
+            - "4000:4000"
+        volumes:
+            - .:/srv/jekyll
+            - bundle:/usr/local/bundle
+
+volumes:
+    bundle:

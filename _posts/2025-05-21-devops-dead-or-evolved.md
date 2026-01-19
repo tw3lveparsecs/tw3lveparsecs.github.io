@@ -4,8 +4,10 @@ title: "DevOps: Dead or Evolved?"
 date: 2025-05-21 11:00:00 +1100
 categories: [DevOps, AI]
 tags: [ai, devops, agentic]
-image: /assets/img/posts/2025-05-21-devops-dead-or-evolved/feature_image.png
+image: assets/images/posts/2025-05-21-devops-dead-or-evolved/feature_image.png
 mermaid: true
+author: AJ Bajada
+toc: true
 ---
 
 # DevOps: Dead or Evolved?
@@ -30,7 +32,7 @@ But now, AI has supercharged that evolution.
 
 With the rise of **Agentic DevOps**, we’re entering a new era where AI agents don’t just automate tasks. They _collaborate_ as part of your team.
 
-![Evolution from Traditional DevOps to Agentic DevOps](../assets/img/posts/2025-05-21-devops-dead-or-evolved/devops_evolution.png)
+![Evolution from Traditional DevOps to Agentic DevOps](../assets/images//posts/2025-05-21-devops-dead-or-evolved/devops_evolution.png)
 
 ## Enter the Agents: DevOps Meets AI
 

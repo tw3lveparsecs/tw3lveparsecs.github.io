@@ -4,8 +4,11 @@ title: "From Awesome Copilot to Plan Agent: GitHub's Built-in Planning Revolutio
 date: 2025-12-10 06:00:00 +1100
 categories: [DevOps, AI]
 tags: [github, copilot, agent, devops, agentic, ai, plan]
-image: /assets/img/posts/2025-12-10-github-plan-agent/feature_image.png
+image: assets/images/posts/2025-12-10-github-plan-agent/feature_image.png
 mermaid: true
+author: AJ Bajada
+toc: true
+featured: true
 ---
 
 In my [previous post about delivering major enhancements using agentic DevOps](https://azurewithaj.com/posts/agentic-devops-delivered-major-enhancement), I shared how I leveraged [GitHub's Awesome Copilot repository](https://github.com/github/awesome-copilot) to access proven prompts and agents for creating implementation plans. That approach served me well, but GitHub has now introduced something that changes the game entirely: the built-in **Plan agent**.
@@ -80,7 +83,7 @@ One of the most powerful features of the Plan agent is the **handoff** capabilit
 
 This handoff feature uses VS Code's new custom chat modes system, creating guided workflows that transition between planning and implementation phases with suggested next steps.
 
-![Plan agent handoff options](/assets/img/posts/2025-12-10-github-plan-agent/plan_agent_handoff.png)
+![Plan agent handoff options](../assets/images/posts/2025-12-10-github-plan-agent/plan_agent_handoff.png)
 
 ## Comparing the Two Approaches
 
@@ -121,8 +124,9 @@ The Plan agent's output differs from what I was accustomed to with Awesome Copil
 **Plan Structure**: The Awesome Copilot "Create Implementation Plan" prompt produced well-structured output with clearly articulated goals and tasks broken down hierarchically, making it suitable for backlog items, stakeholder communication, or sprint ceremonies. In contrast, the Plan agent breaks plans down into detailed bulleted steps focused on technical implementation. While this works well for development, it's less structured for project management purposes.
 
 **Risk and Dependency Analysis**: I've noticed that **dependencies and risks aren't explicitly called out** in the plans. The Awesome Copilot templates had dedicated sections for:
+
 - Technical dependencies and integration points
-- Potential risks and mitigation strategies  
+- Potential risks and mitigation strategies
 - Security and compliance considerations
 - Performance implications
 
