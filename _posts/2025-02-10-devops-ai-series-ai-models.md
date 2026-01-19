@@ -4,7 +4,9 @@ title: "DevOps and AI Series: Managing AI Models"
 date: 2025-02-10 07:00:00 +1100
 categories: [DevOps, AI]
 tags: [ai, devops, ai models, azure]
-image: /assets/img/posts/2025-02-10-devops-ai-series-ai-models/feature_image.png
+image: assets/images/posts/2025-02-10-devops-ai-series-ai-models/feature_image.png
+author: AJ Bajada
+toc: true
 ---
 
 Welcome back to our series on AI and DevOps! In our previous post, we laid the groundwork for deploying AI landing zones within a DevOps framework. Today, we’re going to focus on a critical aspect of this integration: managing AI models using DevOps practices. This involves not only the technical automation of deployments but also ensuring seamless collaboration between the teams involved.
@@ -41,7 +43,7 @@ In the following example, we assume that the Landing Zone has been established a
 
 This has been illustrated in the diagram below:
 
-![ai model workflow](../assets/img/posts/2025-02-10-devops-ai-series-ai-models/ai_model_workflow.png)
+![ai model workflow](../assets/images//posts/2025-02-10-devops-ai-series-ai-models/ai_model_workflow.png)
 
 Breaking down the process:
 

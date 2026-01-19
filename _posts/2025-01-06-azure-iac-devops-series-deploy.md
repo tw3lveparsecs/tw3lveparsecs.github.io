@@ -4,7 +4,9 @@ title: "DevOps and Azure IaC Series: Deploy"
 date: 2025-01-06 09:30:00 +1100
 categories: [DevOps, Azure IaC]
 tags: [azure, deploy, devops, iac, ci/cd]
-image: /assets/img/posts/2025-01-06-azure-iac-devops-series-deploy/feature_image.png
+image: assets/images/posts/2025-01-06-azure-iac-devops-series-deploy/feature_image.png
+author: AJ Bajada
+toc: true
 ---
 
 Welcome back to our Azure IaC and DevOps series! In our previous article, we delved into the Build phase, highlighting best practices to achieve consistent, repeatable builds. Today, we embark on an exciting journey into the Deploy phase. A streamlined deployment process is vital for ensuring successful and consistent infrastructure deployments. We'll explore how leveraging powerful tools like Azure Bicep can play a pivotal role in achieving this goal and transforming our deployment strategy.

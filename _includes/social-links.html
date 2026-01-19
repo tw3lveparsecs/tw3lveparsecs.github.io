@@ -1,0 +1,40 @@
+{%- assign social = site.social -%} {%- if social and (social.github or
+social.email or social.linkedin) -%}
+<ul class="social-links" aria-label="Social links">
+  {%- if social.github -%}
+  <li>
+    <a
+      href="{{ social.github }}"
+      target="_blank"
+      rel="noopener noreferrer me"
+      aria-label="GitHub"
+    >
+      <i class="fab fa-github" aria-hidden="true"></i>
+    </a>
+  </li>
+  {%- endif -%} {%- if social.linkedin -%}
+  <li>
+    <a
+      href="{{ social.linkedin }}"
+      target="_blank"
+      rel="noopener noreferrer me"
+      aria-label="LinkedIn"
+    >
+      <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+    </a>
+  </li>
+  {%- endif -%} {%- if social.email -%}
+  <li>
+    <a href="mailto:{{ social.email }}" aria-label="Email">
+      <i class="fas fa-envelope" aria-hidden="true"></i>
+    </a>
+  </li>
+  {%- endif -%}
+
+  <li>
+    <a href="{{ site.baseurl }}/feed.xml" aria-label="RSS feed">
+      <i class="fas fa-rss" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+{%- endif -%}

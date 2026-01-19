@@ -4,8 +4,10 @@ title: "Building a Star Wars E-Commerce Empire with GitHub Spark: A Weekend DevO
 date: 2025-10-14 06:00:00 +1100
 categories: [DevOps, AI]
 tags: [github, spark, ai, agentic, copilot, frontend]
-image: /assets/img/posts/2025-10-14-github-spark-star-wars-ecommerce/feature_image.png
+image: assets/images/posts/2025-10-14-github-spark-star-wars-ecommerce/feature_image.png
 mermaid: true
+author: AJ Bajada
+toc: true
 ---
 
 As a DevOps professional whose primary expertise lies in infrastructure, automation, and operational excellence rather than frontend development, I've always faced a persistent challenge: creating functional, presentable web applications for demos and presentations. This gap became particularly evident when conducting demonstrations and end-to-end workflows at community meetups and in my day-to-day job, where I needed to showcase the complete picture, not just the infrastructure layer.
@@ -384,11 +386,11 @@ The Empire's procurement system is now operational, and I built it in a weekend 
 
 Here is a few screenshots of the final application in action:
 
-![Home Page](../assets/img/posts/2025-10-14-github-spark-star-wars-ecommerce/github_spark_star_wars_home_page.png)
+![Home Page]({{ '../assets/images//posts/2025-10-14-github-spark-star-wars-ecommerce/github_spark_star_wars_home_page.png' | relative_url }})
 
-![Add to Cart](../assets/img/posts/2025-10-14-github-spark-star-wars-ecommerce/github_spark_star_wars_add_cart.png)
+![Add to Cart]({{ '../assets/images//posts/2025-10-14-github-spark-star-wars-ecommerce/github_spark_star_wars_add_cart.png' | relative_url }})
 
-![Submission](../assets/img/posts/2025-10-14-github-spark-star-wars-ecommerce/github_spark_star_wars_submission.png)
+![Submission]({{ '../assets/images//posts/2025-10-14-github-spark-star-wars-ecommerce/github_spark_star_wars_submission.png' | relative_url }})
 
 ---
 

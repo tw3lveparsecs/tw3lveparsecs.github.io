@@ -3,9 +3,11 @@ layout: post
 title: "DevOps and Azure Policy Series: Remediation Tasks"
 date: 2025-09-24 06:00:00 +1100
 categories: [Azure Policy, DevOps]
-tags: [azure, remediation, iac, policy, cicd, devops]
-image: /assets/img/posts/2025-09-24-devops-azure-policy-series-remediation/feature_image.png
+tags: [azure, remediation, iac, policy, ci/cd, devops]
+image: assets/images/posts/2025-09-24-devops-azure-policy-series-remediation/feature_image.png
 mermaid: true
+author: AJ Bajada
+toc: true
 ---
 
 Welcome to the fourth instalment of our DevOps and Azure Policy series! In our [previous post](https://azurewithaj.com/posts/devops-azure-policy-series-exemptions/), we explored how to manage policy exemptions using Infrastructure as Code (IaC) and CI/CD pipelines. Today, we're diving into another critical aspect of Azure Policy governance: **policy remediation tasks**.

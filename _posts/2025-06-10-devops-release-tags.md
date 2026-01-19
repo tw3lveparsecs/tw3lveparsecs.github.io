@@ -4,8 +4,10 @@ title: "DevOps: Automating Release Tags"
 date: 2025-06-10 06:00:00 +1100
 categories: [DevOps]
 tags: [devops, release, tags, automation]
-image: /assets/img/posts/2025-06-10-devops-release-tags/feature_image.png
+image: assets/images/posts/2025-06-10-devops-release-tags/feature_image.png
 mermaid: true
+author: AJ Bajada
+toc: true
 ---
 
 Recently, I was tasked with developing a consistent strategy for managing releases and tags in a GitHub repository that had grown organically without any version tracking system. The repository had been accumulating features and fixes for months, but there was no way to track versions, identify what changes belonged to which release, or even determine what was the current deployed "version".

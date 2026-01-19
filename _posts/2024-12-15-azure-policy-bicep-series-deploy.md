@@ -4,7 +4,9 @@ title: "DevOps and Azure Policy Series: Deployments"
 date: 2024-12-15 13:43:00 +1100
 categories: [Azure Policy, Bicep]
 tags: [azure, bicep, iac, policy, devops]
-image: /assets/img/posts/2024-12-15-azure-policy-bicep-series-deploy/feature_image.jpg
+image: assets/images/posts/2024-12-15-azure-policy-bicep-series-deploy/feature_image.jpg
+author: AJ Bajada
+toc: true
 ---
 
 Azure Policy is a critical tool for ensuring governance and compliance within Azure environments. In this blog series, we'll explore how to use [Azure Bicep](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview?tabs=bicep), a powerful Infrastructure as Code (IaC) language, to deploy and manage Azure Policy. While the [Enterprise-Scale Azure Policy as Code (EPAC)](https://azure.github.io/enterprise-azure-policy-as-code/) framework is a fantastic, PowerShell-based solution for large-scale policy management, Bicep offers an alternative approach that integrates seamlessly into declarative IaC workflows.
@@ -81,12 +83,11 @@ This example utilises two built-in policies, Allowed locations and Allowed locat
 - Navigate to **Azure Policy** in the portal.
 
 - Select **Definitions** under the "Authoring" section.
-
   - Filter by "**Definition Type: Policy**" to view a comprehensive list of pre-defined built-in policies.
 
 - Click on a policy to view its details, including its **policyDefinitionId**.
 
-![policy definition id](../assets/img/posts/2024-12-15-azure-policy-bicep-series-deploy/policy_definition_id.webp)
+![policy definition id](../assets/images/posts/2024-12-15-azure-policy-bicep-series-deploy/policy_definition_id.webp)
 
 If you prefer command-line tools, you can use Azure CLI or Azure PowerShell to list and retrieve the policyDefinitionId of built-in policies:
 

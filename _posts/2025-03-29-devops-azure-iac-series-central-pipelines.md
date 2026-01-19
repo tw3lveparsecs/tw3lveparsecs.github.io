@@ -4,8 +4,10 @@ title: "DevOps and Azure IaC Series: Centralised Pipelines"
 date: 2025-03-29 21:30:00 +1100
 categories: [DevOps, Azure IaC]
 tags: [azure, pipelines, devops, iac, ci/cd]
-image: /assets/img/posts/2025-03-29-devops-iac-series-central-pipelines/feature_image.png
+image: assets/images/posts/2025-03-29-devops-iac-series-central-pipelines/feature_image.png
 mermaid: true
+author: AJ Bajada
+toc: true
 ---
 
 ## DevOps and Azure IaC Series: Centralised Pipelines
@@ -55,7 +57,6 @@ Centralised pipelines offer several key benefits for managing infrastructure as 
 - **Reduced Maintenance Overhead:** With centralised pipelines, you only need to update and maintain one set of workflows rather than updating numerous similar pipelines across projects. When security requirements change or new best practices emerge, you can implement these changes in one place.
 
 - **Built-in Governance:** Centralised pipelines allow you to embed governance controls directly into your deployment processes. These controls can include:
-
   - Mandatory security scans
   - Policy compliance checks
   - Approval workflows
@@ -417,7 +418,7 @@ stages:
       - deployment: ${{ parameters.stage }}
         displayName: ${{ parameters.stage }}
         pool:
-          vmImage: ubuntu-latest
+          vmthumbnail: ubuntu-latest
         environment: ${{ parameters.adoEnvironment }}
         strategy:
           runOnce:

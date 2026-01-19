@@ -4,8 +4,10 @@ title: "Agentic DevOps Safe Mode: A Practical Framework for Secure GitHub Copilo
 date: 2025-08-27 06:00:00 +1100
 categories: [DevOps, AI]
 tags: [github, copilot, agent, devops, agentic, ai, security]
-image: /assets/img/posts/2025-08-27-agentic-devops-safe-mode/feature_image.png
+image: assets/images/posts/2025-08-27-agentic-devops-safe-mode/feature_image.png
 mermaid: true
+author: AJ Bajada
+toc: true
 ---
 
 Agentic DevOps promises AI agents that understand requirements, write code, and manage workflows. GitHub Copilot Coding Agent is the next step. The enterprise question isn’t ‘can AI help?’, it’s ‘can it help safely within organisational security boundaries?’

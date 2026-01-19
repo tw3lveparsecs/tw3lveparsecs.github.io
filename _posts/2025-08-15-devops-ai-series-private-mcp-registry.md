@@ -4,8 +4,10 @@ title: "DevOps and AI Series: Azure Private MCP Registry"
 date: 2025-08-15 05:00:00 +1100
 categories: [DevOps, AI]
 tags: [mcp, ai, devops, azure]
-image: /assets/img/posts/2025-08-15-devops-ai-series-private-mcp-registry/feature_image.png
+image: assets/images/posts/2025-08-15-devops-ai-series-private-mcp-registry/feature_image.png
 mermaid: true
+author: AJ Bajada
+toc: true
 ---
 
 The rapid adoption of AI-powered development tools has fundamentally changed how organisations approach software delivery. As teams increasingly rely on Model Context Protocol (MCP) servers to enhance their AI capabilities, the need for secure, governed, and centralised management of these resources has become critical. Today, we'll explore how to build an enterprise-ready private MCP registry using Azure API Center, ensuring your organisation can harness AI power while maintaining security and compliance standards.
@@ -427,13 +429,13 @@ Currently there is no command lines available to automate the configuration and 
 - Confirm that the Redirect URI is the value you configured in the app registration.
 - Select Save + publish.
 
-![API Center Publish Portal](../assets/img/posts/2025-08-15-devops-ai-series-private-mcp-registry/private_mcp_registry_enable_apic_portal.png)
+![API Center Publish Portal](../assets/images//posts/2025-08-15-devops-ai-series-private-mcp-registry/private_mcp_registry_enable_apic_portal.png)
 
 To enable sign-in to the API Center portal to access APIs, assign the **Azure API Center Data Reader** role to users or groups in your organisation, scoped to your API center.
 
 You will then end up with a secure and governed API Center portal that allows your internal users to discover and explore approved MCP servers, example below.
 
-![API Center Portal](../assets/img/posts/2025-08-15-devops-ai-series-private-mcp-registry/private_mcp_registry_apic_portal.png)
+![API Center Portal](../assets/images//posts/2025-08-15-devops-ai-series-private-mcp-registry/private_mcp_registry_apic_portal.png)
 
 ## Real-World Problems and Private Registry Solutions
 
