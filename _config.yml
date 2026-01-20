@@ -6,7 +6,6 @@ logo: "assets/images/about/profile.png"
 favicon: "assets/images/favicons/favicon.ico"
 baseurl: ""
 google_analytics: "G-QN1JHQ7WLQ"
-disqus: "azurewithaj"
 
 # Giscus comments (https://giscus.app)
 # Fill these values from the giscus.app setup page.

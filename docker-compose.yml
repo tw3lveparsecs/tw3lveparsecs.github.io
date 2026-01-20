@@ -1,14 +1,23 @@
+
+x-jekyll-common: &jekyll-common
+    build:
+        context: .
+        dockerfile: Dockerfile
+    working_dir: /srv/jekyll
+    volumes:
+        - .:/srv/jekyll
+        - bundle:/usr/local/bundle
+
 services:
     jekyll:
-        build:
-            context: .
-            dockerfile: Dockerfile
-        working_dir: /srv/jekyll
+        <<: *jekyll-common
         ports:
             - "4000:4000"
-        volumes:
-            - .:/srv/jekyll
-            - bundle:/usr/local/bundle
+        command: ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0", "--force_polling", "--baseurl", ""]
+
+    jekyll-build:
+        <<: *jekyll-common
+        command: ["bundle", "exec", "jekyll", "build"]
 
 volumes:
     bundle:

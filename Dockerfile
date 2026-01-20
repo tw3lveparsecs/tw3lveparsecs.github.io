@@ -7,10 +7,15 @@ RUN apt-get update \
 WORKDIR /srv/jekyll
 
 # Install gems first (leverages Docker layer caching)
-COPY Gemfile ./
+COPY Gemfile Gemfile.lock ./
 RUN gem install bundler -v 2.3.25 \
   && bundle config set path /usr/local/bundle \
   && bundle install
+
+COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+RUN chmod +x /usr/local/bin/docker-entrypoint.sh
+
+ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
 
 EXPOSE 4000
 

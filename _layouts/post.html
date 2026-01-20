@@ -1,6 +1,5 @@
 ---
 layout: default
-disqus: false
 archive: false
 post_class: post-template
 ---
@@ -190,8 +189,6 @@ post_class: post-template
             <div class="col-md-8">
                 {% if site.giscus and site.giscus.repo and site.giscus.repo_id and site.giscus.category and site.giscus.category_id %}
                     {% include giscus.html %}
-                {% elsif site.disqus %}
-                    {% include disqus.html %}
                 {% endif %}
             </div>
         </div>
