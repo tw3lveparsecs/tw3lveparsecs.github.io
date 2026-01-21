@@ -5,6 +5,7 @@ description: "A blog by an Azure, DevOps and AI enthusiast, sharing valuable ins
 logo: "assets/images/about/profile.png"
 favicon: "assets/images/favicons/favicon.ico"
 url: "https://azurewithaj.com"
+canonical_url: "https://azurewithaj.com"
 baseurl: ""
 google_analytics: "G-QN1JHQ7WLQ"
 

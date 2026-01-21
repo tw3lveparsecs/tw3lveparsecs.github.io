@@ -1,5 +1,10 @@
 <div class="share sticky-top sticky-top-offset">
-    {% assign share_url = page.url | absolute_url %}
+    {% assign canonical_base = site.canonical_url | default: site.url %}
+    {% if canonical_base and canonical_base != "" %}
+        {% assign share_url = canonical_base | append: site.baseurl | append: page.url %}
+    {% else %}
+        {% assign share_url = page.url | absolute_url %}
+    {% endif %}
     {% assign share_url_escaped = share_url | url_encode %}
     {% assign share_title_escaped = page.title | url_encode %}
     <p>
