@@ -1,10 +1,11 @@
 ---
 layout: post
 title: "GitHub Copilot's Agentic Memory: Teaching AI to Remember and Learn Your Codebase"
-date: 2026-01-25 10:00:00 +1100
+date: 2026-01-22 06:00:00 +1100
 categories: [AI]
 tags: [github, copilot, ai, agentic, memory]
-image: assets/images/posts/2026-01-25-github-copilot-agentic-memory/feature_image.png
+image: assets/images/posts/2026-01-25-github-copilot-agentic-memory/post_image.png
+featured_image: assets/images/posts/2026-01-25-github-copilot-agentic-memory/featured_image.png
 author: AJ Bajada
 toc: true
 featured: true
@@ -88,26 +89,21 @@ graph TD
 
 This real-time verification ensures that memories remain accurate even as code evolves, branches change, and files are refactored.
 
-## Cross-Agent Memory Sharing: The Power Multiplier
+## Privacy and Security: Is it safe to use?
 
-Where agentic memory truly shines is in cross-agent collaboration. Different Copilot agents can learn from each other's discoveries, creating a compound intelligence effect:
+One of the first questions that comes to mind with any AI memory system is privacy and security. Is it safe to let an AI remember details about my codebase?
 
-### Real-World Example: Logging Convention Discovery - REVIEW THIS!!!
+What I had to understand is that Copilot Memory stores repository-scoped memories **only**. This means memories are tied to a specific repository and can only be used by Copilot operations on that same repository. 
 
-1. **Copilot Code Review** discovers a logging convention while reviewing a pull request:
-   - Pattern: "Log file names should follow 'app-YYYYMMDD.log' format"
-   - Technology: "Use Winston for logging with timestamp, error code, user ID format"
+Key points:
 
-2. **Copilot Coding Agent** later receives a task to implement a new microservice:
-   - Sees and validates the logging memory
-   - Automatically applies the same logging format
-   - Maintains consistency across the codebase
+- **Repository Isolation**: Memories are strictly scoped to individual repositories (not shared across repositories or orgs)
+- **Permission-Based Creation**: Only contributors with write permissions can create memories
+- **Access Control**: Memories can be used by other users with appropriate repository access, but not outside that repository
+- **Management Tools**: Repository owners can view and delete stored memories via repository settings
+- **Automatic Expiry**: Memories automatically delete after 28 days unless refreshed through validation
 
-3. **Copilot CLI** helps debug an issue:
-   - Uses the learned logging format to locate correct log files
-   - Efficiently searches based on the established timestamp patterns
-
-This cross-pollination of knowledge creates an increasingly intelligent AI ecosystem that grows more valuable over time.
+This ensures that sensitive repository knowledge stays within the appropriate boundaries while enabling powerful AI assistance.
 
 ## Current Availability and Getting Started
 
@@ -136,17 +132,6 @@ The feature is opt-in and available for all paid Copilot plans:
 **Repository Management:**
 Repository owners can review and manage stored memories via:
 `Repository Settings > Copilot > Memory`
-
-## Privacy and Security: Repository-Scoped Intelligence
-
-GitHub has implemented robust privacy controls for agentic memory:
-
-- **Repository Isolation**: Memories are strictly scoped to individual repositories
-- **Permission-Based Creation**: Only contributors with write permissions can create memories
-- **Access Control**: Memories are only used for users with appropriate repository access
-- **Automatic Expiry**: Memories automatically delete after 28 days unless refreshed through validation
-
-This ensures that sensitive repository knowledge stays within the appropriate boundaries while enabling powerful AI assistance.
 
 ## Implementation Best Practices
 

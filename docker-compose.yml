@@ -17,6 +17,7 @@ services:
 
     jekyll-build:
         <<: *jekyll-common
+        profiles: ["build"]
         command: ["bundle", "exec", "jekyll", "build"]
 
 volumes:
