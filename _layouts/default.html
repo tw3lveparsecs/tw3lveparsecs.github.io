@@ -85,15 +85,12 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);} 
     gtag('js', new Date());
-    // Set default consent to denied until user accepts
-    gtag('consent', 'default', { analytics_storage: 'denied' });
+    gtag('config', '{{ site.google_analytics }}', { anonymize_ip: true, page_path: '{{ page.url }}' });
   </script>
   {% endif %} {% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% 
   endif %}{% endcapture %}
   <body class="{{layout}}">
-    {% if jekyll.environment == 'production' %}
-    {% include consent-banner.html %}
-    {% endif %}
+    
     <!-- defer loading of font and font awesome -->
     <noscript id="deferred-styles">
       <link
