@@ -1,4 +1,7 @@
-<script src="{{site.baseurl}}/assets/js/lunr.js"></script>
+{% if cache_bust == nil %}
+{% assign cache_bust = site.time | date: "%Y%m%d%H%M%S" %}
+{% endif %}
+<script src="{{site.baseurl}}/assets/js/lunr.js?v={{ cache_bust }}"></script>
 
 
 <style>
@@ -18,4 +21,4 @@
     <ul></ul>
 </div>
 
-<script src="{{site.baseurl}}/assets/js/lunrsearchengine.js"></script>
+<script src="{{site.baseurl}}/assets/js/lunrsearchengine.js?v={{ cache_bust }}"></script>

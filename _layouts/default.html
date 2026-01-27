@@ -25,39 +25,46 @@
       })();
     </script>
 
+    {% comment %} Cache busting token based on build time (or GitHub build) {% endcomment %}
+    {% if site.github and site.github.build_revision %}
+    {% assign cache_bust = site.github.build_revision %}
+    {% else %}
+    {% assign cache_bust = site.time | date: "%Y%m%d%H%M%S" %}
+    {% endif %}
+
     <!-- Favicons (serve multiple sizes; browser selects the best match) -->
     <link
       rel="icon"
       type="image/x-icon"
-      href="{{ site.baseurl }}/assets/images/favicons/favicon.ico"
+      href="{{ site.baseurl }}/assets/images/favicons/favicon.ico?v={{ cache_bust }}"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="{{ site.baseurl }}/assets/images/favicons/favicon-16x16.png"
+      href="{{ site.baseurl }}/assets/images/favicons/favicon-16x16.png?v={{ cache_bust }}"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="{{ site.baseurl }}/assets/images/favicons/favicon-32x32.png"
+      href="{{ site.baseurl }}/assets/images/favicons/favicon-32x32.png?v={{ cache_bust }}"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="192x192"
-      href="{{ site.baseurl }}/assets/images/favicons/android-chrome-192x192.png"
+      href="{{ site.baseurl }}/assets/images/favicons/android-chrome-192x192.png?v={{ cache_bust }}"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="512x512"
-      href="{{ site.baseurl }}/assets/images/favicons/android-chrome-512x512.png"
+      href="{{ site.baseurl }}/assets/images/favicons/android-chrome-512x512.png?v={{ cache_bust }}"
     />
     <link
       rel="apple-touch-icon"
-      href="{{ site.baseurl }}/assets/images/favicons/apple-touch-icon.png"
+      href="{{ site.baseurl }}/assets/images/favicons/apple-touch-icon.png?v={{ cache_bust }}"
     />
 
     <title>{{ page.title }} | {{site.name}}</title>
@@ -71,11 +78,11 @@
       crossorigin="anonymous"
     />
 
-    <link href="{{ site.baseurl }}/assets/css/screen.css" rel="stylesheet" />
+    <link href="{{ site.baseurl }}/assets/css/screen.css?v={{ cache_bust }}" rel="stylesheet" />
 
-    <link href="{{ site.baseurl }}/assets/css/main.css" rel="stylesheet" />
+    <link href="{{ site.baseurl }}/assets/css/main.css?v={{ cache_bust }}" rel="stylesheet" />
 
-    <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/jquery.min.js?v={{ cache_bust }}"></script>
   </head>
 
   {% if jekyll.environment == 'production' %}
@@ -279,23 +286,23 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="{{ site.baseurl }}/assets/js/mediumish.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/mediumish.js?v={{ cache_bust }}"></script>
 
-    <script src="{{ site.baseurl }}/assets/js/theme-toggle.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/theme-toggle.js?v={{ cache_bust }}"></script>
 
     {% assign mermaid_enabled = site.mermaid.enabled | default: false %} {% if
     page.mermaid != nil %}{% assign mermaid_enabled = page.mermaid %}{% endif %}
     {% if mermaid_enabled %}
     <script src="https://cdn.jsdelivr.net/npm/mermaid@{{ site.mermaid.version | default: '10' }}/dist/mermaid.min.js"></script>
-    <script src="{{ site.baseurl }}/assets/js/mermaid-init.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/mermaid-init.js?v={{ cache_bust }}"></script>
     {% endif %} {% if site.lazyimages == "enabled" %}
-    <script src="{{ site.baseurl }}/assets/js/lazyload.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/lazyload.js?v={{ cache_bust }}"></script>
     {% endif %}
 
-    <script src="{{ site.baseurl }}/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/ie10-viewport-bug-workaround.js?v={{ cache_bust }}"></script>
 
     {% if page.layout == 'post' %}
-    <script src="{{ site.baseurl }}/assets/js/back-to-top.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/back-to-top.js?v={{ cache_bust }}"></script>
     {% endif %}
   </body>
 </html>
