@@ -8,7 +8,7 @@ image: assets/images/posts/2025-12-16-github-spec-kit/feature_image.png
 mermaid: true
 author: AJ Bajada
 toc: true
-featured: true
+featured: false
 ---
 
 In my journey exploring agentic DevOps tools, I've previously written about [delivering major enhancements using Awesome Copilot](https://azurewithaj.com/posts/agentic-devops-delivered-major-enhancement/) and [GitHub's built-in Plan Agent](https://azurewithaj.com/posts/github-plan-agent/). Each tool has pushed the boundaries of what's possible when AI assists with development workflows. Today, I'm diving into my experience with **GitHub Spec Kit**, a developer-centric toolkit that takes planning and implementation to an entirely new level of detail and sophistication.
