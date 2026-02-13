@@ -1,0 +1,17 @@
+# Cache control headers for all files
+/*
+  Cache-Control: no-cache, no-store, must-revalidate
+  Pragma: no-cache 
+  Expires: 0
+
+# Allow longer caching for static assets
+/assets/*
+  Cache-Control: public, max-age=86400
+
+# Ensure any old service worker requests return 404
+/sw.js
+  404!
+/service-worker.js  
+  404!
+/serviceworker.js
+  404!

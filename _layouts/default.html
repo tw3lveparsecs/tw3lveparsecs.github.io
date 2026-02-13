@@ -25,6 +25,19 @@
       })();
     </script>
 
+    <!-- Unregister any existing service workers from previous PWA implementation -->
+    <script>
+      (function() {
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.getRegistrations().then(function(registrations) {
+            for(let registration of registrations) {
+              registration.unregister();
+            }
+          });
+        }
+      })();
+    </script>
+
     {% comment %} Cache busting token based on build time (or GitHub build) {% endcomment %}
     {% if site.github and site.github.build_revision %}
     {% assign cache_bust = site.github.build_revision %}

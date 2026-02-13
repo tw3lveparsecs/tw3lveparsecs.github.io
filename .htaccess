@@ -1,0 +1,21 @@
+# Force browsers to check for updates more frequently
+<IfModule mod_headers.c>
+    # Prevent caching of HTML files to force fresh content
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+        Header set Expires "0"
+    </FilesMatch>
+
+    # Allow caching of assets but with shorter expires for easier updates
+    <FilesMatch "\.(css|js|png|jpg|jpeg|gif|ico|svg)$">
+        Header set Cache-Control "public, max-age=86400"
+    </FilesMatch>
+</IfModule>
+
+# Additional cache busting for service worker unregistration
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    # Ensure service worker files return 404 if requested
+    RewriteRule ^(sw|service-worker|serviceworker)\.js$ - [R=404,L]
+</IfModule>
