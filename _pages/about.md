@@ -8,11 +8,11 @@ comments: false
 <div class="row justify-content-between">
 <div class="col-md-8 pr-5">
 
-<p>Welcome to my blog! I’m an Azure, DevOps and AI enthusiast with over 15 years of industry experience. My deep technical expertise lies in infrastructure and DevOps, specialising in the automation and development of cloud services and modernisation for enterprise clients.</p>
+<p>Welcome to my blog! I’m an Azure, DevOps and AI enthusiast with more than 15 years of industry experience. My career began in infrastructure and cloud automation, but my focus has evolved toward the rapidly growing world of AI‑powered engineering. Today, I specialise in bringing intelligence into the software delivery lifecycle, helping teams move beyond traditional pipelines and embrace agentic workflows, continuous AI and modern development practices.</p>
 
-<p>I have a strong focus on Microsoft technologies and a passion for designing and implementing robust cloud solutions. I thrive on driving CI/CD pipelines and managing infrastructure as code. Enhancing the developer experience and giving back to the community are close to my heart. I contribute to open-source projects, speak at user groups, and engage wherever I can.</p>
+<p>I have a strong foundation in Microsoft technologies and a passion for building solutions that enhance the developer experience. Whether it’s integrating AI into existing platforms, modernising engineering processes or exploring new patterns for automation, I enjoy working at the intersection of cloud, DevOps and intelligent systems. I’m also committed to community involvement through speaking, open‑source contributions and knowledge sharing.</p>
 
-<p>Outside of my professional life, I’m a typical nerd and a big Star Wars fan. When I’m not immersed in Azure or GitHub, I love sharing my other passions with family and friends.</p>
+<p>Outside of work, I’m a lifelong nerd and a big Star Wars fan. When I’m not experimenting with Azure or GitHub, I’m usually sharing my other passions with family and friends.</p>
 
 </div>
 
