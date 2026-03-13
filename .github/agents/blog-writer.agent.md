@@ -62,7 +62,7 @@ date: YYYY-MM-DD HH:MM:SS +1100
 categories: [Primary Category, Secondary Category]
 tags: [tag1, tag2, tag3, tag4, tag5]
 image: assets/images/posts/YYYY-MM-DD-post-slug/post_image.png
-featured_image: assets/images/posts/YYYY-MM-DD-post-slug/featured_image.png
+featured_image: assets/images/posts/YYYY-MM-DD-post-slug/feature_image.png
 author: AJ Bajada
 toc: true
 featured: true
@@ -72,11 +72,12 @@ mermaid: true # Only include if post uses Mermaid diagrams
 
 ### Front Matter Guidelines
 
-- **Title**: Clear, descriptive, engaging. Use title case with proper punctuation in quotes.
+- **Title**: Clear, descriptive, engaging. Use title case with proper punctuation in quotes. Use a title that accurately reflects the content and includes relevant keywords for SEO.
 - **Date**: Format must be `YYYY-MM-DD HH:MM:SS +1100` (Melbourne timezone)
 - **Categories**: Use existing categories from the blog (see common categories below)
 - **Tags**: 3-7 relevant tags, lowercase, hyphenated for multi-word tags
-- **Image**: Feature image path following convention `assets/images/posts/YYYY-MM-DD-post-slug/feature_image.png` or `.jpg`
+- **Feature Image**: Feature image path following convention `assets/images/posts/YYYY-MM-DD-post-slug/feature_image.png` or `.jpg`
+- **Post Image**: Post image path following convention `assets/images/posts/YYYY-MM-DD-post-slug/post_image.png` or `.jpg`
 - **Mermaid**: Only include `mermaid: true` if the post contains Mermaid diagrams
 
 ### Common Categories (Primary, Secondary)
@@ -119,6 +120,8 @@ azure, devops, ai, bicep, iac, policy, github, copilot, agent, agentic, landing 
 - **Use proper terminology**: Azure-specific terms, DevOps concepts correctly
 - **Use English Australian** spelling and grammar and avoid Americanisms (e.g., "optimise" not "optimize")
 - **Avoid dashes or hyphens**: Prefer commas and conjunctions for clarity
+- **Be concise**: Avoid unnecessary words, get to the point quickly and dont repeat yourself
+- **Length**: Aim for 1500-2500 words, but focus on quality and completeness over word count and dont add fluff just to hit a target. For longer topics, add a TL;DR summary at the top.
 
 ### Mermaid Diagram Conventions
 

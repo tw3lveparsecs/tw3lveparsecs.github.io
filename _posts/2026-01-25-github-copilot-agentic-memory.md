@@ -8,7 +8,7 @@ image: assets/images/posts/2026-01-25-github-copilot-agentic-memory/post_image.p
 featured_image: assets/images/posts/2026-01-25-github-copilot-agentic-memory/featured_image.png
 author: AJ Bajada
 toc: true
-featured: true
+featured: false
 mermaid: true
 ---
 
