@@ -72,7 +72,13 @@ mermaid: true # Only include if post uses Mermaid diagrams
 
 ### Front Matter Guidelines
 
-- **Title**: Clear, descriptive, engaging. Use title case with proper punctuation in quotes. Use a title that accurately reflects the content and includes relevant keywords for SEO.
+- **Title**: 
+  - Primary keyword included in the title
+  - Title length ideally 50-60 characters
+  - Clear value or outcome for the reader
+  - Avoid vague or generic titles
+  - Use power words or specificity where appropriate
+  - Check it works well for search intent. E.g., Would someone search this phrase?, Does the title clearly explain what the article delivers?
 - **Date**: Format must be `YYYY-MM-DD HH:MM:SS +1100` (Melbourne timezone)
 - **Categories**: Use existing categories from the blog (see common categories below)
 - **Tags**: 3-7 relevant tags, lowercase, hyphenated for multi-word tags
@@ -122,6 +128,118 @@ azure, devops, ai, bicep, iac, policy, github, copilot, agent, agentic, landing 
 - **Avoid dashes or hyphens**: Prefer commas and conjunctions for clarity
 - **Be concise**: Avoid unnecessary words, get to the point quickly and dont repeat yourself
 - **Length**: Aim for 1500-2500 words, but focus on quality and completeness over word count and dont add fluff just to hit a target. For longer topics, add a TL;DR summary at the top.
+- **Keyword optimisation**: Use keywords strategically but naturally. Avoid keyword stuffing, which can hurt readability and SEO. Focus on providing value to the reader while incorporating keywords in a way that feels organic. Check the primary keyword is in:
+- Title
+- Introduction
+- At least one H2
+- Meta description
+- URL slug
+Also check:
+- Secondary keywords throughout the article
+- Natural language usage
+- Keyword density isn’t forced or repetitive
+**Internal Linking**: Important for SEO and user navigation. Make sure that the article includes:
+- Links to relevant internal pages
+- Links to related blogs
+- Uses descriptive anchor text
+- Avoids generic anchors like “click here”
+**Image Optimisation**: Images should support SEO. Ensure that all images used in the blog post are optimized for search engines by including descriptive alt text with relevant keywords and ensuring that the images add value to the content rather than being purely decorative.
+
+
+### Meta Description
+
+The meta description should:
+
+- Contain around 150-160 characters
+- Include the primary keyword
+- Clearly summarise the value of the article
+- Be written to encourage clicks (not just describe the content)
+
+### Heading Structure
+
+Blogs should follow a clear hierarchy (I do this anyway)
+
+Check that headings:
+
+- Are descriptive
+- Contain keywords where natural
+- Break up long sections
+- Help with scan ability
+
+### Scan ability
+
+Most people scan blogs rather than read every word.
+
+Be sure to use:
+
+- Bullet points  
+- Numbered lists
+- Clear subheadings
+- Short paragraphs
+- Bolded key points where useful
+
+### Introduction Quality
+
+The introduction should:
+
+- Clearly state the problem or topic
+- Include the primary keyword
+- Explain why the topic matters
+- Set expectations for what the reader will learn
+- Be concise (2-4 short paragraphs, 2-3 lines per paragraph)
+
+A weak intro often loses readers and hurts engagement.
+
+### Readability & Flow
+
+Good readability improves both SEO and engagement.
+
+Check that there are:
+
+- Short paragraphs (2-4 sentences)
+- Clear, simple language
+- Avoid overly complex sentences
+- Logical progression between sections
+- Conversational tone where appropriate
+
+Useful checks:
+- Sentence length variety
+- Avoid jargon unless explained
+- Avoid passive voice where possible
+
+### External Links
+
+External links can improve credibility. Make sure to include:
+
+- Links to authoritative sources
+- Links open in new tabs
+- Sources are reputable
+
+### Content Depth & Value
+
+Search engines reward comprehensive, useful content. Review the article to ensure it provides real value:
+
+- Does the article fully answer the topic?
+- Are there examples, insights, or data?
+- Does it provide original value (not just surface-level explanation)?
+- Is it aligned with search intent?
+
+### Conclusion
+
+The conclusion often gets overlooked but is crucial for reinforcing the article’s value and guiding readers to next steps. A strong conclusion should:
+
+- Summarise key points
+- Reinforce the article’s value
+- Lead naturally into the CTA
+
+### Call to Action (CTA)
+
+Every blog post should end with a clear call to action that encourages reader engagement. This could be:
+
+- Download a resource
+- Read a related article
+- Contact the team
+- Explore a service
 
 ### Mermaid Diagram Conventions
 
