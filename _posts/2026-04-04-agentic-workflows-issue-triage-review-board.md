@@ -12,17 +12,13 @@ featured: true
 mermaid: true
 ---
 
-In my [previous post on agentic workflows]({% post_url 2026-03-16-agentic-workflows-reimagining-automation %}), I covered the fundamentals: what agentic workflows are, how they differ from traditional GitHub Actions, and why they represent a genuine shift toward Continuous AI in development. If you haven't read that one yet, it's worth starting there.
+In my [previous post on agentic workflows]({% post_url 2026-03-16-agentic-workflows-reimagining-automation %}), I covered the fundamentals: what they are, how they differ from traditional GitHub Actions, and why they represent a genuine shift toward Continuous AI. If you haven't read that one yet, start there.
 
-This post is the practical follow-up. At the [Azure Global Bootcamp 2026](https://azureglobalbootcamp.com/), I walked through two real agentic workflows I've been using: an **Issue Triage Agent** and a **Review Board Agent**. Both workflows are available in my [demo repository](https://github.com/tw3lveparsecs/agentic-workflows-demo) if you want to follow along or adapt them for your own projects.
-
-But before diving into the implementations, there's something important to talk about: these workflows are no longer a niche experiment. They're becoming a core part of the GitHub ecosystem.
+This post is the practical follow-up. At [Azure Global Bootcamp 2026](https://azureglobalbootcamp.com/), I demoed two real workflows: an **Issue Triage Agent** and a **Review Board Agent**. Both are in my [demo repository](https://github.com/tw3lveparsecs/agentic-workflows-demo) if you want to follow along.
 
 ## Agentic Workflows Are Going Mainstream
 
-When I first wrote about agentic workflows, they were firmly in the "GitHub Next" category, powerful and promising but still very much in preview. That's changed. GitHub has now embedded agentic workflows directly into the [GitHub Copilot website's awesome-copilot collection](https://github.com/github/awesome-copilot), and general availability is on the horizon.
-
-This is a meaningful signal. GitHub doesn't add things to the awesome-copilot collection unless they're considered production-worthy patterns that teams should be using. The fact that agentic workflows have landed there tells you everything about the direction of travel.
+When I first wrote about agentic workflows, they were firmly in the "GitHub Next" category. That's changed. GitHub has now embedded agentic workflows directly into the [GitHub Copilot awesome-copilot collection](https://github.com/github/awesome-copilot), and general availability is on the horizon. This is a meaningful signal: developers browse awesome-copilot for AI productivity patterns and will now find agentic workflows sitting alongside their other Copilot tooling without needing to go hunting through research previews.
 
 ```mermaid
 graph LR
@@ -36,29 +32,13 @@ graph LR
     style D fill:#059669,stroke:#047857,stroke-width:3px,color:#fff
 ```
 
-The awesome-copilot repository is already home to a growing library of prompts, chat modes, and custom instructions. Adding agentic workflows to that collection creates a natural discovery path: developers browse for AI productivity patterns, find agentic workflows alongside their other Copilot tooling, and start putting them to work without needing to go hunting through research projects or preview documentation.
-
-This is how developer tooling achieves real adoption. Not through mandates, but by meeting developers where they already are.
-
-## The Two Workflows I Demoed
-
-For the Azure Global Bootcamp session, I built two workflows that solve problems every team running a shared repository will recognise.
-
-### Why These Two?
-
-Issue triage is universally painful. New issues arrive with inconsistent detail, missing labels, or unclear priority. Someone on the team has to read each one, ask follow-up questions, apply labels, and route it appropriately. It's important work, but it's also repetitive cognitive overhead that compounds as your repository grows.
-
-The review board problem is different but equally real. When pull requests arrive, someone needs to assess them against your contribution guidelines, architectural patterns, and quality standards. The feedback needs to be constructive, consistent, and timely. In practice, review quality varies depending on who's available and how much context they carry about the codebase.
-
-Both problems have traditionally required either dedicated human attention or complex scripted automation that can't handle nuance. Agentic workflows change that equation.
+The awesome-copilot repository is already home to prompts, chat modes, and custom instructions. This is how tooling achieves real adoption: by meeting developers where they already are.
 
 ## The Issue Triage Agent
 
-The Issue Triage Agent runs automatically when a new issue is opened. It reads the issue content, assesses whether it has sufficient detail to be actionable, applies appropriate labels, asks clarifying questions when needed, and flags potential duplicates.
+The Issue Triage Agent runs when a new issue is opened. It reads the issue content, assesses whether it has sufficient detail, applies appropriate labels, asks clarifying questions when needed, and flags potential duplicates.
 
-### What the Agent Does
-
-The workflow covers four key behaviours:
+The workflow covers four behaviours:
 
 1. **Completeness check**: Does the issue include enough context to act on? For bug reports, that means reproduction steps, environment details, and expected versus actual behaviour. For feature requests, that means a clear problem statement and acceptance criteria.
 2. **Labelling**: Based on the issue content, the agent applies relevant labels from your defined taxonomy.
@@ -88,8 +68,6 @@ graph TD
 ```
 
 ### The Workflow File
-
-Here's the full triage workflow from the demo repository:
 
 ```yaml
 ---
@@ -177,24 +155,13 @@ If a duplicate is found, post a comment linking to the existing issue and explai
 
 ### What Makes This Work
 
-The key isn't the YAML frontmatter, it's the instruction quality in the markdown body. Notice how the workflow doesn't just say "check if the issue is complete." It defines what "complete" actually means for each issue type, specifying exactly which elements to look for.
-
-This specificity is what separates agentic workflows that work consistently from ones that produce patchy results. You're not programming conditional logic, you're giving the agent enough context to make good judgements. The more precisely you describe what good looks like, the more reliably the agent performs.
-
-The `safe-outputs` section also deserves attention. The agent can only add comments and apply labels from the approved list. It cannot close issues, delete content, or take any other action outside those boundaries. This is the safety model in action: you define the blast radius upfront, and the agent works within it.
+Instruction quality is what separates agentic workflows that produce consistent results from ones that don't. The workflow above doesn't just say "check if the issue is complete" — it defines what "complete" means for each issue type. The `safe-outputs` block constrains the agent to only adding comments and approved labels, defining the blast radius upfront.
 
 ## The Review Board Agent
 
-The Review Board Agent is triggered when a pull request is opened or updated. It assesses the PR against your repository's contribution guidelines and architectural standards, then provides structured feedback.
+The Review Board Agent triggers when a pull request is opened or updated. It assesses the PR against your contribution guidelines and quality standards, then provides structured feedback.
 
-### What the Agent Does
-
-The review board concept comes from formal architecture review processes, where a panel evaluates proposals against a defined set of criteria before they're accepted. Translated to a development workflow, it looks like this:
-
-1. **Guidelines check**: Does the PR follow your `CONTRIBUTING.md`? Does it include the required elements (description, testing evidence, linked issues)?
-2. **Scope assessment**: Is the PR focused on a single concern, or is it a sprawling change that mixes unrelated work?
-3. **Quality signals**: Are there obvious patterns missing, like tests for new functionality or documentation updates for changed behaviour?
-4. **Constructive feedback**: Where issues are found, the agent explains why they matter and what a good fix looks like.
+It evaluates four areas:
 
 ```mermaid
 graph TD
@@ -313,15 +280,9 @@ Assess the PR against the following criteria:
 - Limit your response to one comment
 ```
 
-### The Value of Consistent Pre-Review
-
-What I've found running this workflow on my own repositories is that it catches a class of PR problems that human reviewers tend to let slide when they're busy: missing issue links, absent test plans, descriptions that say "made some changes" without any context. These aren't complex judgements, they're checklist items. But checklists get skipped when everyone is under pressure.
-
-The Review Board Agent doesn't get tired and doesn't skip items. It applies the same standard to every PR, which has the secondary effect of educating contributors. When someone receives clear, consistent feedback about what's expected, they internalise it. Over time, the quality of incoming PRs improves because contributors know what the bar looks like.
-
 ## Running Both Workflows Together
 
-These two workflows compose naturally. Issues get triaged cleanly, which means the ones that progress to become work items have enough detail. Work items that become PRs then pass through the review board before consuming human review time. The result is a pipeline where quality gates operate earlier and at lower cost.
+These two workflows compose naturally: triaged issues have enough detail to become proper work items, and those work items become PRs that pass through the review board before reaching a human reviewer.
 
 ```mermaid
 graph LR
@@ -351,23 +312,19 @@ graph LR
     style K fill:#059669,stroke:#047857,stroke-width:3px,color:#fff
 ```
 
-Human reviewers spend their time where it matters: evaluating logic, architecture, and trade-offs. Not checking whether a PR description exists.
+Human reviewers spend their time where it matters: logic, architecture, and trade-offs.
 
 ## What I Learnt Building These
 
-A few things stood out during the bootcamp session and in the lead-up to building these workflows.
+**Instruction quality is everything.** Both workflows went through several iterations. The first versions were too vague, and the agent would apply the wrong labels or ask unnecessary clarifying questions. Tightening the criteria in the instructions fixed this immediately.
 
-**Instruction quality is the variable that matters most.** Both workflows went through several iterations before producing consistently good results. The first versions were too vague. The agent would sometimes apply the wrong labels or ask for clarifications that weren't actually needed. Each revision tightened the instructions, made the criteria more explicit, and the output quality improved noticeably.
+**The safety model builds trust.** Knowing the agent is constrained to the actions you've explicitly permitted makes it straightforward to roll these out across team repositories. The `safe-outputs` boundaries are a feature, not a limitation.
 
-**The safety model builds trust.** Knowing the agent can only perform the actions you've explicitly permitted makes it much easier to roll these out to team repositories without lengthy approval processes. The `safe-outputs` boundaries are a genuine feature, not a limitation.
+**Tone matters more than you'd expect.** Early testing had a triage version that was too terse. Accurate but dismissive. Rewriting the tone guidance in the instructions changed the experience completely. The agent reflects the personality you give it.
 
-**Contributors respond well to agent feedback when the tone is right.** Early testing with the triage workflow had a version that was too terse. The feedback was accurate but felt dismissive. Rewriting the tone guidance in the instructions fixed this immediately. The agent reflects the personality you give it.
+## Getting Started
 
-**These aren't replacements for human judgement.** The triage agent flags issues and asks questions. The review board agent assesses against defined criteria. Neither makes architectural decisions or exercises the kind of contextual judgement that experienced engineers bring. They're amplifiers, handling the routine so humans can focus on the nuanced.
-
-## Getting Started with the Demo Repo
-
-The full implementations of both workflows, along with a sample `CONTRIBUTING.md` and example issues and PRs to test against, are available in the [agentic-workflows-demo repository](https://github.com/tw3lveparsecs/agentic-workflows-demo).
+Full implementations of both workflows, a sample `CONTRIBUTING.md`, and example issues and PRs to test against are in the [agentic-workflows-demo repository](https://github.com/tw3lveparsecs/agentic-workflows-demo).
 
 To get these running in your own repository:
 
@@ -377,19 +334,15 @@ To get these running in your own repository:
 4. Compile the workflows: `gh aw compile`
 5. Commit the generated `.lock.yml` files alongside the markdown source
 
-That's it. The workflows activate on the triggers you've defined and start running the next time an issue is opened or a PR is created.
-
 ## Where This Is Heading
 
-The fact that agentic workflows are now part of the awesome-copilot collection isn't just a distribution story. It signals that GitHub sees these as a foundational pattern in the Copilot ecosystem, sitting alongside prompt files, custom instructions, and chat modes as tools every team should have access to.
+Agentic workflows being part of the awesome-copilot collection signals that GitHub sees these as a foundational pattern alongside prompt files, custom instructions, and chat modes. General availability is coming, but the workflows you build today are already production-grade. The teams I've seen adopt them aren't waiting for GA.
 
-General availability will bring better tooling, broader model support, and deeper integration with GitHub's existing automation surfaces. But the workflows you build today are already production-grade. The teams I've seen adopt them aren't waiting for GA, they're already running triage and review workflows in active repositories and seeing the benefits.
-
-The shift from writing automation logic to describing automation intent is real, and it's available now. The Azure Global Bootcamp was a good reminder that these aren't future possibilities, they're things you can deploy this week.
+The shift from writing automation logic to describing automation intent is available now. These aren't future possibilities, they're things you can deploy this week.
 
 ---
 
-_Have you tried building agentic workflows for your own repositories? I'd love to hear what problems you're solving and how your instruction writing has evolved. Drop a comment below or reach out directly._
+_Have you tried building agentic workflows for your own repositories? I'd love to hear what problems you're solving. Drop a comment below or reach out directly._
 
 ## Further Reading
 
