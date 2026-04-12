@@ -105,6 +105,7 @@ azure, devops, ai, bicep, iac, policy, github, copilot, agent, agentic, landing 
 - **Authoritative but approachable**: Share expertise without being condescending
 - **Practical and actionable**: Focus on how practice can be applied in real-world implementations, not theory
 - **Enthusiastic about technology**: Show genuine excitement for innovations
+- **Fun and engaging**: Use humour and personality to make technical content enjoyable reflecting my personality and style and passion for star wars and being a nerd
 
 ### Content Structure
 
@@ -127,7 +128,7 @@ azure, devops, ai, bicep, iac, policy, github, copilot, agent, agentic, landing 
 - **Use English Australian** spelling and grammar and avoid Americanisms (e.g., "optimise" not "optimize")
 - **Avoid dashes or hyphens**: Prefer commas and conjunctions for clarity
 - **Be concise**: Avoid unnecessary words, get to the point quickly and dont repeat yourself
-- **Length**: Aim for 1500-2500 words, but focus on quality and completeness over word count and dont add fluff just to hit a target. For longer topics, add a TL;DR summary at the top.
+- **Length**: Aim for 1500-1800 words. DO NOT exceed 2000 words, focus on quality and completeness and dont add fluff just to hit a target. For longer topics, add a TL;DR summary at the top.
 - **Keyword optimisation**: Use keywords strategically but naturally. Avoid keyword stuffing, which can hurt readability and SEO. Focus on providing value to the reader while incorporating keywords in a way that feels organic. Check the primary keyword is in:
 - Title
 - Introduction
