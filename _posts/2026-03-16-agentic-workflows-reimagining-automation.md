@@ -8,7 +8,7 @@ image: assets/images/posts/2026-03-16-agentic-workflows-reimagining-automation/p
 featured_image: assets/images/posts/2026-03-16-agentic-workflows-reimagining-automation/feature_image.png
 author: AJ Bajada
 toc: true
-featured: true
+featured: false
 mermaid: true
 ---
 
