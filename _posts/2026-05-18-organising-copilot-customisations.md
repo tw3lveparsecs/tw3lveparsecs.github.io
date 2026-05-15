@@ -14,7 +14,7 @@ mermaid: true
 
 If you're trying to organise GitHub Copilot customisations across an enterprise, the hardest part usually is not creating the agent or the skill. It's deciding where everything should live, how it should be shared, and which pieces should appear automatically versus stay self serve.
 
-After untangling this for my own org, and losing a few hours to one buried prerequisite, I landed on a pattern that is simple enough to operate and structured enough to scale. One source of truth for every customisation, automatic distribution for agents, and marketplace based self serve for everything else.
+After untangling this for my own org, and losing a few hours to one buried prerequisite, I landed on a pattern that is simple enough to operate and structured enough to scale. One source of truth for every customisation, automatic distribution for agents, and marketplace with self serve for everything else.
 
 This post focuses on that operating model. It is not a full catalogue of every Copilot customisation feature, but a practical pattern for organising them in a way platform teams can actually manage.
 
