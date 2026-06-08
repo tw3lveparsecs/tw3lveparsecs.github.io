@@ -13,16 +13,16 @@ mermaid: true
 description: "Azure DevOps vs GitHub in 2026. What Microsoft really announced at Build, how the platforms differ now, and a pragmatic hybrid path for engineering teams."
 ---
 
-The question I get asked more than almost any other right now is deceptively simple. Azure DevOps vs GitHub, which one should we be standing on in 2026? It comes up in architecture reviews, hallway chats, and more than a few late night messages. It used to be a tooling preference. After Microsoft Build 2026, it is a strategy decision.
+The question I get asked more than almost any other right now is deceptively simple. Azure DevOps vs GitHub, which one should we be standing on in 2026? It used to be a tooling preference. After Microsoft Build 2026, it is a strategy decision.
 
-The short version is that both platforms are alive and supported, but only one of them is where the future is being built. If you read the announcements closely, Microsoft drew a line as clean as a lightsaber cut. GitHub is the home of agentic development, and Azure DevOps is the stable, well supported workhorse that keeps doing its job without chasing the frontier.
+The short version is that both platforms are alive and supported, but only one of them is where the future is being built. If you read the Microsoft Build 2026 announcements closely, Microsoft drew a line as clean as a lightsaber cut. GitHub is the home of agentic development, and Azure DevOps is the stable, well supported workhorse that keeps doing its job without chasing the frontier.
 
 This post unpacks what was actually announced, what it means for your teams, and how to plan a migration that does not blow up your delivery in the process. No hype, just the practical read.
 
 ## TL;DR
 
 - **GitHub** is now the agent native control centre for planning, coding, review, security, and agents.
-- **Azure DevOps** continues with incremental improvements focused on security and code quality. Boards, Pipelines, and Test Plans are not going anywhere.
+- **Azure DevOps** continues with incremental improvements, with Microsoft committed to improving code quality in pull requests and helping developers remediate security issues faster. Boards, Pipelines, and Test Plans are not going anywhere.
 - Microsoft recommends a **hybrid model**, GitHub repositories with optional Azure DevOps orchestration.
 - **Enterprise Live Migrations (ELM)** now enable low downtime repository moves from Azure DevOps to GitHub.
 - Azure DevOps basic usage rights are included with **GitHub Enterprise**, so you are not paying twice to run both.
@@ -30,7 +30,7 @@ This post unpacks what was actually announced, what it means for your teams, and
 
 ## The Real Difference in 2026
 
-For years the comparison was feature for feature. Repos, pipelines, boards, artefacts. Both platforms covered the basics, so teams picked based on history and habit. That framing is now out of date.
+For years the comparison was feature for feature. Repos, pipelines, boards, artefacts. Both platforms covered the basics, so teams picked based on history, cost and habit. That framing is now out of date.
 
 The real difference today is intent. GitHub is being built as an AI native platform where agents are first class participants in the software lifecycle. Azure DevOps is being maintained as a mature, predictable suite that prioritises stability over novelty. Neither position is wrong, but they pull in different directions.
 
@@ -54,7 +54,7 @@ This is the part engineering leaders need to sit with. It is not that Azure DevO
 
 ### Azure DevOps Keeps Calm and Carries On
 
-Azure DevOps was not abandoned, and that matters. Microsoft confirmed continued investment, focused on security and code quality improvements rather than new frontier features.
+Azure DevOps was not abandoned, and that matters. Microsoft confirmed continued investment, with a clear focus on improving code quality in pull requests and helping developers remediate security issues faster, rather than chasing new frontier features.
 
 Critically, teams can keep using Azure Boards, Azure Pipelines, and Azure Test Plans. If those tools fit how your organisation runs, you are not being forced off them. They remain supported, hardened, and dependable.
 
@@ -94,13 +94,13 @@ So how do you choose? Rather than a religious war, think about where each platfo
 - Depend on Azure Test Plans for structured, manual test management
 - Need a stable surface while you plan a measured transition
 
-The honest summary is this. GitHub is where you invest for the future. Azure DevOps is where you protect what already works. This is not the platform you are looking for versus the one you are, both have a job to do.
+The honest summary is this. GitHub is where you invest for the future, and Azure DevOps is where you protect what already works. This is not about choosing a hero and a villain, both have a job to do.
 
 ## The Industry Shift: DevOps to Agentic DevOps
 
 None of this happens in a vacuum. The bigger story is the shift from DevOps to Agentic DevOps, a theme I have been tracking since [DevOps: Dead or Evolved](https://azurewithaj.com/devops-dead-or-evolved).
 
-Traditional DevOps automated the pipeline. Agentic DevOps puts intelligent agents inside the workflow, taking on planning, code changes, reviews, and remediation as active collaborators. For a deeper look at how that reshapes automation itself, I explored it in [Agentic Workflows: Reimagining Automation](https://azurewithaj.com/agentic-workflows-reimagining-automation).
+Traditional DevOps automated the pipeline. Agentic DevOps puts intelligent agents inside the workflow, taking on planning, code changes, reviews, and remediation as active collaborators.
 
 When you frame Azure DevOps vs GitHub through that lens, the choice becomes clearer. You are not just picking a repository host. You are deciding how ready your platform is for agents to do real work.
 
@@ -149,8 +149,8 @@ A few takeaways are worth holding onto.
 
 Azure DevOps vs GitHub in 2026 is not really a contest of features. It is a question of where you want your engineering organisation to be standing as agentic development becomes the norm.
 
-Build 2026 made the answer plain. GitHub is the agent native future, Azure DevOps is the dependable present, and the hybrid path lets you honour both. Start by mapping your estate, pick a low risk repository, and try a live migration with agents switched on. Let the results make the case, the Force tends to favour teams who move with intent.
+Build 2026 made the answer plain. GitHub is the agent native future, Azure DevOps is the dependable present, and the hybrid path lets you honour both. Start by mapping your estate, pick a low risk repository, and try a live migration with agents switched on. Let the results make the case, because do or do not when it comes to agents, the teams that commit are the ones the Force favours.
 
-For the wider context on this shift, the official [Microsoft Build](https://news.microsoft.com/build/){:target="_blank" rel="noopener"} announcements and the [GitHub Copilot documentation](https://docs.github.com/copilot){:target="_blank" rel="noopener"} are the best places to go deeper.
+For the wider context on this shift, the official [Microsoft Build](https://news.microsoft.com/build-2026-live-blog/){:target="\_blank" rel="noopener"} announcements and the [Azure DevOps and GitHub AI Era article](https://devblogs.microsoft.com/devops/azure-devops-and-github-journeying-into-the-ai-era/){:target="\_blank" rel="noopener"} are the best places to go deeper.
 
 _Are you planning a move from Azure DevOps to GitHub, or running a hybrid setup already? Share your experiences and questions in the comments below, I would love to hear how your teams are approaching it._
