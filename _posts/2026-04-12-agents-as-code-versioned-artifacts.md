@@ -8,7 +8,7 @@ image: assets/images/posts/2026-04-12-agents-as-code-versioned-artifacts/post_im
 featured_image: assets/images/posts/2026-04-12-agents-as-code-versioned-artifacts/feature_image.png
 author: AJ Bajada
 toc: true
-featured: true
+featured: false
 mermaid: true
 ---
 
@@ -45,13 +45,16 @@ An `AGENTS.md` file at the root of your repository is a **passive, always-on ins
 # AGENTS.md
 
 ## Setup Commands
+
 - Install deps: `pnpm install`
 - Run tests: `pnpm test`
 
 ## Code Style
+
 - TypeScript strict mode, single quotes, no semicolons
 
 ## Boundaries
+
 - Never commit secrets or API keys
 - Never edit `node_modules/` or `vendor/`
 - Always run lint and test before committing
@@ -67,13 +70,14 @@ Custom agents in `.github/agents/` are **active, switchable personas** you invok
 ---
 name: test-agent
 description: Writes and maintains unit tests for this project
-tools: ['editFiles', 'terminal', 'search']
+tools: ["editFiles", "terminal", "search"]
 model: Claude Sonnet 4.5 (copilot)
 ---
 
 You are a quality software engineer specialising in test coverage.
 
 ## Boundaries
+
 - **Always:** Write tests to `tests/`, run tests before committing
 - **Ask first:** Before adding new test dependencies
 - **Never:** Modify source code in `src/`, remove failing tests
@@ -193,7 +197,7 @@ Start small. Define three agents for your most common tasks. Review their bounda
 
 The era of ad-hoc prompting is ending. The era of agents as code has begun.
 
-*Have you started defining custom agents in your repositories? What patterns have worked for your team? Drop your experiences in the comments, I'd love to hear how others are approaching this.*
+_Have you started defining custom agents in your repositories? What patterns have worked for your team? Drop your experiences in the comments, I'd love to hear how others are approaching this._
 
 ## References
 
