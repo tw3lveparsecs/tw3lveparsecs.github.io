@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "Azure DevOps vs GitHub: Your 2026 Platform Decision"
-date: 2026-06-08 06:00:00 +1100
+date: 2026-06-09 06:00:00 +1100
 categories: [DevOps, AI]
 tags: [azure, devops, github, copilot, agentic, ci/cd, migration]
-image: assets/images/posts/2026-06-08-azure-devops-vs-github-build-2026/post_image.png
-featured_image: assets/images/posts/2026-06-08-azure-devops-vs-github-build-2026/feature_image.png
+image: assets/images/posts/2026-06-09-azure-devops-vs-github-build-2026/post_image.png
+featured_image: assets/images/posts/2026-06-09-azure-devops-vs-github-build-2026/feature_image.png
 author: AJ Bajada
 toc: true
 featured: true
