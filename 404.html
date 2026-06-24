@@ -4,6 +4,20 @@ title: 404
 permalink: /404.html
 ---
 
+<script>
+  // Redirect legacy post URLs (e.g. /post/my-title/) to the new
+  // permalink structure (e.g. /my-title/).
+  (function () {
+    var path = window.location.pathname;
+    var match = path.match(/^\/post\/(.*)$/);
+    if (match) {
+      window.location.replace(
+        "/" + match[1] + window.location.search + window.location.hash
+      );
+    }
+  })();
+</script>
+
 <div class="text-center">
 <h1 class="display-1 mt-5 mb-4"><span class="badge badge-danger">404</span> Page does not exist!</h1>
 <p>Please use the search bar at the top or visit our <a href="{{site.baseurl}}/">homepage</a>!</p>
