@@ -8,11 +8,13 @@ permalink: /404.html
   // Redirect legacy post URLs (e.g. /post/my-title/) to the new
   // permalink structure (e.g. /my-title/).
   (function () {
-    var path = window.location.pathname;
-    var match = path.match(/^\/post\/(.*)$/);
+    const match = window.location.pathname.match(/^\/post\/(.*)$/);
     if (match) {
+      // Strip any leading slashes from the captured path to keep the
+      // redirect same-origin and avoid protocol-relative URLs.
+      const target = "/" + match[1].replace(/^\/+/, "");
       window.location.replace(
-        "/" + match[1] + window.location.search + window.location.hash
+        target + window.location.search + window.location.hash
       );
     }
   })();
