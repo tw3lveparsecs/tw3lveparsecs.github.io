@@ -5,22 +5,27 @@ permalink: /404.html
 ---
 
 <script>
-  // Redirect legacy post URLs (e.g. /post/my-title/) to the new
-  // permalink structure (e.g. /my-title/).
+  // Redirect legacy post URLs (e.g. /post/my-title/ or /posts/my-title/)
+  // to the new permalink structure (e.g. /my-title/).
   (function () {
-    const match = window.location.pathname.match(/^\/post\/(.*)$/);
+    const match = window.location.pathname.match(/^\/posts?\/(.*)$/);
     if (match) {
       // Strip any leading slashes from the captured path to keep the
       // redirect same-origin and avoid protocol-relative URLs.
       const target = "/" + match[1].replace(/^\/+/, "");
       window.location.replace(
-        target + window.location.search + window.location.hash
+        target + window.location.search + window.location.hash,
       );
     }
   })();
 </script>
 
 <div class="text-center">
-<h1 class="display-1 mt-5 mb-4"><span class="badge badge-danger">404</span> Page does not exist!</h1>
-<p>Please use the search bar at the top or visit our <a href="{{site.baseurl}}/">homepage</a>!</p>
+  <h1 class="display-1 mt-5 mb-4">
+    <span class="badge badge-danger">404</span> Page does not exist!
+  </h1>
+  <p>
+    Please use the search bar at the top or visit our
+    <a href="{{site.baseurl}}/">homepage</a>!
+  </p>
 </div>
