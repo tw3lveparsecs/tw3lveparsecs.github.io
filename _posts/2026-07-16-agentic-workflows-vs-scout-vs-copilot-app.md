@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Agentic Workflows vs Scout vs Copilot App: When to Use What"
-date: 2026-07-17 06:00:00 +1100
+title: "GitHub Agentic Workflows vs Microsoft Scout vs Copilot App: Which Tool to Use When"
+date: 2026-07-16 06:00:00 +1100
 categories: [DevOps, AI]
-tags: [github, agentic, workflows, copilot, automation, ai, devops]
-image: assets/images/posts/2026-07-17-agentic-workflows-vs-scout-vs-copilot-app/post_image.png
-featured_image: assets/images/posts/2026-07-17-agentic-workflows-vs-scout-vs-copilot-app/feature_image.png
+tags: [github, agentic, workflows, copilot, ai, devops]
+image: assets/images/posts/2026-07-16-agentic-workflows-vs-scout-vs-copilot-app/post_image.png
+featured_image: assets/images/posts/2026-07-16-agentic-workflows-vs-scout-vs-copilot-app/feature_image.png
 author: AJ Bajada
 toc: true
 featured: true
@@ -108,15 +108,15 @@ graph TD
 
 And the side by side view:
 
-| Dimension            | Agentic Workflows                        | Microsoft Scout                            | Copilot App                                |
-| -------------------- | ---------------------------------------- | ------------------------------------------ | ------------------------------------------ |
-| **Scope**            | Repository and org automation            | Your personal and Microsoft 365 work       | Active coding sessions                     |
-| **Human in loop**    | No, unattended with audited outputs      | Approval gates on sensitive actions        | Yes, you supervise and steer               |
-| **Where it runs**    | GitHub Actions runners                   | Your desktop plus Microsoft 365 cloud      | Desktop app, local or cloud sessions       |
-| **Trigger**          | Events, schedules, commands              | Always on, schedules, proactive            | You launch sessions                        |
-| **Licensing**        | Copilot plan plus Actions minutes        | M365 Copilot plus GitHub Copilot Business/Enterprise | Copilot Pro, Pro+, Business, Enterprise |
-| **Billing**          | Actions minutes plus Copilot AI credits  | Copilot AI credits via GitHub              | Copilot AI credits                         |
-| **Availability**     | Public preview                           | Frontier preview                           | Generally available                        |
+| Dimension         | Agentic Workflows                       | Microsoft Scout                                      | Copilot App                             |
+| ----------------- | --------------------------------------- | ---------------------------------------------------- | --------------------------------------- |
+| **Scope**         | Repository and org automation           | Your personal and Microsoft 365 work                 | Active coding sessions                  |
+| **Human in loop** | No, unattended with audited outputs     | Approval gates on sensitive actions                  | Yes, you supervise and steer            |
+| **Where it runs** | GitHub Actions runners                  | Your desktop plus Microsoft 365 cloud                | Desktop app, local or cloud sessions    |
+| **Trigger**       | Events, schedules, commands             | Always on, schedules, proactive                      | You launch sessions                     |
+| **Licensing**     | Copilot plan plus Actions minutes       | M365 Copilot plus GitHub Copilot Business/Enterprise | Copilot Pro, Pro+, Business, Enterprise |
+| **Billing**       | Actions minutes plus Copilot AI credits | Copilot AI credits via GitHub                        | Copilot AI credits                      |
+| **Availability**  | Public preview                          | Frontier preview                                     | Generally available                     |
 
 ## Where They Overlap, and the Official Stance
 

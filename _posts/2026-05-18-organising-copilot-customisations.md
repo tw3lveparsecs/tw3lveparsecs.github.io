@@ -8,7 +8,7 @@ image: assets/images/posts/2026-05-18-organising-copilot-customisations/post_ima
 featured_image: assets/images/posts/2026-05-18-organising-copilot-customisations/feature_image.png
 author: AJ Bajada
 toc: true
-featured: true
+featured: false
 mermaid: true
 ---
 
@@ -87,7 +87,7 @@ agent-platform/
 │   │   └── SKILL.md
 │   └── bicep-refactor/
 ├── hooks/                    # Hook scripts
-├── plugins/                  # Composable plugins published through the marketplace 
+├── plugins/                  # Composable plugins published through the marketplace
 └── .github
     ├── plugin
         ├── marketplace.json  # Plugin marketplace manifest
@@ -136,7 +136,6 @@ The `settings.json` in `.github-private` is what stitches it all together. It te
     "PLUGIN-NAME@MARKETPLACE-NAME": true
   }
 }
-
 ```
 
 Once enabled, developers using Copilot CLI can browse and install plugins directly from your marketplace:
