@@ -645,3 +645,40 @@ html[data-theme="dark"] span.post-read-more a svg,
 html[data-theme="dark"] span.post-read-more a svg path {
   fill: currentColor;
 }
+
+/* Markdown tables in post content.
+   The Mediumish theme ships no table styling, so kramdown tables render as
+   borderless columns. Give them borders, padding, header shading and zebra
+   striping, using the theme CSS variables so they work in light and dark mode. */
+.article-post table {
+  display: block;
+  width: 100%;
+  overflow-x: auto; /* horizontal scroll on narrow screens instead of overflowing */
+  border-collapse: collapse;
+  margin: 1.7rem 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.article-post table th,
+.article-post table td {
+  border: 1px solid var(--border);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.article-post table thead th {
+  background: var(--surface-2);
+  color: var(--text);
+  font-weight: 600;
+  border-bottom: 2px solid var(--border);
+}
+
+.article-post table tbody tr:nth-child(even) {
+  background: var(--surface-2);
+}
+
+.article-post table tbody td {
+  color: var(--text);
+}
