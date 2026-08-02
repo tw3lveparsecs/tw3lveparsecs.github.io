@@ -8,7 +8,7 @@ image: assets/images/posts/2026-06-09-azure-devops-vs-github-build-2026/post_ima
 featured_image: assets/images/posts/2026-06-09-azure-devops-vs-github-build-2026/feature_image.png
 author: AJ Bajada
 toc: true
-featured: true
+featured: false
 mermaid: true
 description: "Azure DevOps vs GitHub in 2026. What Microsoft really announced at Build, how the platforms differ now, and a pragmatic hybrid path for engineering teams."
 ---
