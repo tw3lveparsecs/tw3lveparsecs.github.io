@@ -15,7 +15,7 @@ description: "Why the GitHub Copilot app went from sceptical trial to daily driv
 
 I did not want to like the GitHub Copilot app. I had VS Code tuned exactly how I wanted it, extensions curated over years, keybindings in muscle memory, and a colour theme I will defend to the death. Handing that over for a new desktop app felt like swapping a lightsaber I had built myself for one someone handed me in a shop.
 
-Fast forward and it is open on my machine every single day, and VS Code has quietly become the place I go when I want to read code rather than write it.
+Fast forward and it is open on my machine every single day, sitting alongside VS Code rather than replacing it. VS Code is still where I go for heavy code development, the hands on work where I want the folder tree, the extensions and the debugger. The Copilot app is where I direct the work.
 
 This is not a scorecard, it is my view on why the GitHub Copilot app is now a valid place to do serious work, the good, the awkward and the genuinely annoying. Everything factual here comes from [GitHub's own documentation](https://docs.github.com/en/copilot/concepts/agents/github-copilot-app){:target="\_blank" rel="noopener"}, everything opinionated is mine.
 
@@ -35,7 +35,7 @@ The answer was not obvious, because I was using the app wrong. I started with ch
 
 That reaction is worth naming, because it is not a product flaw, it is a **model mismatch**. An IDE optimises for you writing lines. The Copilot app optimises for you directing work and reviewing outcomes. The sidebar tells the story, [My work, Automations, Search and Sessions](https://docs.github.com/en/copilot/how-tos/github-copilot-app/getting-started){:target="\_blank" rel="noopener"}. Not a file explorer in sight, because files are what the agent is dealing with, not you.
 
-Once I stopped mourning my folder tree, things got interesting fast.
+I was looking for a cockpit and had been handed the war room on Yavin 4. Once I stopped mourning my folder tree, things got interesting fast.
 
 ## The Turning Point: Directing Instead of Typing
 
@@ -47,9 +47,9 @@ What made it stick was **session modes**. You choose how much rope the agent get
 - **Plan**, the agent proposes a plan you approve before it executes.
 - **Autopilot**, the agent writes code, runs tests and iterates on its own.
 
-Plan mode became my default opener for anything non trivial. Approve the approach, then let it run. Combined with a model picker and reasoning effort control per session, it feels less like prompting a tool and more like briefing a colleague.
+Plan mode became my default opener for anything non trivial. Approve the approach, then let it run. Combined with a model picker and reasoning effort control per session, it feels less like prompting a tool and more like briefing a colleague. Autopilot is the "punch it, Chewie" option, brilliant when the task is well defined, less brilliant when you have not read the plan first.
 
-I now gravitate to the app naturally for heavy code development. I am not asking it for dinner ideas, that is not what this is. But when I have three streams of work in flight across two repositories, this is where I sit.
+I now gravitate to the app naturally for orchestrating work. I am not asking it for dinner ideas, that is not what this is. When I have three streams of work in flight across two repositories, this is where I sit. When one of those streams needs me elbow deep in the code itself, I drop into VS Code, do the work properly, then come back. Two tools, two jobs, no guilt.
 
 ```mermaid
 graph TD
@@ -87,7 +87,7 @@ Triggers are refreshingly simple:
 
 For cloud automations you also select the tools Copilot may use, such as pushing changes, updating issue labels or creating a pull request. Selecting only what the task needs is the same least privilege discipline we apply everywhere else, and it is refreshing to see it as a first class dropdown rather than a buried policy.
 
-My favourite detail is the smallest one. Being able to save an automation and just hit run, without waiting for a schedule, means one off jobs get saved rather than retyped. My morning routine is now a scheduled pull request review sweep plus an issue triage run, and I read the results with coffee instead of writing prompts.
+My favourite detail is the smallest one. Being able to save an automation and just hit run, without waiting for a schedule, means one off jobs get saved rather than retyped. My morning routine is now a scheduled pull request review sweep plus an issue triage run, and I read the results with coffee instead of writing prompts. It is the closest I have come to having my own astromech quietly fixing things while I fly.
 
 If you are building a broader library of agent behaviour to feed these, my post on [organising Copilot customisations at scale](https://azurewithaj.com/organising-copilot-customisations) covers where all that should live.
 
@@ -117,7 +117,7 @@ Treat autonomous runs like cloud spend. Start narrow, watch the usage, expand wh
 
 ## Conclusion: Who Should Actually Switch
 
-The GitHub Copilot app did not replace my IDE and I no longer expect it to. It replaced the **orchestration layer** that used to live in my head, spread across terminal tabs, browser windows and half remembered intentions.
+The GitHub Copilot app did not replace my IDE and I no longer expect it to. VS Code is still my lightsaber for heavy code development. The Copilot app is the command deck, and it replaced the **orchestration layer** that used to live in my head, spread across terminal tabs, browser windows and half remembered intentions.
 
 I would recommend it to you if:
 
@@ -126,7 +126,7 @@ I would recommend it to you if:
 - You have **recurring repository chores** that would happily run on a schedule.
 - You are comfortable **directing and reviewing** rather than typing every line.
 
-I would hold off if you are mostly doing focused single threaded work in one repository, or if your workflow depends heavily on IDE extensions. The app is not trying to win that fight.
+I would hold off if you are mostly doing focused single threaded work in one repository, or if your workflow depends heavily on IDE extensions. These are not the droids you are looking for, and the app is not trying to win that fight anyway. Keep VS Code for the deep code work and let the app handle everything around it.
 
 Start small. Install it, connect one repository, run one Plan mode session on a real issue, then save one automation. That is a lunch break's worth of effort, and it is enough to know whether the model fits how you work.
 
