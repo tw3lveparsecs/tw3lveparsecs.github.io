@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "Why the GitHub Copilot App Became My Daily Driver"
-date: 2026-08-02 06:00:00 +1100
+date: 2026-08-03 06:00:00 +1100
 categories: [DevOps, AI]
 tags: [github, copilot, agent, agentic, automation, devops]
-image: assets/images/posts/2026-08-02-github-copilot-app-daily-driver/post_image.png
-featured_image: assets/images/posts/2026-08-02-github-copilot-app-daily-driver/feature_image.png
+image: assets/images/posts/2026-08-03-github-copilot-app-daily-driver/post_image.png
+featured_image: assets/images/posts/2026-08-03-github-copilot-app-daily-driver/feature_image.png
 author: AJ Bajada
 toc: true
 featured: true
@@ -37,19 +37,19 @@ That reaction is worth naming, because it is not a product flaw, it is a **model
 
 I was looking for a cockpit and had been handed the war room on Yavin 4. Once I stopped mourning my folder tree, things got interesting fast.
 
-## The Turning Point: Directing Instead of Typing
+## The Turning Point: From Curiosity to Daily Habit
 
-The shift happened over a handful of real use cases rather than one dramatic moment. A refactor here, a documentation sync there, an issue picked up on a Friday afternoon that I could not be bothered branching for manually.
+The shift did not happen in one dramatic moment. It happened over a handful of real use cases, one after another, a refactor here, a documentation sync there, adding a new skill in a repo on a Friday afternoon that I could not be bothered branching for manually. Nothing individually convinced me, but the tally added up quickly, and I noticed I was reaching for the app before I had consciously decided to.
 
-What made it stick was **session modes**. You choose how much rope the agent gets, and you can change it mid flight:
+Part of what made experimenting low risk is **session modes**. You choose how much rope the agent gets, and you can change it mid flight:
 
 - **Interactive**, the agent suggests changes and waits for your input.
 - **Plan**, the agent proposes a plan you approve before it executes.
 - **Autopilot**, the agent writes code, runs tests and iterates on its own.
 
-Plan mode became my default opener for anything non trivial. Approve the approach, then let it run. Combined with a model picker and reasoning effort control per session, it feels less like prompting a tool and more like briefing a colleague. Autopilot is the "punch it, Chewie" option, brilliant when the task is well defined, less brilliant when you have not read the plan first.
+I will be upfront that Plan mode has not been my own habit, my sessions have mostly lived in Interactive and Autopilot. But it is a genuinely useful option if you want a checkpoint before an agent starts touching your repository, and combined with a model picker and reasoning effort control per session, the range of control on offer is well thought out regardless of which mode you settle on.
 
-I now gravitate to the app naturally for orchestrating work. I am not asking it for dinner ideas, that is not what this is. When I have three streams of work in flight across two repositories, this is where I sit. When one of those streams needs me elbow deep in the code itself, I drop into VS Code, do the work properly, then come back. Two tools, two jobs, no guilt.
+What changed is that it slowly became essential for real development work rather than something I dipped into occasionally. When I have three streams of work in flight across two repositories, this is where I sit. When one of those streams needs me elbow deep in the code itself, I drop into VS Code, do the work properly, then come back.
 
 ```mermaid
 graph TD
@@ -87,31 +87,29 @@ Triggers are refreshingly simple:
 
 For cloud automations you also select the tools Copilot may use, such as pushing changes, updating issue labels or creating a pull request. Selecting only what the task needs is the same least privilege discipline we apply everywhere else, and it is refreshing to see it as a first class dropdown rather than a buried policy.
 
-My favourite detail is the smallest one. Being able to save an automation and just hit run, without waiting for a schedule, means one off jobs get saved rather than retyped. My morning routine is now a scheduled pull request review sweep plus an issue triage run, and I read the results with coffee instead of writing prompts. It is the closest I have come to having my own astromech quietly fixing things while I fly.
+My favourite detail is the smallest one. While troubleshooting I was able to schedule a retry for 24 hours later while I was waiting for a system change to propagate, meaning one off jobs can get saved easily rather than retyped from scratch every time I want to repeat them.
 
-If you are building a broader library of agent behaviour to feed these, my post on [organising Copilot customisations at scale](https://azurewithaj.com/organising-copilot-customisations) covers where all that should live.
+The other pleasant surprise was stumbling onto an inbox style view in the app that surfaces reminders and nudges me to run something when it is actually relevant, rather than leaving automations to fire blind on a timer and hoping I remember to check the results. It is a small addition, but it is the difference between an automation running while I am not looking and one that taps me on the shoulder at the right moment.
 
 ## Multiple Accounts, or Why My Cross Org Life Got Easier
 
 Working across a personal account and multiple client organisations has always meant an authentication tax. Sign out, sign in, re authorise, forget which identity you were in, push to the wrong remote, feel shame.
 
-Being able to work across accounts and set the identity per repository and session removes what has honestly been a barrier to entry for years. It sounds mundane written down. In practice it is the difference between picking up a cross org task immediately and putting it off until I have the energy for the ceremony.
-
-There is a related nicety in the way work is surfaced. My work aggregates issues and pull requests across your repositories into sections you can edit or extend with your own filters, and you can search with qualifiers like `label:bug` inside any section. Between that and automations, the app has quietly become the place I check for what needs attention, which is a job I used to do across three browser tabs and a notifications page.
+Being able to work across accounts and set the identity per repository and session removes what has honestly been a barrier to entry for years. In practice it is the difference between picking up a cross org task immediately and putting it off until I have the energy for the ceremony.
 
 ## The Rough Edges
 
 With that said, here is what still irritates me. Both feel like maturity problems rather than design problems.
 
-**Customisation still pulls you out of the UI.** The docs say you can add and manage [agent skills and MCP servers](https://docs.github.com/en/copilot/how-tos/github-copilot-app/customize-github-copilot-app){:target="\_blank" rel="noopener"} in app settings, and anything already configured for your repositories or Copilot CLI is picked up automatically. That is true, and there is a catalogue of popular MCP servers. But the moment you go beyond the catalogue, you are back in local configuration files, restarting things and guessing why a server did not appear. For an app whose whole pitch is "stay in one place", the customisation path is the one journey that keeps sending me elsewhere.
+**Customisation still pulls you out of the UI.** The docs say you can add and manage [agent skills and MCP servers](https://docs.github.com/en/copilot/how-tos/github-copilot-app/customize-github-copilot-app){:target="\_blank" rel="noopener"} in app settings, and anything already configured for your repositories or Copilot CLI is picked up automatically. That is true, and there is a catalogue of popular MCP servers. But the moment you go beyond the catalogue and need to provide in depth customisations , you are back in local configuration files, restarting things and guessing why a server did not appear. For an app whose whole pitch is "stay in one place", the customisation path is the one journey that keeps sending me elsewhere.
 
-**No terminal until a session exists.** Sessions own the workspace, which makes sense architecturally, since each one gets its own worktree. It also means the terminal is not there when you first open the app. If your instinct is to poke around a repository before deciding what to do, that instinct is temporarily homeless. [Quick chats](https://docs.github.com/en/copilot/how-tos/github-copilot-app/agent-sessions){:target="\_blank" rel="noopener"} help for questions, because they open a conversation without creating a branch or worktree, but they are not a shell.
+**No terminal until a session exists.** Sessions own the workspace, which makes sense architecturally, since each one gets its own worktree. It also means the terminal is not there when you first open the session. If your instinct is to poke around a session before deciding what to do, that instinct is temporarily homeless. [Quick chats](https://docs.github.com/en/copilot/how-tos/github-copilot-app/agent-sessions){:target="\_blank" rel="noopener"} help for questions, because they open a conversation without creating a branch or worktree, but they are not a shell.
 
 Neither is a deal breaker. Both are the kind of thing I expect to read about in a changelog within a couple of releases.
 
 ## Credits and Common Sense
 
-One practical note. Agent sessions consume AI credits, and GitHub publishes [sensible guidance on optimising usage](https://docs.github.com/en/copilot/concepts/agents/github-copilot-app){:target="\_blank" rel="noopener"}, match model capability to task complexity, use Plan mode to validate scope before burning effort, use quick chats for early exploration, and start a fresh session when you switch tasks so you are not dragging irrelevant context along.
+One practical note. Agent sessions consume AI credits, and GitHub publishes [sensible guidance on optimising usage](https://docs.github.com/en/copilot/concepts/agents/github-copilot-app#optimizing-ai-usage-in-the-github-copilot-app){:target="\_blank" rel="noopener"}, match model capability to task complexity, use Plan mode to validate scope before burning effort, use quick chats for early exploration, and start a fresh session when you switch tasks so you are not dragging irrelevant context along.
 
 Treat autonomous runs like cloud spend. Start narrow, watch the usage, expand what clearly pays for itself.
 
@@ -129,7 +127,5 @@ I would recommend it to you if:
 I would hold off if you are mostly doing focused single threaded work in one repository, or if your workflow depends heavily on IDE extensions. These are not the droids you are looking for, and the app is not trying to win that fight anyway. Keep VS Code for the deep code work and let the app handle everything around it.
 
 Start small. Install it, connect one repository, run one Plan mode session on a real issue, then save one automation. That is a lunch break's worth of effort, and it is enough to know whether the model fits how you work.
-
-If you want more context on where this sits in the wider agent story, read [Welcome Home, Agents](https://azurewithaj.com/welcome-home-agents) next.
 
 _Have you given the GitHub Copilot app a proper go, or are you still loyal to your IDE? Tell me what won you over, or what sent you back, in the comments._
