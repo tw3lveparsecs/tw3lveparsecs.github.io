@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "Why the GitHub Copilot App Became My Daily Driver"
-date: 2026-08-02 06:00:00 +1100
+date: 2026-08-03 06:00:00 +1100
 categories: [DevOps, AI]
 tags: [github, copilot, agent, agentic, automation, devops]
-image: assets/images/posts/2026-08-02-github-copilot-app-daily-driver/post_image.png
-featured_image: assets/images/posts/2026-08-02-github-copilot-app-daily-driver/feature_image.png
+image: assets/images/posts/2026-08-03-github-copilot-app-daily-driver/post_image.png
+featured_image: assets/images/posts/2026-08-03-github-copilot-app-daily-driver/feature_image.png
 author: AJ Bajada
 toc: true
 featured: true
