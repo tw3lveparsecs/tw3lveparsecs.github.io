@@ -1,23 +1,23 @@
 ---
 layout: post
-title: "GitHub Copilot App Review: Six Weeks as My Daily Driver"
+title: "Why the GitHub Copilot App Became My Daily Driver"
 date: 2026-08-02 06:00:00 +1100
 categories: [DevOps, AI]
 tags: [github, copilot, agent, agentic, automation, devops]
-image: assets/images/posts/2026-08-02-github-copilot-app-review/post_image.png
-featured_image: assets/images/posts/2026-08-02-github-copilot-app-review/feature_image.png
+image: assets/images/posts/2026-08-02-github-copilot-app-daily-driver/post_image.png
+featured_image: assets/images/posts/2026-08-02-github-copilot-app-daily-driver/feature_image.png
 author: AJ Bajada
 toc: true
 featured: true
 mermaid: true
-description: "An honest GitHub Copilot app review after six weeks of daily use, covering automations, multiple accounts, the rough edges and who should actually switch."
+description: "Why the GitHub Copilot app went from sceptical trial to daily driver, covering automations, multiple accounts, the rough edges and who should actually switch."
 ---
 
 I did not want to like the GitHub Copilot app. I had VS Code tuned exactly how I wanted it, extensions curated over years, keybindings in muscle memory, and a colour theme I will defend to the death. Handing that over for a new desktop app felt like swapping a lightsaber I had built myself for one someone handed me in a shop.
 
-Six weeks later it is open on my machine every single day, and VS Code has quietly become the place I go when I want to read code rather than write it.
+Fast forward and it is open on my machine every single day, and VS Code has quietly become the place I go when I want to read code rather than write it.
 
-This GitHub Copilot app review is my honest experience, the good, the awkward and the genuinely annoying. Everything factual here comes from [GitHub's own documentation](https://docs.github.com/en/copilot/concepts/agents/github-copilot-app){:target="\_blank" rel="noopener"}, everything opinionated is mine.
+This is not a scorecard, it is my view on why the GitHub Copilot app is now a valid place to do serious work, the good, the awkward and the genuinely annoying. Everything factual here comes from [GitHub's own documentation](https://docs.github.com/en/copilot/concepts/agents/github-copilot-app){:target="\_blank" rel="noopener"}, everything opinionated is mine.
 
 ## What the GitHub Copilot App Actually Is
 
@@ -29,7 +29,7 @@ If you want the wider landscape view, I compared it against other agentic surfac
 
 ## The Part Where I Resisted
 
-My first week was mild frustration. I kept asking myself the obvious question, why would I use this when VS Code already has Copilot in it?
+Early on it was mild frustration. I kept asking myself the obvious question, why would I use this when VS Code already has Copilot in it?
 
 The answer was not obvious, because I was using the app wrong. I started with chat, treating it as a fancier chat window, which is the least interesting thing it does. Then I kicked off real agentic work and the discomfort arrived properly. No folder tree down the left. No extensions bar. No terminal sitting where my eyes expect it. My hands kept reaching for shortcuts that were not there.
 
@@ -101,7 +101,7 @@ There is a related nicety in the way work is surfaced. My work aggregates issues
 
 ## The Rough Edges
 
-Six weeks in, here is what still irritates me. Both feel like maturity problems rather than design problems.
+With that said, here is what still irritates me. Both feel like maturity problems rather than design problems.
 
 **Customisation still pulls you out of the UI.** The docs say you can add and manage [agent skills and MCP servers](https://docs.github.com/en/copilot/how-tos/github-copilot-app/customize-github-copilot-app){:target="\_blank" rel="noopener"} in app settings, and anything already configured for your repositories or Copilot CLI is picked up automatically. That is true, and there is a catalogue of popular MCP servers. But the moment you go beyond the catalogue, you are back in local configuration files, restarting things and guessing why a server did not appear. For an app whose whole pitch is "stay in one place", the customisation path is the one journey that keeps sending me elsewhere.
 
