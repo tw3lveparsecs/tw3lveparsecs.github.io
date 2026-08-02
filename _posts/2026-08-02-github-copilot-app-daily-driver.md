@@ -37,19 +37,19 @@ That reaction is worth naming, because it is not a product flaw, it is a **model
 
 I was looking for a cockpit and had been handed the war room on Yavin 4. Once I stopped mourning my folder tree, things got interesting fast.
 
-## The Turning Point: Directing Instead of Typing
+## The Turning Point: From Curiosity to Daily Habit
 
-The shift happened over a handful of real use cases rather than one dramatic moment. A refactor here, a documentation sync there, an issue picked up on a Friday afternoon that I could not be bothered branching for manually.
+The shift did not happen in one dramatic moment. It happened over a handful of real use cases, one after another, a refactor here, a documentation sync there, an issue picked up on a Friday afternoon that I could not be bothered branching for manually. Nothing individually convinced me, but the tally added up quickly, and I noticed I was reaching for the app before I had consciously decided to.
 
-What made it stick was **session modes**. You choose how much rope the agent gets, and you can change it mid flight:
+Part of what made experimenting low risk is **session modes**. You choose how much rope the agent gets, and you can change it mid flight:
 
 - **Interactive**, the agent suggests changes and waits for your input.
 - **Plan**, the agent proposes a plan you approve before it executes.
 - **Autopilot**, the agent writes code, runs tests and iterates on its own.
 
-Plan mode became my default opener for anything non trivial. Approve the approach, then let it run. Combined with a model picker and reasoning effort control per session, it feels less like prompting a tool and more like briefing a colleague. Autopilot is the "punch it, Chewie" option, brilliant when the task is well defined, less brilliant when you have not read the plan first.
+I will be upfront that Plan mode has not been my own habit, my sessions have mostly lived in Interactive and Autopilot. But it is a genuinely useful option if you want a checkpoint before an agent starts touching your repository, and combined with a model picker and reasoning effort control per session, the range of control on offer is well thought out regardless of which mode you settle on.
 
-I now gravitate to the app naturally for orchestrating work. I am not asking it for dinner ideas, that is not what this is. When I have three streams of work in flight across two repositories, this is where I sit. When one of those streams needs me elbow deep in the code itself, I drop into VS Code, do the work properly, then come back. Two tools, two jobs, no guilt.
+I do not reach for the app for "what should I have for dinner" style questions, that was never the point. What changed is that it slowly became essential for real development work rather than something I dipped into occasionally. When I have three streams of work in flight across two repositories, this is where I sit. When one of those streams needs me elbow deep in the code itself, I drop into VS Code, do the work properly, then come back. Two tools, two jobs, no guilt.
 
 ```mermaid
 graph TD
@@ -87,7 +87,9 @@ Triggers are refreshingly simple:
 
 For cloud automations you also select the tools Copilot may use, such as pushing changes, updating issue labels or creating a pull request. Selecting only what the task needs is the same least privilege discipline we apply everywhere else, and it is refreshing to see it as a first class dropdown rather than a buried policy.
 
-My favourite detail is the smallest one. Being able to save an automation and just hit run, without waiting for a schedule, means one off jobs get saved rather than retyped. My morning routine is now a scheduled pull request review sweep plus an issue triage run, and I read the results with coffee instead of writing prompts. It is the closest I have come to having my own astromech quietly fixing things while I fly.
+My favourite detail is the smallest one. Being able to save an automation and just hit run, without waiting for a schedule, means one off jobs get saved rather than retyped from scratch every time I want to repeat them.
+
+The other pleasant surprise was stumbling onto an inbox style view in the app that surfaces reminders and nudges me to run something when it is actually relevant, rather than leaving automations to fire blind on a timer and hoping I remember to check the results. It is a small addition, but it is the difference between an automation running while I am not looking and one that taps me on the shoulder at the right moment.
 
 If you are building a broader library of agent behaviour to feed these, my post on [organising Copilot customisations at scale](https://azurewithaj.com/organising-copilot-customisations) covers where all that should live.
 
