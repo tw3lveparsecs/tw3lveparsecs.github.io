@@ -87,7 +87,7 @@ Triggers are refreshingly simple:
 
 For cloud automations you also select the tools Copilot may use, such as pushing changes, updating issue labels or creating a pull request. Selecting only what the task needs is the same least privilege discipline we apply everywhere else, and it is refreshing to see it as a first class dropdown rather than a buried policy.
 
-My favourite detail is the smallest one. Being able to save an automation and just hit run, without waiting for a schedule, means one off jobs get saved rather than retyped from scratch every time I want to repeat them.
+My favourite detail is the smallest one. While troubleshooting I was able to schedule a retry for 24 hours later while I was waiting for a system change to propagate, meaning one off jobs can get saved easily rather than retyped from scratch every time I want to repeat them.
 
 The other pleasant surprise was stumbling onto an inbox style view in the app that surfaces reminders and nudges me to run something when it is actually relevant, rather than leaving automations to fire blind on a timer and hoping I remember to check the results. It is a small addition, but it is the difference between an automation running while I am not looking and one that taps me on the shoulder at the right moment.
 
@@ -95,7 +95,7 @@ The other pleasant surprise was stumbling onto an inbox style view in the app th
 
 Working across a personal account and multiple client organisations has always meant an authentication tax. Sign out, sign in, re authorise, forget which identity you were in, push to the wrong remote, feel shame.
 
-Being able to work across accounts and set the identity per repository and session removes what has honestly been a barrier to entry for years. It sounds mundane written down. In practice it is the difference between picking up a cross org task immediately and putting it off until I have the energy for the ceremony.
+Being able to work across accounts and set the identity per repository and session removes what has honestly been a barrier to entry for years. In practice it is the difference between picking up a cross org task immediately and putting it off until I have the energy for the ceremony.
 
 ## The Rough Edges
 
@@ -103,13 +103,13 @@ With that said, here is what still irritates me. Both feel like maturity problem
 
 **Customisation still pulls you out of the UI.** The docs say you can add and manage [agent skills and MCP servers](https://docs.github.com/en/copilot/how-tos/github-copilot-app/customize-github-copilot-app){:target="\_blank" rel="noopener"} in app settings, and anything already configured for your repositories or Copilot CLI is picked up automatically. That is true, and there is a catalogue of popular MCP servers. But the moment you go beyond the catalogue and need to provide in depth customisations , you are back in local configuration files, restarting things and guessing why a server did not appear. For an app whose whole pitch is "stay in one place", the customisation path is the one journey that keeps sending me elsewhere.
 
-**No terminal until a session exists.** Sessions own the workspace, which makes sense architecturally, since each one gets its own worktree. It also means the terminal is not there when you first open the app. If your instinct is to poke around a repository before deciding what to do, that instinct is temporarily homeless. [Quick chats](https://docs.github.com/en/copilot/how-tos/github-copilot-app/agent-sessions){:target="\_blank" rel="noopener"} help for questions, because they open a conversation without creating a branch or worktree, but they are not a shell.
+**No terminal until a session exists.** Sessions own the workspace, which makes sense architecturally, since each one gets its own worktree. It also means the terminal is not there when you first open the session. If your instinct is to poke around a session before deciding what to do, that instinct is temporarily homeless. [Quick chats](https://docs.github.com/en/copilot/how-tos/github-copilot-app/agent-sessions){:target="\_blank" rel="noopener"} help for questions, because they open a conversation without creating a branch or worktree, but they are not a shell.
 
 Neither is a deal breaker. Both are the kind of thing I expect to read about in a changelog within a couple of releases.
 
 ## Credits and Common Sense
 
-One practical note. Agent sessions consume AI credits, and GitHub publishes [sensible guidance on optimising usage](https://docs.github.com/en/copilot/concepts/agents/github-copilot-app){:target="\_blank" rel="noopener"}, match model capability to task complexity, use Plan mode to validate scope before burning effort, use quick chats for early exploration, and start a fresh session when you switch tasks so you are not dragging irrelevant context along.
+One practical note. Agent sessions consume AI credits, and GitHub publishes [sensible guidance on optimising usage](https://docs.github.com/en/copilot/concepts/agents/github-copilot-app#optimizing-ai-usage-in-the-github-copilot-app){:target="\_blank" rel="noopener"}, match model capability to task complexity, use Plan mode to validate scope before burning effort, use quick chats for early exploration, and start a fresh session when you switch tasks so you are not dragging irrelevant context along.
 
 Treat autonomous runs like cloud spend. Start narrow, watch the usage, expand what clearly pays for itself.
 
