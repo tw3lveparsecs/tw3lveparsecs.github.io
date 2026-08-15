@@ -1,12 +1,13 @@
 # Cache control headers for all files
+# HTML is always revalidated so readers get new posts straight away, but a
+# cached copy can still be reused when it is unchanged (304).
 /*
-  Cache-Control: no-cache, no-store, must-revalidate
-  Pragma: no-cache 
-  Expires: 0
+  Cache-Control: public, no-cache, must-revalidate
 
-# Allow longer caching for static assets
+# Static assets are versioned with a ?v= cache busting token, so they can be
+# cached for much longer.
 /assets/*
-  Cache-Control: public, max-age=86400
+  Cache-Control: public, max-age=604800
 
 # Ensure any old service worker requests return 404
 /sw.js

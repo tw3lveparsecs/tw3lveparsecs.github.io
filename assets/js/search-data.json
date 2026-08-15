@@ -1,0 +1,22 @@
+---
+layout: null
+sitemap: false
+---
+{%- assign counter = 0 -%}
+[
+{%- for page in site.pages -%}
+{%- if page.url contains '.xml' or page.url contains '.json' or page.url contains '.txt' or page.url contains 'assets' or page.url contains 'category' or page.url contains 'tag' -%}
+{%- else -%}
+{%- if counter > 0 %},{% endif %}
+{%- capture body -%}{{ page.content | markdownify | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | normalize_whitespace }}{%- endcapture -%}
+{"id":{{ counter }},"url":{{ site.url | append: site.baseurl | append: page.url | jsonify }},"title":{{ page.title | jsonify }},"body":{{ body | strip | jsonify }}}
+{%- assign counter = counter | plus: 1 -%}
+{%- endif -%}
+{%- endfor -%}
+{%- for post in site.posts -%}
+{%- if counter > 0 %},{% endif %}
+{%- capture body -%}{{ post.date | date: "%Y/%m/%d" }} - {{ post.content | markdownify | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | normalize_whitespace }}{%- endcapture -%}
+{"id":{{ counter }},"url":{{ site.url | append: site.baseurl | append: post.url | jsonify }},"title":{{ post.title | jsonify }},"body":{{ body | strip | jsonify }}}
+{%- assign counter = counter | plus: 1 -%}
+{%- endfor -%}
+]

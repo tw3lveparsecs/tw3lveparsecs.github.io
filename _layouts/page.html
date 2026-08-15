@@ -9,7 +9,7 @@ layout: default
     </div>
 
     <div class="article-post">
-    {{content}}
+    {{ content | replace: '<img src=', '<img loading="lazy" decoding="async" src=' }}
     </div>
 
     {% if page.comments == true %}
