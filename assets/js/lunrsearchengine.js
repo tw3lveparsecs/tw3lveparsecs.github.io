@@ -65,7 +65,7 @@ sitemap: false
     if (!container) return null;
 
     container.innerHTML =
-      '<div id="resultsmodal" class="modal fade show d-block" tabindex="-1" role="dialog" aria-labelledby="resultsmodal">' +
+      '<div id="resultsmodal" class="modal fade show d-block" tabindex="-1" role="dialog" aria-labelledby="resultsmodal-title">' +
       '<div class="modal-dialog shadow-lg" role="document"><div class="modal-content">' +
       '<div class="modal-header" id="modtit">' +
       '<button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button>' +
@@ -77,6 +77,7 @@ sitemap: false
 
     var heading = document.createElement("h5");
     heading.className = "modal-title";
+    heading.id = "resultsmodal-title";
     heading.textContent = "Search results for '" + term + "'";
     var header = container.querySelector("#modtit");
     header.insertBefore(heading, header.firstChild);
