@@ -4,7 +4,7 @@ sitemap: false
 ---
 # {{ site.title }} - full content
 
-> {{ site.description }} This file contains the full markdown content of every post on {{ site.url }}, concatenated for large language models and AI assistants. Index version: {{ site.url }}{{ site.baseurl }}/llms.txt
+> {{ site.description }} This file contains the full plain text content of every post on {{ site.url }}, concatenated for large language models and AI assistants. Index version: {{ site.url }}{{ site.baseurl }}/llms.txt
 
 Author: {{ site.authors['AJ Bajada'].display_name | default: 'AJ Bajada' }}
 Site: {{ site.url }}{{ site.baseurl }}/
