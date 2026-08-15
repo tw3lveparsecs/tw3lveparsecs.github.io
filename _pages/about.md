@@ -21,6 +21,8 @@ comments: false
 <div class="sticky-top sticky-top-80">
 
 <img
+	loading="lazy"
+	decoding="async"
 	src="{{ site.baseurl }}/assets/images/about/profile.png"
 	alt="{{ site.name }}"
 	class="img-fluid"

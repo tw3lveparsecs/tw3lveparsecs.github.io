@@ -1,8 +1,6 @@
 {% if cache_bust == nil %}
 {% assign cache_bust = site.time | date: "%Y%m%d%H%M%S" %}
 {% endif %}
-<script src="{{site.baseurl}}/assets/js/lunr.js?v={{ cache_bust }}"></script>
-
 
 <style>
     .lunrsearchresult .title {color: #d9230f;}
@@ -13,12 +11,11 @@
 </style>
 
 
-<form class="bd-search" onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
-    <input type="text" class="form-control text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter..."/>
+<form class="bd-search" id="lunrsearchform">
+    <input type="text" class="form-control text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter..." aria-label="Search this site"/>
 </form>
 
 <div id="lunrsearchresults">
-    <ul></ul>
 </div>
 
-<script src="{{site.baseurl}}/assets/js/lunrsearchengine.js?v={{ cache_bust }}"></script>
+<script defer src="{{site.baseurl}}/assets/js/lunrsearchengine.js?v={{ cache_bust }}"></script>

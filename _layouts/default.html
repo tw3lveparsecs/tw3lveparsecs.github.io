@@ -9,6 +9,13 @@
 
     <meta name="color-scheme" content="light dark" />
 
+    <!-- Warm up connections to the third party origins used for CSS, fonts and analytics -->
+    <link rel="preconnect" href="https://stackpath.bootstrapcdn.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+
     <script>
       // Set theme as early as possible to avoid a flash of the wrong theme.
       (function () {
@@ -112,7 +119,7 @@
 
     <link href="{{ site.baseurl }}/assets/css/main.css?v={{ cache_bust }}" rel="stylesheet" />
 
-    <script src="{{ site.baseurl }}/assets/js/jquery.min.js?v={{ cache_bust }}"></script>
+    <script defer src="{{ site.baseurl }}/assets/js/jquery.min.js?v={{ cache_bust }}"></script>
   </head>
 
   {% if jekyll.environment == 'production' %}
@@ -131,7 +138,7 @@
     <!-- defer loading of font and font awesome -->
     <noscript id="deferred-styles">
       <link
-        href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i"
+        href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i&display=swap"
         rel="stylesheet"
       />
       <link
@@ -305,34 +312,36 @@
 ================================================== -->
 
     <script
+      defer
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
       integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
       crossorigin="anonymous"
     ></script>
 
     <script
+      defer
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
       integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
       crossorigin="anonymous"
     ></script>
 
-    <script src="{{ site.baseurl }}/assets/js/mediumish.js?v={{ cache_bust }}"></script>
+    <script defer src="{{ site.baseurl }}/assets/js/mediumish.js?v={{ cache_bust }}"></script>
 
-    <script src="{{ site.baseurl }}/assets/js/theme-toggle.js?v={{ cache_bust }}"></script>
+    <script defer src="{{ site.baseurl }}/assets/js/theme-toggle.js?v={{ cache_bust }}"></script>
 
     {% assign mermaid_enabled = site.mermaid.enabled | default: false %} {% if
     page.mermaid != nil %}{% assign mermaid_enabled = page.mermaid %}{% endif %}
     {% if mermaid_enabled %}
-    <script src="https://cdn.jsdelivr.net/npm/mermaid@{{ site.mermaid.version | default: '10' }}/dist/mermaid.min.js"></script>
-    <script src="{{ site.baseurl }}/assets/js/mermaid-init.js?v={{ cache_bust }}"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/mermaid@{{ site.mermaid.version | default: '10' }}/dist/mermaid.min.js"></script>
+    <script defer src="{{ site.baseurl }}/assets/js/mermaid-init.js?v={{ cache_bust }}"></script>
     {% endif %} {% if site.lazyimages == "enabled" %}
-    <script src="{{ site.baseurl }}/assets/js/lazyload.js?v={{ cache_bust }}"></script>
+    <script defer src="{{ site.baseurl }}/assets/js/lazyload.js?v={{ cache_bust }}"></script>
     {% endif %}
 
-    <script src="{{ site.baseurl }}/assets/js/ie10-viewport-bug-workaround.js?v={{ cache_bust }}"></script>
+    <script defer src="{{ site.baseurl }}/assets/js/ie10-viewport-bug-workaround.js?v={{ cache_bust }}"></script>
 
     {% if page.layout == 'post' %}
-    <script src="{{ site.baseurl }}/assets/js/back-to-top.js?v={{ cache_bust }}"></script>
+    <script defer src="{{ site.baseurl }}/assets/js/back-to-top.js?v={{ cache_bust }}"></script>
     {% endif %}
   </body>
 </html>
