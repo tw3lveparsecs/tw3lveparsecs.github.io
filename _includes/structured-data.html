@@ -1,0 +1,77 @@
+{% comment %}
+  Structured data (schema.org JSON-LD) to help search engines and AI answer
+  engines understand who wrote this site and what each page is about.
+{% endcomment %}
+
+{% assign site_author = site.authors['AJ Bajada'] %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "{{ site.url }}{{ site.baseurl }}/#website",
+      "url": "{{ site.url }}{{ site.baseurl }}/",
+      "name": {{ site.title | jsonify }},
+      "description": {{ site.description | jsonify }},
+      "inLanguage": "en",
+      "publisher": { "@id": "{{ site.url }}{{ site.baseurl }}/#person" }
+    },
+    {
+      "@type": "Person",
+      "@id": "{{ site.url }}{{ site.baseurl }}/#person",
+      "name": {{ site_author.display_name | default: "AJ Bajada" | jsonify }},
+      "description": {{ site_author.description | jsonify }},
+      "url": "{{ site.url }}{{ site.baseurl }}/about",
+      "image": "{{ site.url }}{{ site.baseurl }}/{{ site.logo }}",
+      "knowsAbout": ["Microsoft Azure", "DevOps", "Platform Engineering", "Infrastructure as Code", "Bicep", "GitHub", "GitHub Copilot", "Agentic AI", "Azure Policy"],
+      "sameAs": [
+        {% if site.social.github %}"{{ site.social.github }}"{% endif %}{% if site.social.github and site.social.linkedin %},{% endif %}
+        {% if site.social.linkedin %}"{{ site.social.linkedin }}"{% endif %}
+      ]
+    },
+    {
+      "@type": "Blog",
+      "@id": "{{ site.url }}{{ site.baseurl }}/#blog",
+      "url": "{{ site.url }}{{ site.baseurl }}/",
+      "name": {{ site.title | jsonify }},
+      "description": {{ site.description | jsonify }},
+      "inLanguage": "en",
+      "author": { "@id": "{{ site.url }}{{ site.baseurl }}/#person" },
+      "publisher": { "@id": "{{ site.url }}{{ site.baseurl }}/#person" }
+    }{% if page.layout == 'post' %},
+    {% assign post_image = page.featured_image | default: page.image %}
+    {% assign post_body = page.content | strip_html | normalize_whitespace %}
+    {% assign post_words = post_body | number_of_words %}
+    {
+      "@type": "BlogPosting",
+      "@id": "{{ site.url }}{{ site.baseurl }}{{ page.url }}#post",
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ site.url }}{{ site.baseurl }}{{ page.url }}" },
+      "url": "{{ site.url }}{{ site.baseurl }}{{ page.url }}",
+      "headline": {{ page.title | jsonify }},
+      "description": {{ page.description | default: site.description | jsonify }},
+      "datePublished": "{{ page.date | date_to_xmlschema }}",
+      "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+      "inLanguage": "en",
+      "wordCount": {{ post_words }},
+      "isPartOf": { "@id": "{{ site.url }}{{ site.baseurl }}/#blog" },
+      "author": { "@id": "{{ site.url }}{{ site.baseurl }}/#person" },
+      "publisher": { "@id": "{{ site.url }}{{ site.baseurl }}/#person" }{% if post_image %},
+      "image": "{{ site.url }}{{ site.baseurl }}/{{ post_image }}"{% endif %}{% if page.categories.size > 0 %},
+      "articleSection": {{ page.categories | jsonify }}{% endif %}{% if page.tags.size > 0 %},
+      "keywords": {{ page.tags | join: ", " | jsonify }}{% endif %},
+      "abstract": {{ post_body | truncate: 500 | jsonify }}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "{{ site.url }}{{ site.baseurl }}{{ page.url }}#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Blog", "item": "{{ site.url }}{{ site.baseurl }}/" }{% if page.categories.first %},
+        { "@type": "ListItem", "position": 2, "name": {{ page.categories.first | jsonify }}, "item": "{{ site.url }}{{ site.baseurl }}/category/{{ page.categories.first | slugify }}/" },
+        { "@type": "ListItem", "position": 3, "name": {{ page.title | jsonify }}, "item": "{{ site.url }}{{ site.baseurl }}{{ page.url }}" }{% else %},
+        { "@type": "ListItem", "position": 2, "name": {{ page.title | jsonify }}, "item": "{{ site.url }}{{ site.baseurl }}{{ page.url }}" }{% endif %}
+      ]
+    }{% endif %}
+  ]
+}
+</script>
