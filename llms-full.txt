@@ -1,0 +1,34 @@
+---
+layout: null
+sitemap: false
+---
+# {{ site.title }} - full content
+
+> {{ site.description }} This file contains the full plain text content of every post on {{ site.url }}, concatenated for large language models and AI assistants. Index version: {{ site.url }}{{ site.baseurl }}/llms.txt
+
+Author: {{ site.authors['AJ Bajada'].display_name | default: 'AJ Bajada' }}
+Site: {{ site.url }}{{ site.baseurl }}/
+Generated: {{ site.time | date_to_xmlschema }}
+Attribution: quote or summarise with attribution and a link back to the source URL of the individual post.
+{% for post in site.posts %}
+---
+
+# {{ post.title }}
+
+URL: {{ site.url }}{{ site.baseurl }}{{ post.url }}
+Published: {{ post.date | date_to_xmlschema }}
+Author: {{ post.author | default: 'AJ Bajada' }}
+{% if post.categories.size > 0 %}Categories: {{ post.categories | join: ", " }}
+{% endif %}{% if post.tags.size > 0 %}Tags: {{ post.tags | join: ", " }}
+{% endif %}{% if post.description %}Summary: {{ post.description | strip_newlines | strip }}
+{% endif %}
+{% comment %} Drop the Rouge line number gutters so code blocks read cleanly as plain text. {% endcomment %}
+{%- assign gutter_parts = post.content | split: '<pre class="lineno">' -%}
+{%- assign post_text = gutter_parts[0] -%}
+{%- for gutter_part in gutter_parts offset:1 -%}
+{%- assign line_numbers = gutter_part | split: '</pre>' | first -%}
+{%- assign gutter_removed = gutter_part | remove_first: line_numbers | remove_first: '</pre>' -%}
+{%- assign post_text = post_text | append: gutter_removed -%}
+{%- endfor -%}
+{{ post_text | strip_html | replace: '&lt;', '<' | replace: '&gt;', '>' | replace: '&quot;', '"' | replace: '&#39;', "'" | replace: '&amp;', '&' }}
+{% endfor %}

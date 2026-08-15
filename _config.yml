@@ -32,6 +32,14 @@ social:
   github: "https://github.com/tw3lveparsecs"
   linkedin: "https://www.linkedin.com/in/aj-bajada-3347a52a/"
   email: "aj.bajada@outlook.com"
+  # Used by jekyll-seo-tag to emit Person structured data
+  name: "AJ Bajada"
+  links:
+    - "https://github.com/tw3lveparsecs"
+    - "https://www.linkedin.com/in/aj-bajada-3347a52a/"
+
+# Default author (used by jekyll-seo-tag)
+author: "AJ Bajada"
 
 # Authors
 authors:

@@ -8,6 +8,7 @@ image: assets/images/posts/2025-09-17-agentic-devops-delivered-major-enhancement
 mermaid: true
 author: AJ Bajada
 toc: true
+description: "How I delivered a major enhancement without writing a single line of code myself, using agentic DevOps principles and GitHub Copilot's coding agent."
 ---
 
 As a busy professional, I found myself in a familiar situation, needing to deliver a major enhancement to an internal solution while managing my regular day-to-day responsibilities. The challenge wasn't a lack of capability or resources, but rather finding the sustained focus time that complex development work typically demands.

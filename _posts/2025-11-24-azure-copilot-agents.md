@@ -8,6 +8,7 @@ image: assets/images/posts/2025-11-24-azure-copilot-agents/feature_image.png
 mermaid: true
 author: AJ Bajada
 toc: true
+description: "Azure Copilot Agents announced at Ignite 2025, the five specialised agents, how orchestration routes work between them, and the security and governance considerations."
 ---
 
 Microsoft Ignite 2025 has delivered what might be the most transformative announcement for cloud operations teams: **Azure Copilot Agents**. This isn't just another AI assistant, it's a fundamental reimagining of how we deploy, monitor, optimise, and troubleshoot cloud infrastructure.

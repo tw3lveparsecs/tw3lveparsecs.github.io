@@ -8,6 +8,7 @@ image: assets/images/posts/2025-05-15-devops-azure-policy-series-custom-policies
 mermaid: enabled
 author: AJ Bajada
 toc: true
+description: "Creating custom Azure Policy definitions and initiatives with Bicep, and deploying them through centralised CI/CD pipelines for consistent governance at scale."
 ---
 
 Welcome to the second instalment of our DevOps and Azure Policy series! In our [previous post](https://azurewithaj.com/posts/azure-policy-bicep-series-deploy/), we explored how to deploy policy initiatives with built-in policies using Bicep. Today, we're taking it a step further by diving into custom policy definitions and implementing a robust CI/CD pipeline for Azure Policy deployments. We'll leverage the centralised pipelines concept discussed in our [DevOps and Azure IaC Series](https://azurewithaj.com/posts/devops-azure-iac-series-central-pipelines/) to create a streamlined, consistent approach to policy deployment.

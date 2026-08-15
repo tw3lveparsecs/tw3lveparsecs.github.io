@@ -7,6 +7,7 @@ tags: [ai, devops, landing zones, azure]
 image: assets/images/posts/2025-01-06-ai-devops-series-lz/feature_image.png
 author: AJ Bajada
 toc: true
+description: "Why AI deployments need safe, scalable landing zones, and how DevOps teams build the governance, security and automation foundations that make them work."
 ---
 
 In today's fast-paced digital landscape, the integration of artificial intelligence (AI) and DevOps practices is revolutionising how organisations manage their infrastructure and streamline operations. This blog post, the first in a series, will delve into the critical importance of establishing safe and scalable landing zones for AI deployments and how DevOps teams enable this transformation.

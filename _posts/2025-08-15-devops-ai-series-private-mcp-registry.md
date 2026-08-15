@@ -8,6 +8,7 @@ image: assets/images/posts/2025-08-15-devops-ai-series-private-mcp-registry/feat
 mermaid: true
 author: AJ Bajada
 toc: true
+description: "How to build an enterprise-ready private MCP registry with Azure API Center, giving teams secure, governed and centralised access to Model Context Protocol servers."
 ---
 
 The rapid adoption of AI-powered development tools has fundamentally changed how organisations approach software delivery. As teams increasingly rely on Model Context Protocol (MCP) servers to enhance their AI capabilities, the need for secure, governed, and centralised management of these resources has become critical. Today, we'll explore how to build an enterprise-ready private MCP registry using Azure API Center, ensuring your organisation can harness AI power while maintaining security and compliance standards.

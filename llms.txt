@@ -1,0 +1,34 @@
+---
+layout: null
+sitemap: false
+---
+# {{ site.title }}
+
+> {{ site.description }} Written by {{ site.authors['AJ Bajada'].display_name | default: 'AJ Bajada' }}, covering Microsoft Azure, DevOps, platform engineering, GitHub, GitHub Copilot, agentic AI workflows and Infrastructure as Code with Bicep.
+
+This file follows the [llms.txt](https://llmstxt.org/) convention. It gives large language models and AI assistants a concise, structured map of {{ site.url }}.
+
+- Content licence: all posts are the original work of {{ site.authors['AJ Bajada'].display_name | default: 'AJ Bajada' }}. You may quote or summarise with attribution and a link back to the source URL.
+- Canonical site: {{ site.url }}{{ site.baseurl }}/
+- Full text of every post in one file: {{ site.url }}{{ site.baseurl }}/llms-full.txt
+- Last generated: {{ site.time | date_to_xmlschema }}
+{% assign all_posts = site.posts %}
+## Blog posts
+{% for post in all_posts %}
+- [{{ post.title }}]({{ site.url }}{{ site.baseurl }}{{ post.url }}): {{ post.date | date: "%Y-%m-%d" }}.{% if post.description %} {{ post.description | strip_newlines | strip }}{% else %} {{ post.content | strip_html | strip_newlines | truncate: 200 }}{% endif %}{% if post.tags.size > 0 %} Tags: {{ post.tags | join: ", " }}.{% endif %}
+{%- endfor %}
+
+## Topics
+{% assign cats = site.categories | sort %}{% for category in cats %}
+- [{{ category[0] }}]({{ site.url }}{{ site.baseurl }}/category/{{ category[0] | slugify }}/): {{ category[1].size }} post{% if category[1].size != 1 %}s{% endif %} about {{ category[0] }}.
+{%- endfor %}
+
+## Pages
+{% for page in site.pages %}{% unless page.title == nil or page.url contains '.xml' or page.url contains '.txt' or page.url contains '.json' or page.url contains '404' or page.url contains '/category/' or page.url contains '/page' %}
+- [{{ page.title }}]({{ site.url }}{{ site.baseurl }}{{ page.url }}){% if page.description %}: {{ page.description | strip_newlines | strip }}{% endif %}
+{%- endunless %}{% endfor %}
+
+## Optional
+- [RSS feed]({{ site.url }}{{ site.baseurl }}/feed.xml): latest posts in RSS 2.0.
+- [Sitemap]({{ site.url }}{{ site.baseurl }}/sitemap.xml): every indexable URL on the site.
+- [Archives]({{ site.url }}{{ site.baseurl }}/archives): all posts grouped by year.

@@ -8,6 +8,7 @@ image: assets/images/posts/2025-03-29-devops-iac-series-central-pipelines/featur
 mermaid: true
 author: AJ Bajada
 toc: true
+description: "How to build centralised, reusable CI/CD pipelines for Azure Infrastructure as Code in GitHub and Azure DevOps, including versioning strategy and change management."
 ---
 
 ## DevOps and Azure IaC Series: Centralised Pipelines

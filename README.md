@@ -20,3 +20,16 @@ Rebuild when changing styles or JS:
 ```bash
 docker compose run --rm jekyll-build
 ```
+
+## Discoverability (SEO and AI answer engines)
+
+The site is built to be easy for both search engines and AI assistants to find, read and cite:
+
+- [llms.txt](llms.txt): an [llmstxt.org](https://llmstxt.org/) style index generated at build time, listing every post with its publish date, description and tags, plus topics, pages and feeds. Served at `/llms.txt`.
+- [llms-full.txt](llms-full.txt): the full text of every post concatenated into a single plain text file (code blocks are included without the Rouge line number gutters). Served at `/llms-full.txt`.
+- [robots.txt](robots.txt): explicitly allows the major search and AI crawlers (GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot, Google-Extended, Applebot-Extended and others) and points to the sitemap.
+- [\_includes/structured-data.html](_includes/structured-data.html): schema.org JSON-LD (`WebSite`, `Person`, `Blog`, and on posts `BlogPosting` and `BreadcrumbList`) injected into every page from [\_layouts/default.html](_layouts/default.html#L1).
+- `<head>` alternates: the RSS feed and `llms.txt` are advertised via `<link rel="alternate">`.
+- `jekyll-sitemap`, `jekyll-feed` and `jekyll-seo-tag` continue to provide `/sitemap.xml`, `/feed.xml` and per-page meta/Open Graph tags. `author` and `social.name`/`social.links` in [\_config.yml](_config.yml#L1) feed the author and social profile metadata.
+
+Both `llms.txt` and `llms-full.txt` regenerate automatically on every build, so new posts appear without any manual step.

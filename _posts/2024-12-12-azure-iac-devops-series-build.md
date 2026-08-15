@@ -7,6 +7,7 @@ tags: [azure, build, devops, iac, ci/cd]
 image: assets/images/posts/2024-12-12-azure-iac-devops-series-build/feature_image.jpg
 author: AJ Bajada
 toc: true
+description: "The build phase for Azure Infrastructure as Code, covering Bicep linting, what-if validation, surfacing test results and packaging pipeline artifacts."
 ---
 
 In this series, we'll explore the unique aspects of deploying CI/CD pipelines for Azure infrastructure, how it differs from software development, and the critical stages involved, including build and deploy phases, centralised pipelines, and other essential considerations. By the end, you’ll have the tools and knowledge to build robust, reliable pipelines for scalable and secure Azure deployments.

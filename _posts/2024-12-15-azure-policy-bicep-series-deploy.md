@@ -7,6 +7,7 @@ tags: [azure, bicep, iac, policy, devops]
 image: assets/images/posts/2024-12-15-azure-policy-bicep-series-deploy/feature_image.jpg
 author: AJ Bajada
 toc: true
+description: "An introduction to Azure Policy with Bicep, covering policy definitions, initiatives and deploying an initiative of built-in policies as Infrastructure as Code."
 ---
 
 Azure Policy is a critical tool for ensuring governance and compliance within Azure environments. In this blog series, we'll explore how to use [Azure Bicep](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview?tabs=bicep), a powerful Infrastructure as Code (IaC) language, to deploy and manage Azure Policy. While the [Enterprise-Scale Azure Policy as Code (EPAC)](https://azure.github.io/enterprise-azure-policy-as-code/) framework is a fantastic, PowerShell-based solution for large-scale policy management, Bicep offers an alternative approach that integrates seamlessly into declarative IaC workflows.

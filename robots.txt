@@ -1,0 +1,94 @@
+---
+layout: null
+sitemap: false
+---
+# {{ site.title }} - {{ site.url }}
+# Human and machine readable index: {{ site.url }}{{ site.baseurl }}/llms.txt
+
+# Default: all well behaved crawlers are welcome
+User-agent: *
+Allow: /
+Disallow: /assets/js/lunrsearchengine.js
+
+# AI assistants and answer engines are explicitly welcome to read and cite this blog.
+User-agent: GPTBot
+Allow: /
+Disallow: /assets/js/lunrsearchengine.js
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /assets/js/lunrsearchengine.js
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /assets/js/lunrsearchengine.js
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /assets/js/lunrsearchengine.js
+
+User-agent: Claude-Web
+Allow: /
+Disallow: /assets/js/lunrsearchengine.js
+
+User-agent: Claude-User
+Allow: /
+Disallow: /assets/js/lunrsearchengine.js
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /assets/js/lunrsearchengine.js
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /assets/js/lunrsearchengine.js
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /assets/js/lunrsearchengine.js
+
+User-agent: Perplexity-User
+Allow: /
+Disallow: /assets/js/lunrsearchengine.js
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /assets/js/lunrsearchengine.js
+
+User-agent: Googlebot
+Allow: /
+Disallow: /assets/js/lunrsearchengine.js
+
+User-agent: Applebot
+Allow: /
+Disallow: /assets/js/lunrsearchengine.js
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /assets/js/lunrsearchengine.js
+
+User-agent: Bingbot
+Allow: /
+Disallow: /assets/js/lunrsearchengine.js
+
+User-agent: cohere-ai
+Allow: /
+Disallow: /assets/js/lunrsearchengine.js
+
+User-agent: Meta-ExternalAgent
+Allow: /
+Disallow: /assets/js/lunrsearchengine.js
+
+User-agent: DuckAssistBot
+Allow: /
+Disallow: /assets/js/lunrsearchengine.js
+
+User-agent: YouBot
+Allow: /
+Disallow: /assets/js/lunrsearchengine.js
+
+User-agent: Amazonbot
+Allow: /
+Disallow: /assets/js/lunrsearchengine.js
+
+Sitemap: {{ site.url }}{{ site.baseurl }}/sitemap.xml

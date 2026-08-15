@@ -8,6 +8,7 @@ image: assets/images/posts/2025-11-17-welcome-home-agents/feature_image.png
 mermaid: true
 author: AJ Bajada
 toc: true
+description: "GitHub Agent HQ explained, plus the VS Code agent sessions view, Plan agent, cloud agents, CLI agents and delegation that make orchestrating fleets of agents practical."
 ---
 
 The development landscape has fundamentally shifted. We're no longer working with simple AI assistants that complete our code,we're orchestrating fleets of specialised agents that can take on entire features, collaborate across tools, and work asynchronously while we sleep. GitHub's announcement of **Agent HQ** at Universe 2025 marks a pivotal moment in how we think about development workflows, and the accompanying VS Code updates make this vision tangible today.

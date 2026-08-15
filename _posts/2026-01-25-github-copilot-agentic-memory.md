@@ -10,6 +10,7 @@ author: AJ Bajada
 toc: true
 featured: false
 mermaid: true
+description: "GitHub Copilot's agentic memory in public preview, how AI agents learn and remember your codebase, the privacy and security implications, and best practices for using it."
 ---
 
 One of the biggest challenges with AI coding assistants has been their stateless nature with every interaction starting from scratch, requiring developers to repeatedly explain coding conventions, architectural patterns, and repository-specific knowledge. GitHub has just changed the game with the public preview of **agentic memory** for GitHub Copilot, a revolutionary capability that allows AI agents to remember and learn from your codebase over time.

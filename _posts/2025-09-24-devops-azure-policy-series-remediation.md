@@ -8,6 +8,7 @@ image: assets/images/posts/2025-09-24-devops-azure-policy-series-remediation/fea
 mermaid: true
 author: AJ Bajada
 toc: true
+description: "How Azure Policy remediation tasks automatically fix non-compliant resources, with PowerShell automation, CI/CD integration and a practical governance workflow."
 ---
 
 Welcome to the fourth instalment of our DevOps and Azure Policy series! In our [previous post](https://azurewithaj.com/posts/devops-azure-policy-series-exemptions/), we explored how to manage policy exemptions using Infrastructure as Code (IaC) and CI/CD pipelines. Today, we're diving into another critical aspect of Azure Policy governance: **policy remediation tasks**.
