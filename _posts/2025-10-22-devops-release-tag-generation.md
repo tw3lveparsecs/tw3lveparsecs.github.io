@@ -7,6 +7,7 @@ tags: [devops, release, tags, automation, api]
 image: assets/images/posts/2025-10-22-devops-release-tag-generation/feature_image.png
 author: AJ Bajada
 toc: true
+description: "Evolving release automation by swapping basic release notes for GitHub's automatic release notes generation API, with the complete enhanced GitHub Actions workflow."
 ---
 
 In my previous article, "[DevOps: Automating Release Tags](https://azurewithaj.com/posts/devops-release-tags/)", I shared how we automated version tagging and release creation using GitHub Actions. While that solution worked well, the release notes generation was basic, essentially just copying the PR title and description. Today, I'll show you how we evolved this approach by leveraging GitHub's powerful automatic release notes generation API.

@@ -10,6 +10,7 @@ author: AJ Bajada
 toc: true
 featured: false
 mermaid: true
+description: "Why AI agents deserve the same versioning discipline as infrastructure and pipelines, the difference between AGENTS.md and custom agents, and how to treat agents as code."
 ---
 
 We version our infrastructure. We version our pipelines. We version our policies. So why are most teams still treating their AI agents like throwaway prompt snippets floating in someone's clipboard?

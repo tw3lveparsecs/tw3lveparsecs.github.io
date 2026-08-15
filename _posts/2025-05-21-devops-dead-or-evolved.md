@@ -8,6 +8,7 @@ image: assets/images/posts/2025-05-21-devops-dead-or-evolved/feature_image.png
 mermaid: true
 author: AJ Bajada
 toc: true
+description: "Is DevOps dead in the age of AI? Why DevOps has evolved rather than disappeared, what Agentic DevOps means and how to navigate the transition."
 ---
 
 # DevOps: Dead or Evolved?

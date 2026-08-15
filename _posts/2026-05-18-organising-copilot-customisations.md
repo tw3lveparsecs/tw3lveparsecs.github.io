@@ -10,6 +10,7 @@ author: AJ Bajada
 toc: true
 featured: false
 mermaid: true
+description: "A practical two-repository pattern for organising GitHub Copilot agents, instructions, skills and plugins at enterprise scale, with governance and ownership guidance."
 ---
 
 If you're trying to organise GitHub Copilot customisations across an enterprise, the hardest part usually is not creating the agent or the skill. It's deciding where everything should live, how it should be shared, and which pieces should appear automatically versus stay self serve.

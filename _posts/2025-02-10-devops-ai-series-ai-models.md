@@ -7,6 +7,7 @@ tags: [ai, devops, ai models, azure]
 image: assets/images/posts/2025-02-10-devops-ai-series-ai-models/feature_image.png
 author: AJ Bajada
 toc: true
+description: "Managing Azure OpenAI and Azure AI Foundry model deployments with DevOps practices, including who owns them, platform team versus application team, and how to automate them."
 ---
 
 Welcome back to our series on AI and DevOps! In our previous post, we laid the groundwork for deploying AI landing zones within a DevOps framework. Today, we’re going to focus on a critical aspect of this integration: managing AI models using DevOps practices. This involves not only the technical automation of deployments but also ensuring seamless collaboration between the teams involved.

@@ -10,6 +10,7 @@ author: AJ Bajada
 toc: true
 featured: false
 mermaid: true
+description: "GitHub Agentic Workflows let you describe repository automation in natural language. How they work, where they beat traditional workflows, and how to get started."
 ---
 
 Repository automation works well for deterministic tasks, but struggles with work requiring context understanding and adaptive decision-making. When you need to keep documentation synchronised with code, triage issues intelligently, or verify pull requests comply with guidelines, traditional approaches force you to encode all logic upfront using conditionals, regex patterns, and scripts. But real development is messier than any ruleset can capture.

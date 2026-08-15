@@ -8,6 +8,7 @@ image: assets/images/posts/2025-08-27-agentic-devops-safe-mode/feature_image.png
 mermaid: true
 author: AJ Bajada
 toc: true
+description: "A practical defence in depth framework for running GitHub Copilot coding agent safely in the enterprise, with repository-level guardrails and human oversight."
 ---
 
 Agentic DevOps promises AI agents that understand requirements, write code, and manage workflows. GitHub Copilot Coding Agent is the next step. The enterprise question isn’t ‘can AI help?’, it’s ‘can it help safely within organisational security boundaries?’

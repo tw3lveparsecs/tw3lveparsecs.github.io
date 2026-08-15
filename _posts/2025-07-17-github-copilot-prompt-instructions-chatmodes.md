@@ -8,6 +8,7 @@ image: assets/images/posts/2025-07-17-github-copilot-prompt-instructions-chatmod
 mermaid: true
 author: AJ Bajada
 toc: true
+description: "Prompt files, custom instructions and custom chat modes in GitHub Copilot explained, with clear guidance on when to use each in your DevOps workflows."
 ---
 
 As we venture deeper into 2025, GitHub Copilot has evolved far beyond a simple code completion tool. The introduction of **prompt files**, **custom instructions**, and **custom chat modes** has transformed it into a sophisticated AI development partner. Yet, we may find ourselves confused about when and how to leverage these features effectively.

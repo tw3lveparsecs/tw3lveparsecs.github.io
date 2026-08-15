@@ -8,6 +8,7 @@ image: assets/images/posts/2025-07-23-agentic-devops-github-copilot-coding-agent
 mermaid: true
 author: AJ Bajada
 toc: true
+description: "Real-world lessons from using GitHub Copilot's coding agent, covering how it works, security considerations and best practices for maximising efficiency."
 ---
 
 The evolution of DevOps continues to accelerate, and we're now entering the era of **Agentic DevOps** where AI agents don't just assist with code completion, but actively participate in the entire development lifecycle. GitHub Copilot's Coding Agent represents a significant leap forward, transforming how we approach backlog management, code reviews, and development workflows.

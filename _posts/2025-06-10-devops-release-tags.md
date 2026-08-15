@@ -8,6 +8,7 @@ image: assets/images/posts/2025-06-10-devops-release-tags/feature_image.png
 mermaid: true
 author: AJ Bajada
 toc: true
+description: "How to automate semantic versioning, git tags and GitHub Releases with a GitHub Actions workflow, including a flexible way to bump major versions."
 ---
 
 Recently, I was tasked with developing a consistent strategy for managing releases and tags in a GitHub repository that had grown organically without any version tracking system. The repository had been accumulating features and fixes for months, but there was no way to track versions, identify what changes belonged to which release, or even determine what was the current deployed "version".

@@ -8,6 +8,7 @@ image: assets/images/posts/2025-10-14-github-spark-star-wars-ecommerce/feature_i
 mermaid: true
 author: AJ Bajada
 toc: true
+description: "A DevOps engineer builds a full-stack Star Wars e-commerce app in a weekend with GitHub Spark, and the hard-earned lessons about AI-powered development along the way."
 ---
 
 As a DevOps professional whose primary expertise lies in infrastructure, automation, and operational excellence rather than frontend development, I've always faced a persistent challenge: creating functional, presentable web applications for demos and presentations. This gap became particularly evident when conducting demonstrations and end-to-end workflows at community meetups and in my day-to-day job, where I needed to showcase the complete picture, not just the infrastructure layer.

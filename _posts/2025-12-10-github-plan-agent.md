@@ -8,6 +8,7 @@ image: assets/images/posts/2025-12-10-github-plan-agent/feature_image.png
 mermaid: true
 author: AJ Bajada
 toc: true
+description: "GitHub's built-in Plan agent compared with an Awesome Copilot planning workflow, what changed in my approach and whether native planning delivers on its promise."
 ---
 
 In my [previous post about delivering major enhancements using agentic DevOps](https://azurewithaj.com/posts/agentic-devops-delivered-major-enhancement), I shared how I leveraged [GitHub's Awesome Copilot repository](https://github.com/github/awesome-copilot) to access proven prompts and agents for creating implementation plans. That approach served me well, but GitHub has now introduced something that changes the game entirely: the built-in **Plan agent**.
