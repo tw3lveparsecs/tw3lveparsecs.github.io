@@ -25,10 +25,12 @@
       "url": "{{ site.url }}{{ site.baseurl }}/about",
       "image": "{{ site.url }}{{ site.baseurl }}/{{ site.logo }}",
       "knowsAbout": ["Microsoft Azure", "DevOps", "Platform Engineering", "Infrastructure as Code", "Bicep", "GitHub", "GitHub Copilot", "Agentic AI", "Azure Policy"],
-      "sameAs": [
-        {% if site.social.github %}"{{ site.social.github }}"{% endif %}{% if site.social.github and site.social.linkedin %},{% endif %}
-        {% if site.social.linkedin %}"{{ site.social.linkedin }}"{% endif %}
-      ]
+      {%- assign social_links = site.social.links -%}
+      {%- unless social_links -%}
+        {%- capture social_csv %}{% if site.social.github %}{{ site.social.github }}{% endif %}{% if site.social.github and site.social.linkedin %},{% endif %}{% if site.social.linkedin %}{{ site.social.linkedin }}{% endif %}{% endcapture -%}
+        {%- assign social_links = social_csv | split: "," -%}
+      {%- endunless %}
+      "sameAs": {{ social_links | jsonify }}
     },
     {
       "@type": "Blog",

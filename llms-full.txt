@@ -27,7 +27,8 @@ Author: {{ post.author | default: 'AJ Bajada' }}
 {%- assign post_text = gutter_parts[0] -%}
 {%- for gutter_part in gutter_parts offset:1 -%}
 {%- assign line_numbers = gutter_part | split: '</pre>' | first -%}
-{%- assign post_text = post_text | append: gutter_part | remove_first: line_numbers -%}
+{%- assign gutter_removed = gutter_part | remove_first: line_numbers | remove_first: '</pre>' -%}
+{%- assign post_text = post_text | append: gutter_removed -%}
 {%- endfor -%}
 {{ post_text | strip_html | replace: '&lt;', '<' | replace: '&gt;', '>' | replace: '&quot;', '"' | replace: '&#39;', "'" | replace: '&amp;', '&' }}
 {% endfor %}
