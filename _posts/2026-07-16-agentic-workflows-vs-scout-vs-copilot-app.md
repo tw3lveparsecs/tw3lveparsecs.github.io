@@ -8,7 +8,7 @@ image: assets/images/posts/2026-07-16-agentic-workflows-vs-scout-vs-copilot-app/
 featured_image: assets/images/posts/2026-07-16-agentic-workflows-vs-scout-vs-copilot-app/feature_image.png
 author: AJ Bajada
 toc: true
-featured: true
+featured: false
 mermaid: true
 description: "Confused about GitHub Agentic Workflows vs Microsoft Scout vs the GitHub Copilot app? Here is when to use each, aligned with Microsoft and GitHub's stance."
 ---
