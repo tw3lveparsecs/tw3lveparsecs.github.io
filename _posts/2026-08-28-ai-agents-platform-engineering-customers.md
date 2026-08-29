@@ -3,13 +3,12 @@ layout: post
 title: "Are AI Agents the New Platform Engineering Customers?"
 date: 2026-09-08 06:00:00 +1100
 categories: [DevOps, AI]
-tags: [ai, agent, agentic, platform-engineering, github, azure, automation]
+tags: [ai, agent, platform-engineering]
 image: assets/images/posts/2026-09-08-ai-agents-platform-engineering-customers/post_image.png
 featured_image: assets/images/posts/2026-09-08-ai-agents-platform-engineering-customers/feature_image.png
 author: AJ Bajada
 toc: true
 featured: true
-mermaid: true
 description: "AI agents are becoming platform engineering customers. Learn how machine consumable paths, strong guardrails and human judgement help them deliver safely."
 ---
 
@@ -33,32 +32,13 @@ Platform teams need to design for both humans and agents. That means machine con
 
 ## Why AI Agents Are Platform Engineering Customers
 
-The [CNCF Platforms White Paper](https://tag-app-delivery.cncf.io/whitepapers/platforms/){:target="\_blank" rel="noopener"} describes platforms as collections of capabilities built to meet the needs of their users. Google Cloud makes the product mindset even clearer in its [platform engineering guidance](https://cloud.google.com/solutions/platform-engineering){:target="\_blank" rel="noopener"}: developers are customers, and the platform reduces cognitive load through self service.
+Microsoft's guide to [platform engineering](https://learn.microsoft.com/en-us/platform-engineering/what-is-platform-engineering){:target="\_blank" rel="noopener"} describes an internal developer platform as a set of secure, scalable and self service capabilities that reduce cognitive load. Its guidance on [treating developers as customers](https://learn.microsoft.com/en-us/platform-engineering/about/customers){:target="\_blank" rel="noopener"} makes the product mindset clear: build the platform around the needs of the people consuming it.
 
 That model still holds. What has changed is who, or what, is standing at the counter.
 
 A developer might browse a portal, choose a template and raise a pull request. An agent can make the same journey through a CLI, API, MCP server or repository workflow. It inspects the environment, chooses a paved road, generates the artefacts and puts the result in front of a human.
 
 That sounds like the same customer journey with fewer coffee breaks, but there is an important difference. Humans compensate for bad platforms. We infer what the author meant, copy the command from an old Teams message and quietly add the tag everyone knows is mandatory even though nobody wrote it down. An agent sees the platform exactly as it is. No folklore, no helpful colleague leaning over the desk, no Force ghost appearing at the critical moment with the missing subscription ID.
-
-```mermaid
-graph LR
-    H[Human sets intent] --> A[AI agent plans the work]
-    A --> P[Platform interfaces]
-    P --> G[Guardrails and policy]
-    G --> O[Observable outcome]
-    O --> R[Human reviews and owns decision]
-    R -->|Approved| D[Deliver through Azure and GitHub]
-    R -->|Needs work| A
-
-    style H fill:#2563eb,stroke:#1e40af,stroke-width:3px,color:#fff
-    style A fill:#94a3b8,stroke:#64748b,stroke-width:2px,color:#0f172a
-    style P fill:#94a3b8,stroke:#64748b,stroke-width:2px,color:#0f172a
-    style G fill:#f59e0b,stroke:#d97706,stroke-width:3px,color:#fff
-    style O fill:#94a3b8,stroke:#64748b,stroke-width:2px,color:#0f172a
-    style R fill:#2563eb,stroke:#1e40af,stroke-width:3px,color:#fff
-    style D fill:#059669,stroke:#047857,stroke-width:3px,color:#fff
-```
 
 ## AI Agents Need a Different Developer Experience
 
@@ -71,7 +51,7 @@ Microsoft's take on [how AI coding agents use technology](https://devblogs.micro
 For platform teams, four things matter:
 
 1. **Machine consumable interfaces.** Capabilities need stable APIs, CLIs, schemas and MCP tools, not knowledge hidden in somebody's head.
-2. **Explicit golden paths.** Preferred patterns must define when to use them, accepted inputs and good output. Google's [golden path guidance](https://cloud.google.com/blog/products/application-development/golden-paths-for-engineering-execution-consistency){:target="\_blank" rel="noopener"} applies equally to agents.
+2. **Explicit golden paths.** Preferred patterns must define when to use them, accepted inputs and good output. Microsoft's guidance on [paving optimal development paths](https://learn.microsoft.com/en-us/platform-engineering/about/customers#identify-optimal-development-paths-to-streamline-best-practices){:target="\_blank" rel="noopener"} applies equally to agents.
 3. **Guardrails close to execution.** Policy, permissions, budgets and approvals must constrain the action itself. Telling an agent to "be secure" is not a security control.
 4. **Observable decisions.** Show which tools were called, what changed and where human approval occurred.
 
@@ -134,7 +114,7 @@ This is platform engineering doing what it has always promised: reducing cogniti
 
 If a human needs a meeting to learn the hidden process and an agent needs six retries to reverse engineer it, the problem is not either customer. The paved road has a pothole large enough to lose an Imperial walker in it.
 
-The [CNCF Platform Engineering Maturity Model](https://tag-app-delivery.cncf.io/whitepapers/platform-eng-maturity-model/){:target="\_blank" rel="noopener"} pushes teams from ticket driven operations towards consistent self service and platform as a product. Agents raise the bar again. If a capability cannot be discovered, understood and safely consumed without tribal knowledge, it is not ready for this new customer.
+Microsoft's [Platform Engineering Capability Model](https://learn.microsoft.com/en-us/platform-engineering/platform-engineering-capability-model){:target="\_blank" rel="noopener"} helps teams assess their current practices and set goals across adoption, governance, provisioning, interfaces and feedback. Agents raise the bar again. If a capability cannot be discovered, understood and safely consumed without tribal knowledge, it is not ready for this new customer.
 
 ## Where Platform Teams Should Start
 
