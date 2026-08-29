@@ -36,9 +36,9 @@ Microsoft's guide to [platform engineering](https://learn.microsoft.com/en-us/pl
 
 That model still holds. What has changed is who, or what, is standing at the counter.
 
-A developer might browse a portal, choose a template and raise a pull request. An agent can make the same journey through a CLI, API, MCP server or repository workflow. It inspects the environment, chooses a paved road, generates the artefacts and puts the result in front of a human.
+A developer might browse a portal, write code and raise a pull request. An agent can make the same journey through a CLI, API, MCP server or repository workflow. It inspects the environment, chooses a paved road, generates the artefacts and puts the result in front of a human.
 
-That sounds like the same customer journey with fewer coffee breaks, but there is an important difference. Humans compensate for bad platforms. We infer what the author meant, copy the command from an old Teams message and quietly add the tag everyone knows is mandatory even though nobody wrote it down. An agent sees the platform exactly as it is. No folklore, no helpful colleague leaning over the desk, no Force ghost appearing at the critical moment with the missing subscription ID.
+That sounds like the same customer journey with fewer coffee breaks, but there is an important difference. Humans compensate for bad platforms. We infer what the author meant, connect to a corporate VPN to deploy to an environment and message support when none of it works. An agent cannot fill those gaps with tribal knowledge and mild frustration.
 
 ## AI Agents Need a Different Developer Experience
 
@@ -63,11 +63,11 @@ Neither is a particularly strong platform strategy.
 
 This is not abstract for me. It has already changed how I work.
 
-Previously, I would open VS Code and start building. Now I usually stop and ask whether the thing in front of me is a one off task or the first run of something I will have to do another twenty times. Experience suggests it is nearly always the second one wearing a fake moustache.
+Previously, I would open VS Code and start building. Now I usually stop and ask whether the thing in front of me is a one off task or the first run of something I will have to do another twenty times.
 
 My focus has moved from producing an artefact once to creating a reusable capability. Instead of another assessment script, I think about an agent with the right sources, tools, questions and output. Instead of manually gathering migration evidence, I create a skill that collects it consistently and surfaces what needs human judgement. For executive narratives, an agent assembles the evidence into a first draft that I can challenge and refine.
 
-Across Azure and GitHub, an agent can gather repository data, cloud configuration, delivery signals and policy findings in parallel. It gives engineers the detail and executives the decisions that matter.
+Across Azure and GitHub, an agent can gather repository data, cloud configuration and policy findings in parallel. It gives engineers the detail and executives the decisions that matter.
 
 That changes what platform engineering is actually for. The platform team is no longer only curating Terraform modules, Bicep templates, pipelines and portals for developers. It is curating **capabilities, context and controls** for people and agents working side by side.
 
@@ -79,9 +79,7 @@ There is a part of this shift that does not get enough airtime.
 
 AI makes the easy path dangerously easy. It produces a polished answer, the structure looks right, the language is confident and every instinct says **LGTM**. When the result arrives faster than you could have created it yourself, accepting it feels like progress.
 
-That is exactly where complacency starts.
-
-Polished is not the same as correct. PowerPoint has been teaching us that for decades.
+It's a trap!
 
 Human in the loop cannot mean somebody clicks approve at the end. It means actively testing the reasoning, checking the evidence, understanding the risk and deciding whether you are comfortable putting your name to the result.
 
@@ -99,7 +97,7 @@ A green tick is useful. It is not absolution.
 
 ## Design the Platform for Two Customers
 
-The answer is not a second platform built just for agents. Nobody needs another portal, another backlog and eighteen months of meetings to decide what colour its navigation should be. Make the existing platform clearer, safer and easier to compose, and humans benefit too.
+The answer is not a second platform built just for agents. Nobody needs another portal or another backlog. Make the existing platform clearer, safer and easier to compose, and humans benefit too.
 
 | Platform capability | Human customer needs                  | Agent customer needs                              |
 | ------------------- | ------------------------------------- | ------------------------------------------------- |
