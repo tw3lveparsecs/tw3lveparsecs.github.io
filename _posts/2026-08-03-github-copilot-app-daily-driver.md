@@ -8,7 +8,7 @@ image: assets/images/posts/2026-08-03-github-copilot-app-daily-driver/post_image
 featured_image: assets/images/posts/2026-08-03-github-copilot-app-daily-driver/feature_image.png
 author: AJ Bajada
 toc: true
-featured: true
+featured: false
 mermaid: true
 description: "Why the GitHub Copilot app went from sceptical trial to daily driver, covering automations, multiple accounts, the rough edges and who should actually switch."
 ---
