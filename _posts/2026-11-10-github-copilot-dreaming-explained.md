@@ -2,8 +2,8 @@
 layout: post
 title: "GitHub Copilot Dreaming Explained: Keep AI Context Fresh"
 date: 2026-11-10 06:00:00 +1100
-categories: [DevOps, AI]
-tags: [github, copilot, ai, agent, agentic, automation]
+categories: [AI]
+tags: [github, copilot, ai, agent]
 image: assets/images/posts/2026-11-10-github-copilot-dreaming-explained/post_image.png
 featured_image: assets/images/posts/2026-11-10-github-copilot-dreaming-explained/feature_image.png
 author: AJ Bajada
@@ -17,7 +17,7 @@ Every repository I work in has a `copilot-instructions.md` file that was perfect
 
 **GitHub Copilot Dreaming** is GitHub's answer to that slow drift. It works in the background to keep Copilot's memories and repository guidance up to date, so your AI context does not quietly rot while you are busy shipping. It is in **public preview and subject to change**, so treat everything here as an early look rather than a final word.
 
-This post covers what Copilot Dreaming is, the problem it solves, and real world scenarios where it will earn its keep, based on the official [About GitHub Copilot Dreaming](https://docs.github.com/en/copilot/concepts/prompting-and-context/copilot-dreaming){:target="\_blank" rel="noopener"} documentation.
+This post covers what Copilot Dreaming is, the problem it solves, and real world scenarios where it will earn its keep.
 
 ## The Problem: AI Context Goes Stale
 
@@ -34,7 +34,7 @@ None of these are dramatic failures, they are paper cuts. But an assistant worki
 
 ## What Is GitHub Copilot Dreaming?
 
-Copilot Dreaming is a background process that **analyses eligible Copilot sessions and pull request review feedback** to identify useful information, correct outdated guidance and remove duplicate memories. The docs give a nice simple example: it can propose an update when your repository's instructions describe an obsolete test command.
+Copilot Dreaming is a background process that **analyses eligible Copilot sessions and pull request review feedback** to identify useful information, correct outdated guidance and remove duplicate memories. The [docs](https://docs.github.com/en/copilot/concepts/prompting-and-context/copilot-dreaming) give a nice simple example: it can propose an update when your repository's instructions describe an obsolete test command.
 
 A few things worth calling out:
 
@@ -42,17 +42,15 @@ A few things worth calling out:
 - **It runs in the background.** You do not need to keep a Copilot conversation open for it to run.
 - **It builds on Copilot Memory.** Memory stores repository facts and personal preferences Copilot learns and reuses, even when Dreaming is off. Dreaming is the housekeeper keeping them relevant and accurate. If you are new to Memory, my post on [GitHub Copilot's agentic memory](https://azurewithaj.com/github-copilot-agentic-memory/) is a good primer.
 
-I like the name. Copilot does the work, then quietly processes what it learned in the background, a bit like sleeping on a problem.
-
 ## The Three Copilot Dreaming Capabilities
 
 Dreaming is made up of three capabilities, each with different inputs and outputs.
 
-| Capability                   | Information it uses                                         | Output                                                                       |
-| ---------------------------- | ----------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| Repository customisation     | Eligible repository sessions, code, memories and guidance   | Updated repository memories and proposed instruction or skill changes       |
-| Personal memory curation     | Your eligible sessions and personal memories                | Updated personal memories, with no changes to personal instruction or skill files |
-| Code review customisation    | Feedback on merged pull requests and current repository code | Guidance for future Copilot code reviews                                     |
+| Capability                | Information it uses                                          | Output                                                                            |
+| ------------------------- | ------------------------------------------------------------ | --------------------------------------------------------------------------------- |
+| Repository customisation  | Eligible repository sessions, code, memories and guidance    | Updated repository memories and proposed instruction or skill changes             |
+| Personal memory curation  | Your eligible sessions and personal memories                 | Updated personal memories, with no changes to personal instruction or skill files |
+| Code review customisation | Feedback on merged pull requests and current repository code | Guidance for future Copilot code reviews                                          |
 
 Repository customisation can review tracked `.github/copilot-instructions.md`, `.github/instructions/**`, `.github/agents/**`, `AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, `REVIEW.md` and `.github/skills/**` files. It will not necessarily change every file, and which instructions, skills and memories Copilot uses depends on the Copilot feature.
 
@@ -86,8 +84,6 @@ graph LR
 
 The pull request path matters most to me. **AI generated guidance can be incorrect**, so review proposed changes before merging, exactly as you would a teammate's pull request. Not every run makes changes or opens a pull request, so silence is not necessarily a problem.
 
-You configure Dreaming on GitHub.com, and individual run outputs can be viewed in the Copilot app. If you have not tried the app yet, here is [why the GitHub Copilot app became my daily driver](https://azurewithaj.com/github-copilot-app-daily-driver/).
-
 ## Real World Scenarios for Copilot Dreaming
 
 These are illustrative scenarios based on what the capabilities are designed to do, not documented case studies.
@@ -106,15 +102,9 @@ Dreaming can **remove the duplicates and correct the outdated memory** automatic
 
 ### Scenario 3: Review Feedback That Finally Sticks
 
-This one is my favourite. Imagine a team where senior engineers keep leaving the same comment on merged pull requests, something like "use managed identity here instead of a connection string". The feedback is right, but it stays buried in pull request history.
+Imagine a team where senior engineers keep leaving the same comment on merged pull requests, something like "use managed identity here instead of a connection string". The feedback is right, but it stays buried in pull request history.
 
 With **code review customisation**, Dreaming uses feedback on merged pull requests and the current code to build guidance for future Copilot code reviews. Your reviewers stop repeating themselves, and their knowledge scales.
-
-### Scenario 4: My Own Personal Preferences
-
-I work across a lot of repositories, and my personal memories collect preferences I have since changed my mind on.
-
-**Personal memory curation** uses my eligible sessions and personal memories to keep those preferences current. Importantly, it only updates personal memories. It does **not** touch my personal instruction or skill files, which I prefer to curate by hand.
 
 ## Prerequisites and Enabling Copilot Dreaming
 
@@ -129,11 +119,11 @@ This is where the preview shows. There are a fair few boxes to tick.
 
 ### Settings per Capability
 
-| Capability                | Memory setting                      | Dreaming setting                                                  | Session syncing |
-| ------------------------- | ----------------------------------- | ----------------------------------------------------------------- | --------------- |
-| Repository customisation  | Repository level Memory enabled     | Organisation policy or personally owned repository settings       | Required        |
-| Personal memory curation  | Personal Memory enabled             | Permitted by managed policies, where applicable, and enabled for the user | Required        |
-| Code review customisation | Repository level Memory enabled     | Organisation policy or personally owned repository settings       | Not required    |
+| Capability                | Memory setting                  | Dreaming setting                                                          | Session syncing |
+| ------------------------- | ------------------------------- | ------------------------------------------------------------------------- | --------------- |
+| Repository customisation  | Repository level Memory enabled | Organisation policy or personally owned repository settings               | Required        |
+| Personal memory curation  | Personal Memory enabled         | Permitted by managed policies, where applicable, and enabled for the user | Required        |
+| Code review customisation | Repository level Memory enabled | Organisation policy or personally owned repository settings               | Not required    |
 
 Code review customisation also needs Copilot code review and its preview features enabled, and it **does not currently support self hosted runners**.
 
@@ -178,7 +168,7 @@ The big one: **turning Dreaming off does not undo its changes.** It will not res
 
 ## My Take on Copilot Dreaming
 
-I am genuinely excited about this. Context maintenance is the chore nobody puts in a sprint, and Dreaming tackles it where the drift happens. A few key insights:
+Context maintenance is the chore nobody puts in a sprint, and Dreaming tackles it where the drift happens. A few key insights:
 
 - **The risk split is well judged.** Memory updates happen automatically, while checked in files go through a pull request, keeping humans in control of shared guidance.
 - **Code review customisation is the sleeper hit.** Turning repeated reviewer comments into future review guidance is compounding value.
