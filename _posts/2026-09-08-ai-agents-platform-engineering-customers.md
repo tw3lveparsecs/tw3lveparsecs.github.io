@@ -8,7 +8,7 @@ image: assets/images/posts/2026-09-08-ai-agents-platform-engineering-customers/p
 featured_image: assets/images/posts/2026-09-08-ai-agents-platform-engineering-customers/feature_image.png
 author: AJ Bajada
 toc: true
-featured: true
+featured: false
 description: "AI agents are becoming platform engineering customers. Learn how machine consumable paths, strong guardrails and human judgement help them deliver safely."
 ---
 
